@@ -19,7 +19,13 @@ namespace Projeto_Socorrista
 
         private void frmLoginVoluntario_Load(object sender, EventArgs e)
         {
-            fontes();
+            var input = new ModernTextBox();
+            input.Location = new Point(20, 20);
+            input.PlaceholderText = "Seu nome completo";
+            this.Controls.Add(input);
+            panel1.SendToBack();
+         
+
         }
 
 
@@ -27,6 +33,6 @@ namespace Projeto_Socorrista
             //lblTituloPrincipal.Font = new Font("Montserrat", 30, FontStyle.Bold);
         }
 
-     
+      
     }
 }

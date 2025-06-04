@@ -52,6 +52,9 @@
     <Compile Include="frmLoginVoluntario.Designer.cs">
       <DependentUpon>frmLoginVoluntario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ModernTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLoginVoluntario.resx">

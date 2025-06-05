@@ -13,6 +13,7 @@ namespace Projeto_Socorrista
     public partial class frmLoginVoluntario : Form
     {
         private bool imagemAlternada = false;
+        private bool imagemAlternada1 = false;
 
         public frmLoginVoluntario()
         {
@@ -73,6 +74,18 @@ namespace Projeto_Socorrista
         private void picMostrarSenha1_Click(object sender, EventArgs e)
         {
             MtxtConfirmeSenha.UseSystemPasswordChar = !MtxtConfirmeSenha.UseSystemPasswordChar;
+
+            if (imagemAlternada1)
+            {
+                picMostrarSenha1.Image = Properties.Resources.SenhaEscondida;
+            }
+            else
+            {
+
+                picMostrarSenha1.Image = Properties.Resources.SenhaVisivel;
+            }
+
+            imagemAlternada1 = !imagemAlternada1;
         }
     }
 }

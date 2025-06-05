@@ -6,13 +6,55 @@ using System.Windows.Forms;
 public class ModernTextBox : UserControl
 {
     private TextBox textBox;
-
     public string PlaceholderText { get; set; } = "Digite aqui...";
+    public char PlaceholderChar { get; set; }
+
+    private bool usePasswordChar = false;
+    public bool EnablePlaceholder { get; set; } = true;
     public string TextValue
     {
         get => (textBox.Text == PlaceholderText) ? "" : textBox.Text;
         set => textBox.Text = value;
     }
+
+    //Mostrar senha
+
+    private void UpdatePasswordChar()
+    {
+        textBox.UseSystemPasswordChar = !isPlaceholderActive && usePasswordChar;
+    }
+    public void MostrarSenha(bool mostrar)
+    {
+        textBox.UseSystemPasswordChar = !mostrar && usePasswordChar;
+
+    }
+
+    public bool UseSystemPasswordChar
+    {
+        get => usePasswordChar;
+        set
+        {
+            usePasswordChar = value;
+            UpdatePasswordChar();
+        }
+    }
+
+    public char PasswordChar
+    {
+        get { return textBox.PasswordChar; }
+        set { textBox.PasswordChar = value; }
+    }
+
+    // Metodo para limitar o caracter do campo
+    public int MaxLength
+    {
+        get => textBox.MaxLength;
+        set => textBox.MaxLength = value;
+    }
+
+
+    public event EventHandler TextChanged;
+    private bool isPlaceholderActive = true;
 
     public ModernTextBox()
     {
@@ -23,24 +65,48 @@ public class ModernTextBox : UserControl
         textBox = new TextBox
         {
             BorderStyle = BorderStyle.None,
-            ForeColor = Color.White,
+            ForeColor = Color.LightGray,
             BackColor = ColorTranslator.FromHtml("#009E70"),
             Font = new Font("Segoe UI", 10),
             Location = new Point(10, 10),
             Width = this.Width - 20
         };
 
+        textBox.TextChanged += (s, e) =>
+        {
+            if (!isPlaceholderActive)
+            {
+                TextChanged?.Invoke(this, e);
+            }
+        };
+
         textBox.GotFocus += RemovePlaceholder;
         textBox.LostFocus += SetPlaceholder;
 
         this.Controls.Add(textBox);
-        SetPlaceholder(null, null);
+
+        // Removida a chamada daqui:
+        // SetPlaceholder(null, null); 
+    }
+
+    protected override void OnCreateControl()
+    {
+        base.OnCreateControl();
+
+        if (EnablePlaceholder)
+        {
+            SetPlaceholder(null, null);
+        }
     }
 
     private void SetPlaceholder(object sender, EventArgs e)
     {
+        if (!EnablePlaceholder) return;
+
         if (string.IsNullOrWhiteSpace(textBox.Text))
         {
+            isPlaceholderActive = true;
+            textBox.UseSystemPasswordChar = false;
             textBox.Text = PlaceholderText;
             textBox.ForeColor = Color.LightGray;
         }
@@ -50,6 +116,7 @@ public class ModernTextBox : UserControl
     {
         if (textBox.Text == PlaceholderText)
         {
+            isPlaceholderActive = false;
             textBox.Text = "";
             textBox.ForeColor = Color.White;
         }

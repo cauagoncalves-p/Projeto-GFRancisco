@@ -32,8 +32,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSubTituloF = new System.Windows.Forms.Label();
             this.panelCadastro = new System.Windows.Forms.Panel();
-            this.lblEspacoProBotao = new System.Windows.Forms.Label();
+            this.MtxtComplemento = new ModernTextBox();
+            this.MtxtCidade = new ModernTextBox();
+            this.MtxtEndereco = new ModernTextBox();
+            this.MtxtCEP = new ModernTextBox();
+            this.MtxtSobrenome = new ModernTextBox();
+            this.MtxtNome = new ModernTextBox();
+            this.MtxtConfirmeSenha = new ModernTextBox();
+            this.MtxtSenha = new ModernTextBox();
+            this.MtxtDataNascimento = new ModernTextBox();
             this.btnCriarConta = new System.Windows.Forms.Button();
+            this.MtxtTelefone = new ModernTextBox();
+            this.MtxtCPF = new ModernTextBox();
+            this.MtxtEmail = new ModernTextBox();
+            this.lblEspacoProBotao = new System.Windows.Forms.Label();
             this.lblConfirmeSenha = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
@@ -58,21 +70,13 @@
             this.lblCompartilhe = new System.Windows.Forms.Label();
             this.lblTransforme = new System.Windows.Forms.Label();
             this.lblDescritivo = new System.Windows.Forms.Label();
-            this.modernTextBox24 = new ModernTextBox();
-            this.modernTextBox23 = new ModernTextBox();
-            this.modernTextBox22 = new ModernTextBox();
-            this.modernTextBox21 = new ModernTextBox();
-            this.modernTextBox20 = new ModernTextBox();
-            this.modernTextBox19 = new ModernTextBox();
-            this.modernTextBox18 = new ModernTextBox();
-            this.modernTextBox17 = new ModernTextBox();
-            this.modernTextBox16 = new ModernTextBox();
-            this.modernTextBox15 = new ModernTextBox();
-            this.modernTextBox14 = new ModernTextBox();
-            this.modernTextBox13 = new ModernTextBox();
+            this.picMonstrarSenha = new System.Windows.Forms.PictureBox();
+            this.picMostrarSenha1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMostrarSenha1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -91,7 +95,7 @@
             this.lblSubTituloF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.lblSubTituloF.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTituloF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.lblSubTituloF.Location = new System.Drawing.Point(258, 168);
+            this.lblSubTituloF.Location = new System.Drawing.Point(258, 73);
             this.lblSubTituloF.Name = "lblSubTituloF";
             this.lblSubTituloF.Size = new System.Drawing.Size(246, 55);
             this.lblSubTituloF.TabIndex = 1;
@@ -101,19 +105,21 @@
             // 
             this.panelCadastro.AutoScroll = true;
             this.panelCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.panelCadastro.Controls.Add(this.modernTextBox24);
-            this.panelCadastro.Controls.Add(this.modernTextBox23);
-            this.panelCadastro.Controls.Add(this.modernTextBox22);
-            this.panelCadastro.Controls.Add(this.modernTextBox21);
-            this.panelCadastro.Controls.Add(this.modernTextBox20);
-            this.panelCadastro.Controls.Add(this.modernTextBox19);
-            this.panelCadastro.Controls.Add(this.modernTextBox18);
-            this.panelCadastro.Controls.Add(this.modernTextBox17);
-            this.panelCadastro.Controls.Add(this.modernTextBox16);
+            this.panelCadastro.Controls.Add(this.picMostrarSenha1);
+            this.panelCadastro.Controls.Add(this.picMonstrarSenha);
+            this.panelCadastro.Controls.Add(this.MtxtComplemento);
+            this.panelCadastro.Controls.Add(this.MtxtCidade);
+            this.panelCadastro.Controls.Add(this.MtxtEndereco);
+            this.panelCadastro.Controls.Add(this.MtxtCEP);
+            this.panelCadastro.Controls.Add(this.MtxtSobrenome);
+            this.panelCadastro.Controls.Add(this.MtxtNome);
+            this.panelCadastro.Controls.Add(this.MtxtConfirmeSenha);
+            this.panelCadastro.Controls.Add(this.MtxtSenha);
+            this.panelCadastro.Controls.Add(this.MtxtDataNascimento);
             this.panelCadastro.Controls.Add(this.btnCriarConta);
-            this.panelCadastro.Controls.Add(this.modernTextBox15);
-            this.panelCadastro.Controls.Add(this.modernTextBox14);
-            this.panelCadastro.Controls.Add(this.modernTextBox13);
+            this.panelCadastro.Controls.Add(this.MtxtTelefone);
+            this.panelCadastro.Controls.Add(this.MtxtCPF);
+            this.panelCadastro.Controls.Add(this.MtxtEmail);
             this.panelCadastro.Controls.Add(this.lblEspacoProBotao);
             this.panelCadastro.Controls.Add(this.lblConfirmeSenha);
             this.panelCadastro.Controls.Add(this.lblSenha);
@@ -138,16 +144,133 @@
             this.panelCadastro.Size = new System.Drawing.Size(684, 915);
             this.panelCadastro.TabIndex = 2;
             // 
-            // lblEspacoProBotao
+            // MtxtComplemento
             // 
-            this.lblEspacoProBotao.AutoSize = true;
-            this.lblEspacoProBotao.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspacoProBotao.ForeColor = System.Drawing.Color.White;
-            this.lblEspacoProBotao.Location = new System.Drawing.Point(69, 1201);
-            this.lblEspacoProBotao.Name = "lblEspacoProBotao";
-            this.lblEspacoProBotao.Size = new System.Drawing.Size(42, 25);
-            this.lblEspacoProBotao.TabIndex = 41;
-            this.lblEspacoProBotao.Text = "ppp";
+            this.MtxtComplemento.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtComplemento.EnablePlaceholder = true;
+            this.MtxtComplemento.Location = new System.Drawing.Point(68, 1078);
+            this.MtxtComplemento.Name = "MtxtComplemento";
+            this.MtxtComplemento.PasswordChar = '\0';
+            this.MtxtComplemento.PlaceholderChar = '\0';
+            this.MtxtComplemento.PlaceholderText = "Ex: 453, perto da estação";
+            this.MtxtComplemento.Size = new System.Drawing.Size(250, 40);
+            this.MtxtComplemento.TabIndex = 53;
+            this.MtxtComplemento.TextValue = "";
+            this.MtxtComplemento.UseSystemPasswordChar = false;
+            // 
+            // MtxtCidade
+            // 
+            this.MtxtCidade.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtCidade.EnablePlaceholder = true;
+            this.MtxtCidade.Location = new System.Drawing.Point(375, 1078);
+            this.MtxtCidade.Name = "MtxtCidade";
+            this.MtxtCidade.PasswordChar = '\0';
+            this.MtxtCidade.PlaceholderChar = '\0';
+            this.MtxtCidade.PlaceholderText = "Ex: São Paulo";
+            this.MtxtCidade.Size = new System.Drawing.Size(250, 40);
+            this.MtxtCidade.TabIndex = 52;
+            this.MtxtCidade.TextValue = "";
+            this.MtxtCidade.UseSystemPasswordChar = false;
+            // 
+            // MtxtEndereco
+            // 
+            this.MtxtEndereco.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtEndereco.EnablePlaceholder = true;
+            this.MtxtEndereco.Location = new System.Drawing.Point(373, 958);
+            this.MtxtEndereco.Name = "MtxtEndereco";
+            this.MtxtEndereco.PasswordChar = '\0';
+            this.MtxtEndereco.PlaceholderChar = '\0';
+            this.MtxtEndereco.PlaceholderText = "Ex: Senac Largo Treze";
+            this.MtxtEndereco.Size = new System.Drawing.Size(250, 40);
+            this.MtxtEndereco.TabIndex = 51;
+            this.MtxtEndereco.TextValue = "";
+            this.MtxtEndereco.UseSystemPasswordChar = false;
+            // 
+            // MtxtCEP
+            // 
+            this.MtxtCEP.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtCEP.EnablePlaceholder = true;
+            this.MtxtCEP.Location = new System.Drawing.Point(71, 958);
+            this.MtxtCEP.Name = "MtxtCEP";
+            this.MtxtCEP.PasswordChar = '\0';
+            this.MtxtCEP.PlaceholderChar = '\0';
+            this.MtxtCEP.PlaceholderText = "Ex: 00000-000";
+            this.MtxtCEP.Size = new System.Drawing.Size(250, 40);
+            this.MtxtCEP.TabIndex = 50;
+            this.MtxtCEP.TextValue = "";
+            this.MtxtCEP.UseSystemPasswordChar = false;
+            // 
+            // MtxtSobrenome
+            // 
+            this.MtxtSobrenome.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtSobrenome.EnablePlaceholder = true;
+            this.MtxtSobrenome.Location = new System.Drawing.Point(373, 446);
+            this.MtxtSobrenome.Name = "MtxtSobrenome";
+            this.MtxtSobrenome.PasswordChar = '\0';
+            this.MtxtSobrenome.PlaceholderChar = '\0';
+            this.MtxtSobrenome.PlaceholderText = "Ex: Gonçalves";
+            this.MtxtSobrenome.Size = new System.Drawing.Size(250, 40);
+            this.MtxtSobrenome.TabIndex = 49;
+            this.MtxtSobrenome.TextValue = "";
+            this.MtxtSobrenome.UseSystemPasswordChar = false;
+            // 
+            // MtxtNome
+            // 
+            this.MtxtNome.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtNome.EnablePlaceholder = true;
+            this.MtxtNome.Location = new System.Drawing.Point(66, 446);
+            this.MtxtNome.Name = "MtxtNome";
+            this.MtxtNome.PasswordChar = '\0';
+            this.MtxtNome.PlaceholderChar = '\0';
+            this.MtxtNome.PlaceholderText = "Ex: Cauã";
+            this.MtxtNome.Size = new System.Drawing.Size(250, 40);
+            this.MtxtNome.TabIndex = 48;
+            this.MtxtNome.TextValue = "";
+            this.MtxtNome.UseSystemPasswordChar = false;
+            // 
+            // MtxtConfirmeSenha
+            // 
+            this.MtxtConfirmeSenha.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtConfirmeSenha.EnablePlaceholder = true;
+            this.MtxtConfirmeSenha.Font = new System.Drawing.Font("Wingdings", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MtxtConfirmeSenha.Location = new System.Drawing.Point(373, 761);
+            this.MtxtConfirmeSenha.Name = "MtxtConfirmeSenha";
+            this.MtxtConfirmeSenha.PasswordChar = '\0';
+            this.MtxtConfirmeSenha.PlaceholderChar = '\0';
+            this.MtxtConfirmeSenha.PlaceholderText = "";
+            this.MtxtConfirmeSenha.Size = new System.Drawing.Size(250, 40);
+            this.MtxtConfirmeSenha.TabIndex = 47;
+            this.MtxtConfirmeSenha.TextValue = "";
+            this.MtxtConfirmeSenha.UseSystemPasswordChar = false;
+            // 
+            // MtxtSenha
+            // 
+            this.MtxtSenha.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtSenha.EnablePlaceholder = true;
+            this.MtxtSenha.Font = new System.Drawing.Font("Wingdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MtxtSenha.Location = new System.Drawing.Point(70, 761);
+            this.MtxtSenha.Name = "MtxtSenha";
+            this.MtxtSenha.PasswordChar = '\0';
+            this.MtxtSenha.PlaceholderChar = '\0';
+            this.MtxtSenha.PlaceholderText = "";
+            this.MtxtSenha.Size = new System.Drawing.Size(250, 40);
+            this.MtxtSenha.TabIndex = 46;
+            this.MtxtSenha.TextValue = "";
+            this.MtxtSenha.UseSystemPasswordChar = false;
+            // 
+            // MtxtDataNascimento
+            // 
+            this.MtxtDataNascimento.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtDataNascimento.EnablePlaceholder = true;
+            this.MtxtDataNascimento.Location = new System.Drawing.Point(373, 651);
+            this.MtxtDataNascimento.Name = "MtxtDataNascimento";
+            this.MtxtDataNascimento.PasswordChar = '\0';
+            this.MtxtDataNascimento.PlaceholderChar = '\0';
+            this.MtxtDataNascimento.PlaceholderText = "Ex: 00/00/0000";
+            this.MtxtDataNascimento.Size = new System.Drawing.Size(250, 40);
+            this.MtxtDataNascimento.TabIndex = 45;
+            this.MtxtDataNascimento.TextValue = "";
+            this.MtxtDataNascimento.UseSystemPasswordChar = false;
             // 
             // btnCriarConta
             // 
@@ -162,6 +285,59 @@
             this.btnCriarConta.TabIndex = 40;
             this.btnCriarConta.Text = "Criar conta";
             this.btnCriarConta.UseVisualStyleBackColor = false;
+            // 
+            // MtxtTelefone
+            // 
+            this.MtxtTelefone.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtTelefone.EnablePlaceholder = true;
+            this.MtxtTelefone.Location = new System.Drawing.Point(67, 651);
+            this.MtxtTelefone.Name = "MtxtTelefone";
+            this.MtxtTelefone.PasswordChar = '\0';
+            this.MtxtTelefone.PlaceholderChar = '\0';
+            this.MtxtTelefone.PlaceholderText = "Ex: 00 00000-0000";
+            this.MtxtTelefone.Size = new System.Drawing.Size(250, 40);
+            this.MtxtTelefone.TabIndex = 44;
+            this.MtxtTelefone.TextValue = "";
+            this.MtxtTelefone.UseSystemPasswordChar = false;
+            // 
+            // MtxtCPF
+            // 
+            this.MtxtCPF.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtCPF.EnablePlaceholder = true;
+            this.MtxtCPF.Location = new System.Drawing.Point(373, 551);
+            this.MtxtCPF.Name = "MtxtCPF";
+            this.MtxtCPF.PasswordChar = '\0';
+            this.MtxtCPF.PlaceholderChar = '\0';
+            this.MtxtCPF.PlaceholderText = "Ex: 000.000.000-00";
+            this.MtxtCPF.Size = new System.Drawing.Size(250, 40);
+            this.MtxtCPF.TabIndex = 43;
+            this.MtxtCPF.TextValue = "";
+            this.MtxtCPF.UseSystemPasswordChar = false;
+            // 
+            // MtxtEmail
+            // 
+            this.MtxtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtEmail.EnablePlaceholder = true;
+            this.MtxtEmail.Location = new System.Drawing.Point(66, 551);
+            this.MtxtEmail.Name = "MtxtEmail";
+            this.MtxtEmail.PasswordChar = '\0';
+            this.MtxtEmail.PlaceholderChar = '\0';
+            this.MtxtEmail.PlaceholderText = "Ex: caua@gmail.com";
+            this.MtxtEmail.Size = new System.Drawing.Size(250, 40);
+            this.MtxtEmail.TabIndex = 42;
+            this.MtxtEmail.TextValue = "";
+            this.MtxtEmail.UseSystemPasswordChar = false;
+            // 
+            // lblEspacoProBotao
+            // 
+            this.lblEspacoProBotao.AutoSize = true;
+            this.lblEspacoProBotao.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspacoProBotao.ForeColor = System.Drawing.Color.White;
+            this.lblEspacoProBotao.Location = new System.Drawing.Point(69, 1201);
+            this.lblEspacoProBotao.Name = "lblEspacoProBotao";
+            this.lblEspacoProBotao.Size = new System.Drawing.Size(42, 25);
+            this.lblEspacoProBotao.TabIndex = 41;
+            this.lblEspacoProBotao.Text = "ppp";
             // 
             // lblConfirmeSenha
             // 
@@ -201,7 +377,7 @@
             this.lblComplemento.AutoSize = true;
             this.lblComplemento.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplemento.ForeColor = System.Drawing.Color.White;
-            this.lblComplemento.Location = new System.Drawing.Point(368, 1027);
+            this.lblComplemento.Location = new System.Drawing.Point(66, 1031);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(121, 25);
             this.lblComplemento.TabIndex = 33;
@@ -212,7 +388,7 @@
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCidade.ForeColor = System.Drawing.Color.White;
-            this.lblCidade.Location = new System.Drawing.Point(64, 1027);
+            this.lblCidade.Location = new System.Drawing.Point(368, 1031);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(68, 25);
             this.lblCidade.TabIndex = 31;
@@ -257,7 +433,7 @@
             this.lblResidencia.AutoSize = true;
             this.lblResidencia.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResidencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.lblResidencia.Location = new System.Drawing.Point(66, 844);
+            this.lblResidencia.Location = new System.Drawing.Point(66, 856);
             this.lblResidencia.Name = "lblResidencia";
             this.lblResidencia.Size = new System.Drawing.Size(129, 24);
             this.lblResidencia.TabIndex = 24;
@@ -381,7 +557,7 @@
             this.lblTituloF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.lblTituloF.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.lblTituloF.Location = new System.Drawing.Point(258, 96);
+            this.lblTituloF.Location = new System.Drawing.Point(258, 153);
             this.lblTituloF.Name = "lblTituloF";
             this.lblTituloF.Size = new System.Drawing.Size(260, 55);
             this.lblTituloF.TabIndex = 4;
@@ -435,125 +611,25 @@
             this.lblDescritivo.TabIndex = 8;
             this.lblDescritivo.Text = resources.GetString("lblDescritivo.Text");
             // 
-            // modernTextBox24
+            // picMonstrarSenha
             // 
-            this.modernTextBox24.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox24.Location = new System.Drawing.Point(373, 1074);
-            this.modernTextBox24.Name = "modernTextBox24";
-            this.modernTextBox24.PlaceholderText = "Ex: 453, perto da estação";
-            this.modernTextBox24.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox24.TabIndex = 53;
-            this.modernTextBox24.TextValue = "";
+            this.picMonstrarSenha.Image = ((System.Drawing.Image)(resources.GetObject("picMonstrarSenha.Image")));
+            this.picMonstrarSenha.Location = new System.Drawing.Point(278, 769);
+            this.picMonstrarSenha.Name = "picMonstrarSenha";
+            this.picMonstrarSenha.Size = new System.Drawing.Size(26, 22);
+            this.picMonstrarSenha.TabIndex = 56;
+            this.picMonstrarSenha.TabStop = false;
+            this.picMonstrarSenha.Click += new System.EventHandler(this.picMonstrarSenha_Click);
             // 
-            // modernTextBox23
+            // picMostrarSenha1
             // 
-            this.modernTextBox23.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox23.Location = new System.Drawing.Point(71, 1074);
-            this.modernTextBox23.Name = "modernTextBox23";
-            this.modernTextBox23.PlaceholderText = "Ex: São Paulo";
-            this.modernTextBox23.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox23.TabIndex = 52;
-            this.modernTextBox23.TextValue = "";
-            // 
-            // modernTextBox22
-            // 
-            this.modernTextBox22.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox22.Location = new System.Drawing.Point(373, 958);
-            this.modernTextBox22.Name = "modernTextBox22";
-            this.modernTextBox22.PlaceholderText = "Ex: Senac Largo Treze";
-            this.modernTextBox22.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox22.TabIndex = 51;
-            this.modernTextBox22.TextValue = "";
-            // 
-            // modernTextBox21
-            // 
-            this.modernTextBox21.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox21.Location = new System.Drawing.Point(71, 958);
-            this.modernTextBox21.Name = "modernTextBox21";
-            this.modernTextBox21.PlaceholderText = "Ex: 00000-000";
-            this.modernTextBox21.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox21.TabIndex = 50;
-            this.modernTextBox21.TextValue = "";
-            // 
-            // modernTextBox20
-            // 
-            this.modernTextBox20.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox20.Location = new System.Drawing.Point(373, 446);
-            this.modernTextBox20.Name = "modernTextBox20";
-            this.modernTextBox20.PlaceholderText = "Ex: Gonçalves";
-            this.modernTextBox20.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox20.TabIndex = 49;
-            this.modernTextBox20.TextValue = "";
-            // 
-            // modernTextBox19
-            // 
-            this.modernTextBox19.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox19.Location = new System.Drawing.Point(66, 446);
-            this.modernTextBox19.Name = "modernTextBox19";
-            this.modernTextBox19.PlaceholderText = "Ex: Cauã";
-            this.modernTextBox19.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox19.TabIndex = 48;
-            this.modernTextBox19.TextValue = "";
-            // 
-            // modernTextBox18
-            // 
-            this.modernTextBox18.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox18.Location = new System.Drawing.Point(373, 761);
-            this.modernTextBox18.Name = "modernTextBox18";
-            this.modernTextBox18.PlaceholderText = "Ex: Senha123456@";
-            this.modernTextBox18.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox18.TabIndex = 47;
-            this.modernTextBox18.TextValue = "";
-            // 
-            // modernTextBox17
-            // 
-            this.modernTextBox17.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox17.Location = new System.Drawing.Point(70, 761);
-            this.modernTextBox17.Name = "modernTextBox17";
-            this.modernTextBox17.PlaceholderText = "Ex: Senha123456@";
-            this.modernTextBox17.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox17.TabIndex = 46;
-            this.modernTextBox17.TextValue = "";
-            // 
-            // modernTextBox16
-            // 
-            this.modernTextBox16.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox16.Location = new System.Drawing.Point(373, 651);
-            this.modernTextBox16.Name = "modernTextBox16";
-            this.modernTextBox16.PlaceholderText = "Ex: 00/00/0000";
-            this.modernTextBox16.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox16.TabIndex = 45;
-            this.modernTextBox16.TextValue = "";
-            // 
-            // modernTextBox15
-            // 
-            this.modernTextBox15.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox15.Location = new System.Drawing.Point(67, 651);
-            this.modernTextBox15.Name = "modernTextBox15";
-            this.modernTextBox15.PlaceholderText = "Ex: 00 00000-0000";
-            this.modernTextBox15.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox15.TabIndex = 44;
-            this.modernTextBox15.TextValue = "";
-            // 
-            // modernTextBox14
-            // 
-            this.modernTextBox14.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox14.Location = new System.Drawing.Point(373, 551);
-            this.modernTextBox14.Name = "modernTextBox14";
-            this.modernTextBox14.PlaceholderText = "Ex: 000.000.000-00";
-            this.modernTextBox14.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox14.TabIndex = 43;
-            this.modernTextBox14.TextValue = "";
-            // 
-            // modernTextBox13
-            // 
-            this.modernTextBox13.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox13.Location = new System.Drawing.Point(66, 551);
-            this.modernTextBox13.Name = "modernTextBox13";
-            this.modernTextBox13.PlaceholderText = "Ex: caua@gmail.com";
-            this.modernTextBox13.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox13.TabIndex = 42;
-            this.modernTextBox13.TextValue = "";
+            this.picMostrarSenha1.Image = ((System.Drawing.Image)(resources.GetObject("picMostrarSenha1.Image")));
+            this.picMostrarSenha1.Location = new System.Drawing.Point(586, 769);
+            this.picMostrarSenha1.Name = "picMostrarSenha1";
+            this.picMostrarSenha1.Size = new System.Drawing.Size(26, 22);
+            this.picMostrarSenha1.TabIndex = 57;
+            this.picMostrarSenha1.TabStop = false;
+            this.picMostrarSenha1.Click += new System.EventHandler(this.picMostrarSenha1_Click);
             // 
             // frmLoginVoluntario
             // 
@@ -581,6 +657,8 @@
             this.panelCadastro.ResumeLayout(false);
             this.panelCadastro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMostrarSenha1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -629,17 +707,19 @@
         private ModernTextBox modernTextBox12;
         private System.Windows.Forms.Button btnCriarConta;
         private System.Windows.Forms.Label lblEspacoProBotao;
-        private ModernTextBox modernTextBox24;
-        private ModernTextBox modernTextBox23;
-        private ModernTextBox modernTextBox22;
-        private ModernTextBox modernTextBox21;
-        private ModernTextBox modernTextBox20;
-        private ModernTextBox modernTextBox19;
-        private ModernTextBox modernTextBox18;
-        private ModernTextBox modernTextBox17;
-        private ModernTextBox modernTextBox16;
-        private ModernTextBox modernTextBox15;
-        private ModernTextBox modernTextBox14;
-        private ModernTextBox modernTextBox13;
+        private ModernTextBox MtxtComplemento;
+        private ModernTextBox MtxtCidade;
+        private ModernTextBox MtxtEndereco;
+        private ModernTextBox MtxtCEP;
+        private ModernTextBox MtxtSobrenome;
+        private ModernTextBox MtxtNome;
+        private ModernTextBox MtxtConfirmeSenha;
+        private ModernTextBox MtxtSenha;
+        private ModernTextBox MtxtDataNascimento;
+        private ModernTextBox MtxtTelefone;
+        private ModernTextBox MtxtCPF;
+        private ModernTextBox MtxtEmail;
+        private System.Windows.Forms.PictureBox picMostrarSenha1;
+        private System.Windows.Forms.PictureBox picMonstrarSenha;
     }
 }

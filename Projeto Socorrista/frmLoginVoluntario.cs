@@ -23,7 +23,7 @@ namespace Projeto_Socorrista
             input.Location = new Point(20, 20);
             input.PlaceholderText = "Seu nome completo";
             this.Controls.Add(input);
-            panel1.SendToBack();
+            panelCadastro.SendToBack();
          
 
         }

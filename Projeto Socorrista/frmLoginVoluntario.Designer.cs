@@ -30,34 +30,34 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginVoluntario));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTituloPrincipal = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblSubTituloF = new System.Windows.Forms.Label();
+            this.panelCadastro = new System.Windows.Forms.Panel();
+            this.lblEspacoProBotao = new System.Windows.Forms.Label();
+            this.btnCriarConta = new System.Windows.Forms.Button();
+            this.lblConfirmeSenha = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.lblComplemento = new System.Windows.Forms.Label();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.lblCep = new System.Windows.Forms.Label();
+            this.lblPontilhado2 = new System.Windows.Forms.Label();
+            this.lblResidencia = new System.Windows.Forms.Label();
+            this.lblPontilhado = new System.Windows.Forms.Label();
+            this.lblDadosPessoais = new System.Windows.Forms.Label();
+            this.lblDataNascimento = new System.Windows.Forms.Label();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblSobrenome = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblSubTituloCriarConta = new System.Windows.Forms.Label();
+            this.lblTituloCriarConta = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTituloF = new System.Windows.Forms.Label();
+            this.lblDoe = new System.Windows.Forms.Label();
+            this.lblCompartilhe = new System.Windows.Forms.Label();
+            this.lblTransforme = new System.Windows.Forms.Label();
+            this.lblDescritivo = new System.Windows.Forms.Label();
             this.modernTextBox24 = new ModernTextBox();
             this.modernTextBox23 = new ModernTextBox();
             this.modernTextBox22 = new ModernTextBox();
@@ -71,7 +71,7 @@
             this.modernTextBox14 = new ModernTextBox();
             this.modernTextBox13 = new ModernTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,362 +79,366 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(727, 978);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblTituloPrincipal
+            // lblSubTituloF
             // 
-            this.lblTituloPrincipal.AutoSize = true;
-            this.lblTituloPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblTituloPrincipal.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.lblTituloPrincipal.Location = new System.Drawing.Point(258, 168);
-            this.lblTituloPrincipal.Name = "lblTituloPrincipal";
-            this.lblTituloPrincipal.Size = new System.Drawing.Size(246, 55);
-            this.lblTituloPrincipal.TabIndex = 1;
-            this.lblTituloPrincipal.Text = "Grupo G.";
+            this.lblSubTituloF.AutoSize = true;
+            this.lblSubTituloF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.lblSubTituloF.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTituloF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
+            this.lblSubTituloF.Location = new System.Drawing.Point(258, 168);
+            this.lblSubTituloF.Name = "lblSubTituloF";
+            this.lblSubTituloF.Size = new System.Drawing.Size(246, 55);
+            this.lblSubTituloF.TabIndex = 1;
+            this.lblSubTituloF.Text = "Grupo G.";
             // 
-            // panel1
+            // panelCadastro
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.panel1.Controls.Add(this.modernTextBox24);
-            this.panel1.Controls.Add(this.modernTextBox23);
-            this.panel1.Controls.Add(this.modernTextBox22);
-            this.panel1.Controls.Add(this.modernTextBox21);
-            this.panel1.Controls.Add(this.modernTextBox20);
-            this.panel1.Controls.Add(this.modernTextBox19);
-            this.panel1.Controls.Add(this.modernTextBox18);
-            this.panel1.Controls.Add(this.modernTextBox17);
-            this.panel1.Controls.Add(this.modernTextBox16);
-            this.panel1.Controls.Add(this.modernTextBox15);
-            this.panel1.Controls.Add(this.modernTextBox14);
-            this.panel1.Controls.Add(this.modernTextBox13);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(727, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(682, 776);
-            this.panel1.TabIndex = 2;
+            this.panelCadastro.AutoScroll = true;
+            this.panelCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
+            this.panelCadastro.Controls.Add(this.modernTextBox24);
+            this.panelCadastro.Controls.Add(this.modernTextBox23);
+            this.panelCadastro.Controls.Add(this.modernTextBox22);
+            this.panelCadastro.Controls.Add(this.modernTextBox21);
+            this.panelCadastro.Controls.Add(this.modernTextBox20);
+            this.panelCadastro.Controls.Add(this.modernTextBox19);
+            this.panelCadastro.Controls.Add(this.modernTextBox18);
+            this.panelCadastro.Controls.Add(this.modernTextBox17);
+            this.panelCadastro.Controls.Add(this.modernTextBox16);
+            this.panelCadastro.Controls.Add(this.btnCriarConta);
+            this.panelCadastro.Controls.Add(this.modernTextBox15);
+            this.panelCadastro.Controls.Add(this.modernTextBox14);
+            this.panelCadastro.Controls.Add(this.modernTextBox13);
+            this.panelCadastro.Controls.Add(this.lblEspacoProBotao);
+            this.panelCadastro.Controls.Add(this.lblConfirmeSenha);
+            this.panelCadastro.Controls.Add(this.lblSenha);
+            this.panelCadastro.Controls.Add(this.lblCPF);
+            this.panelCadastro.Controls.Add(this.lblComplemento);
+            this.panelCadastro.Controls.Add(this.lblCidade);
+            this.panelCadastro.Controls.Add(this.lblEndereco);
+            this.panelCadastro.Controls.Add(this.lblCep);
+            this.panelCadastro.Controls.Add(this.lblPontilhado2);
+            this.panelCadastro.Controls.Add(this.lblResidencia);
+            this.panelCadastro.Controls.Add(this.lblPontilhado);
+            this.panelCadastro.Controls.Add(this.lblDadosPessoais);
+            this.panelCadastro.Controls.Add(this.lblDataNascimento);
+            this.panelCadastro.Controls.Add(this.lblTelefone);
+            this.panelCadastro.Controls.Add(this.lblEmail);
+            this.panelCadastro.Controls.Add(this.lblSobrenome);
+            this.panelCadastro.Controls.Add(this.lblNome);
+            this.panelCadastro.Controls.Add(this.lblSubTituloCriarConta);
+            this.panelCadastro.Controls.Add(this.lblTituloCriarConta);
+            this.panelCadastro.Location = new System.Drawing.Point(727, -137);
+            this.panelCadastro.Name = "panelCadastro";
+            this.panelCadastro.Size = new System.Drawing.Size(684, 915);
+            this.panelCadastro.TabIndex = 2;
             // 
-            // label24
+            // lblEspacoProBotao
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(65, 1375);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(0, 25);
-            this.label24.TabIndex = 41;
+            this.lblEspacoProBotao.AutoSize = true;
+            this.lblEspacoProBotao.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspacoProBotao.ForeColor = System.Drawing.Color.White;
+            this.lblEspacoProBotao.Location = new System.Drawing.Point(69, 1201);
+            this.lblEspacoProBotao.Name = "lblEspacoProBotao";
+            this.lblEspacoProBotao.Size = new System.Drawing.Size(42, 25);
+            this.lblEspacoProBotao.TabIndex = 41;
+            this.lblEspacoProBotao.Text = "ppp";
             // 
-            // button1
+            // btnCriarConta
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(71, 1324);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(557, 46);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Criar conta";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCriarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(135)))), ((int)(((byte)(95)))));
+            this.btnCriarConta.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCriarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCriarConta.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarConta.ForeColor = System.Drawing.Color.White;
+            this.btnCriarConta.Location = new System.Drawing.Point(70, 1147);
+            this.btnCriarConta.Name = "btnCriarConta";
+            this.btnCriarConta.Size = new System.Drawing.Size(557, 46);
+            this.btnCriarConta.TabIndex = 40;
+            this.btnCriarConta.Text = "Criar conta";
+            this.btnCriarConta.UseVisualStyleBackColor = false;
             // 
-            // label22
+            // lblConfirmeSenha
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(370, 904);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(176, 25);
-            this.label22.TabIndex = 39;
-            this.label22.Text = "Confirme sua senha ";
+            this.lblConfirmeSenha.AutoSize = true;
+            this.lblConfirmeSenha.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmeSenha.ForeColor = System.Drawing.Color.White;
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(370, 715);
+            this.lblConfirmeSenha.Name = "lblConfirmeSenha";
+            this.lblConfirmeSenha.Size = new System.Drawing.Size(176, 25);
+            this.lblConfirmeSenha.TabIndex = 39;
+            this.lblConfirmeSenha.Text = "Confirme sua senha ";
             // 
-            // label23
+            // lblSenha
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(64, 904);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(63, 25);
-            this.label23.TabIndex = 38;
-            this.label23.Text = "Senha";
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.White;
+            this.lblSenha.Location = new System.Drawing.Point(64, 715);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(63, 25);
+            this.lblSenha.TabIndex = 38;
+            this.lblSenha.Text = "Senha";
             // 
-            // label21
+            // lblCPF
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(368, 696);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(46, 25);
-            this.label21.TabIndex = 35;
-            this.label21.Text = "CPF";
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.ForeColor = System.Drawing.Color.White;
+            this.lblCPF.Location = new System.Drawing.Point(368, 507);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(46, 25);
+            this.lblCPF.TabIndex = 35;
+            this.lblCPF.Text = "CPF";
             // 
-            // label19
+            // lblComplemento
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(368, 1198);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(121, 25);
-            this.label19.TabIndex = 33;
-            this.label19.Text = "Complemento";
+            this.lblComplemento.AutoSize = true;
+            this.lblComplemento.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplemento.ForeColor = System.Drawing.Color.White;
+            this.lblComplemento.Location = new System.Drawing.Point(368, 1027);
+            this.lblComplemento.Name = "lblComplemento";
+            this.lblComplemento.Size = new System.Drawing.Size(121, 25);
+            this.lblComplemento.TabIndex = 33;
+            this.lblComplemento.Text = "Complemento";
             // 
-            // label20
+            // lblCidade
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(64, 1198);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 25);
-            this.label20.TabIndex = 31;
-            this.label20.Text = "Cidade";
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCidade.ForeColor = System.Drawing.Color.White;
+            this.lblCidade.Location = new System.Drawing.Point(64, 1027);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(68, 25);
+            this.lblCidade.TabIndex = 31;
+            this.lblCidade.Text = "Cidade";
             // 
-            // label18
+            // lblEndereco
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(368, 1086);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(88, 25);
-            this.label18.TabIndex = 29;
-            this.label18.Text = "Endereço";
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndereco.ForeColor = System.Drawing.Color.White;
+            this.lblEndereco.Location = new System.Drawing.Point(368, 915);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(88, 25);
+            this.lblEndereco.TabIndex = 29;
+            this.lblEndereco.Text = "Endereço";
             // 
-            // label17
+            // lblCep
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(65, 1086);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 25);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "CEP";
+            this.lblCep.AutoSize = true;
+            this.lblCep.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCep.ForeColor = System.Drawing.Color.White;
+            this.lblCep.Location = new System.Drawing.Point(65, 915);
+            this.lblCep.Name = "lblCep";
+            this.lblCep.Size = new System.Drawing.Size(46, 25);
+            this.lblCep.TabIndex = 27;
+            this.lblCep.Text = "CEP";
             // 
-            // label15
+            // lblPontilhado2
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(65, 1057);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(576, 25);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "---------------------------------------------------------------------------------" +
+            this.lblPontilhado2.AutoSize = true;
+            this.lblPontilhado2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPontilhado2.ForeColor = System.Drawing.Color.White;
+            this.lblPontilhado2.Location = new System.Drawing.Point(65, 886);
+            this.lblPontilhado2.Name = "lblPontilhado2";
+            this.lblPontilhado2.Size = new System.Drawing.Size(576, 25);
+            this.lblPontilhado2.TabIndex = 25;
+            this.lblPontilhado2.Text = "---------------------------------------------------------------------------------" +
     "-------------";
             // 
-            // label16
+            // lblResidencia
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.label16.Location = new System.Drawing.Point(66, 1033);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(129, 24);
-            this.label16.TabIndex = 24;
-            this.label16.Text = "Residência:";
+            this.lblResidencia.AutoSize = true;
+            this.lblResidencia.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResidencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.lblResidencia.Location = new System.Drawing.Point(66, 844);
+            this.lblResidencia.Name = "lblResidencia";
+            this.lblResidencia.Size = new System.Drawing.Size(129, 24);
+            this.lblResidencia.TabIndex = 24;
+            this.lblResidencia.Text = "Residência:";
             // 
-            // label14
+            // lblPontilhado
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(61, 559);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(576, 25);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "---------------------------------------------------------------------------------" +
+            this.lblPontilhado.AutoSize = true;
+            this.lblPontilhado.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPontilhado.ForeColor = System.Drawing.Color.White;
+            this.lblPontilhado.Location = new System.Drawing.Point(61, 370);
+            this.lblPontilhado.Name = "lblPontilhado";
+            this.lblPontilhado.Size = new System.Drawing.Size(576, 25);
+            this.lblPontilhado.TabIndex = 23;
+            this.lblPontilhado.Text = "---------------------------------------------------------------------------------" +
     "-------------";
             // 
-            // label13
+            // lblDadosPessoais
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(62, 535);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(174, 24);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "Dados Pessoais:";
+            this.lblDadosPessoais.AutoSize = true;
+            this.lblDadosPessoais.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDadosPessoais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.lblDadosPessoais.Location = new System.Drawing.Point(62, 346);
+            this.lblDadosPessoais.Name = "lblDadosPessoais";
+            this.lblDadosPessoais.Size = new System.Drawing.Size(174, 24);
+            this.lblDadosPessoais.TabIndex = 22;
+            this.lblDadosPessoais.Text = "Dados Pessoais:";
             // 
-            // label12
+            // lblDataNascimento
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(371, 800);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(170, 25);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Data de nascimento";
+            this.lblDataNascimento.AutoSize = true;
+            this.lblDataNascimento.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataNascimento.ForeColor = System.Drawing.Color.White;
+            this.lblDataNascimento.Location = new System.Drawing.Point(371, 611);
+            this.lblDataNascimento.Name = "lblDataNascimento";
+            this.lblDataNascimento.Size = new System.Drawing.Size(170, 25);
+            this.lblDataNascimento.TabIndex = 21;
+            this.lblDataNascimento.Text = "Data de nascimento";
             // 
-            // label11
+            // lblTelefone
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(65, 800);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 25);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Telefone";
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefone.ForeColor = System.Drawing.Color.White;
+            this.lblTelefone.Location = new System.Drawing.Point(65, 611);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(82, 25);
+            this.lblTelefone.TabIndex = 19;
+            this.lblTelefone.Text = "Telefone";
             // 
-            // label10
+            // lblEmail
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(62, 696);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 25);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(62, 507);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(55, 25);
+            this.lblEmail.TabIndex = 18;
+            this.lblEmail.Text = "Email";
             // 
-            // label9
+            // lblSobrenome
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(368, 595);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 25);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Sobrenome";
+            this.lblSobrenome.AutoSize = true;
+            this.lblSobrenome.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobrenome.ForeColor = System.Drawing.Color.White;
+            this.lblSobrenome.Location = new System.Drawing.Point(368, 406);
+            this.lblSobrenome.Name = "lblSobrenome";
+            this.lblSobrenome.Size = new System.Drawing.Size(103, 25);
+            this.lblSobrenome.TabIndex = 15;
+            this.lblSobrenome.Text = "Sobrenome";
             // 
-            // label8
+            // lblNome
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(62, 595);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 25);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Nome";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(62, 406);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(58, 25);
+            this.lblNome.TabIndex = 11;
+            this.lblNome.Text = "Nome";
             // 
-            // label7
+            // lblSubTituloCriarConta
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Cooper Black", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(122, 435);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(428, 40);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Vamos criar sua conta?";
+            this.lblSubTituloCriarConta.AutoSize = true;
+            this.lblSubTituloCriarConta.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubTituloCriarConta.Font = new System.Drawing.Font("Cooper Black", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTituloCriarConta.ForeColor = System.Drawing.Color.White;
+            this.lblSubTituloCriarConta.Location = new System.Drawing.Point(121, 260);
+            this.lblSubTituloCriarConta.Name = "lblSubTituloCriarConta";
+            this.lblSubTituloCriarConta.Size = new System.Drawing.Size(428, 40);
+            this.lblSubTituloCriarConta.TabIndex = 10;
+            this.lblSubTituloCriarConta.Text = "Vamos criar sua conta?";
             // 
-            // label6
+            // lblTituloCriarConta
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(57, 351);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(555, 55);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Bem vindo voluntário";
+            this.lblTituloCriarConta.AutoSize = true;
+            this.lblTituloCriarConta.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloCriarConta.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloCriarConta.ForeColor = System.Drawing.Color.White;
+            this.lblTituloCriarConta.Location = new System.Drawing.Point(56, 176);
+            this.lblTituloCriarConta.Name = "lblTituloCriarConta";
+            this.lblTituloCriarConta.Size = new System.Drawing.Size(555, 55);
+            this.lblTituloCriarConta.TabIndex = 9;
+            this.lblTituloCriarConta.Text = "Bem vindo voluntário";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(16, 39);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 20);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(227, 223);
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // lblTituloF
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.label1.Location = new System.Drawing.Point(258, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 55);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Francisco";
+            this.lblTituloF.AutoSize = true;
+            this.lblTituloF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.lblTituloF.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
+            this.lblTituloF.Location = new System.Drawing.Point(258, 96);
+            this.lblTituloF.Name = "lblTituloF";
+            this.lblTituloF.Size = new System.Drawing.Size(260, 55);
+            this.lblTituloF.TabIndex = 4;
+            this.lblTituloF.Text = "Francisco";
             // 
-            // label2
+            // lblDoe
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(156)))), ((int)(((byte)(241)))));
-            this.label2.Location = new System.Drawing.Point(45, 306);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 55);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Doe.";
+            this.lblDoe.AutoSize = true;
+            this.lblDoe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.lblDoe.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(156)))), ((int)(((byte)(241)))));
+            this.lblDoe.Location = new System.Drawing.Point(45, 306);
+            this.lblDoe.Name = "lblDoe";
+            this.lblDoe.Size = new System.Drawing.Size(131, 55);
+            this.lblDoe.TabIndex = 5;
+            this.lblDoe.Text = "Doe.";
             // 
-            // label3
+            // lblCompartilhe
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(45, 373);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(348, 55);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Compartilhe.";
+            this.lblCompartilhe.AutoSize = true;
+            this.lblCompartilhe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.lblCompartilhe.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompartilhe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.lblCompartilhe.Location = new System.Drawing.Point(45, 373);
+            this.lblCompartilhe.Name = "lblCompartilhe";
+            this.lblCompartilhe.Size = new System.Drawing.Size(348, 55);
+            this.lblCompartilhe.TabIndex = 6;
+            this.lblCompartilhe.Text = "Compartilhe.";
             // 
-            // label4
+            // lblTransforme
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label4.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(139)))), ((int)(((byte)(106)))));
-            this.label4.Location = new System.Drawing.Point(45, 442);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(326, 55);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Transforme.";
+            this.lblTransforme.AutoSize = true;
+            this.lblTransforme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.lblTransforme.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransforme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(139)))), ((int)(((byte)(106)))));
+            this.lblTransforme.Location = new System.Drawing.Point(45, 442);
+            this.lblTransforme.Name = "lblTransforme";
+            this.lblTransforme.Size = new System.Drawing.Size(326, 55);
+            this.lblTransforme.TabIndex = 7;
+            this.lblTransforme.Text = "Transforme.";
             // 
-            // label5
+            // lblDescritivo
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label5.Location = new System.Drawing.Point(12, 556);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(715, 200);
-            this.label5.TabIndex = 8;
-            this.label5.Text = resources.GetString("label5.Text");
+            this.lblDescritivo.AutoSize = true;
+            this.lblDescritivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.lblDescritivo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescritivo.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblDescritivo.Location = new System.Drawing.Point(12, 556);
+            this.lblDescritivo.Name = "lblDescritivo";
+            this.lblDescritivo.Size = new System.Drawing.Size(715, 200);
+            this.lblDescritivo.TabIndex = 8;
+            this.lblDescritivo.Text = resources.GetString("lblDescritivo.Text");
             // 
             // modernTextBox24
             // 
             this.modernTextBox24.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox24.Location = new System.Drawing.Point(373, 1245);
+            this.modernTextBox24.Location = new System.Drawing.Point(373, 1074);
             this.modernTextBox24.Name = "modernTextBox24";
             this.modernTextBox24.PlaceholderText = "Ex: 453, perto da estação";
             this.modernTextBox24.Size = new System.Drawing.Size(250, 40);
@@ -444,7 +448,7 @@
             // modernTextBox23
             // 
             this.modernTextBox23.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox23.Location = new System.Drawing.Point(71, 1245);
+            this.modernTextBox23.Location = new System.Drawing.Point(71, 1074);
             this.modernTextBox23.Name = "modernTextBox23";
             this.modernTextBox23.PlaceholderText = "Ex: São Paulo";
             this.modernTextBox23.Size = new System.Drawing.Size(250, 40);
@@ -454,7 +458,7 @@
             // modernTextBox22
             // 
             this.modernTextBox22.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox22.Location = new System.Drawing.Point(373, 1129);
+            this.modernTextBox22.Location = new System.Drawing.Point(373, 958);
             this.modernTextBox22.Name = "modernTextBox22";
             this.modernTextBox22.PlaceholderText = "Ex: Senac Largo Treze";
             this.modernTextBox22.Size = new System.Drawing.Size(250, 40);
@@ -464,7 +468,7 @@
             // modernTextBox21
             // 
             this.modernTextBox21.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox21.Location = new System.Drawing.Point(71, 1129);
+            this.modernTextBox21.Location = new System.Drawing.Point(71, 958);
             this.modernTextBox21.Name = "modernTextBox21";
             this.modernTextBox21.PlaceholderText = "Ex: 00000-000";
             this.modernTextBox21.Size = new System.Drawing.Size(250, 40);
@@ -474,7 +478,7 @@
             // modernTextBox20
             // 
             this.modernTextBox20.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox20.Location = new System.Drawing.Point(373, 635);
+            this.modernTextBox20.Location = new System.Drawing.Point(373, 446);
             this.modernTextBox20.Name = "modernTextBox20";
             this.modernTextBox20.PlaceholderText = "Ex: Gonçalves";
             this.modernTextBox20.Size = new System.Drawing.Size(250, 40);
@@ -484,7 +488,7 @@
             // modernTextBox19
             // 
             this.modernTextBox19.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox19.Location = new System.Drawing.Point(66, 635);
+            this.modernTextBox19.Location = new System.Drawing.Point(66, 446);
             this.modernTextBox19.Name = "modernTextBox19";
             this.modernTextBox19.PlaceholderText = "Ex: Cauã";
             this.modernTextBox19.Size = new System.Drawing.Size(250, 40);
@@ -494,7 +498,7 @@
             // modernTextBox18
             // 
             this.modernTextBox18.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox18.Location = new System.Drawing.Point(373, 950);
+            this.modernTextBox18.Location = new System.Drawing.Point(373, 761);
             this.modernTextBox18.Name = "modernTextBox18";
             this.modernTextBox18.PlaceholderText = "Ex: Senha123456@";
             this.modernTextBox18.Size = new System.Drawing.Size(250, 40);
@@ -504,7 +508,7 @@
             // modernTextBox17
             // 
             this.modernTextBox17.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox17.Location = new System.Drawing.Point(70, 950);
+            this.modernTextBox17.Location = new System.Drawing.Point(70, 761);
             this.modernTextBox17.Name = "modernTextBox17";
             this.modernTextBox17.PlaceholderText = "Ex: Senha123456@";
             this.modernTextBox17.Size = new System.Drawing.Size(250, 40);
@@ -514,7 +518,7 @@
             // modernTextBox16
             // 
             this.modernTextBox16.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox16.Location = new System.Drawing.Point(373, 840);
+            this.modernTextBox16.Location = new System.Drawing.Point(373, 651);
             this.modernTextBox16.Name = "modernTextBox16";
             this.modernTextBox16.PlaceholderText = "Ex: 00/00/0000";
             this.modernTextBox16.Size = new System.Drawing.Size(250, 40);
@@ -524,7 +528,7 @@
             // modernTextBox15
             // 
             this.modernTextBox15.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox15.Location = new System.Drawing.Point(67, 840);
+            this.modernTextBox15.Location = new System.Drawing.Point(67, 651);
             this.modernTextBox15.Name = "modernTextBox15";
             this.modernTextBox15.PlaceholderText = "Ex: 00 00000-0000";
             this.modernTextBox15.Size = new System.Drawing.Size(250, 40);
@@ -534,7 +538,7 @@
             // modernTextBox14
             // 
             this.modernTextBox14.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox14.Location = new System.Drawing.Point(373, 740);
+            this.modernTextBox14.Location = new System.Drawing.Point(373, 551);
             this.modernTextBox14.Name = "modernTextBox14";
             this.modernTextBox14.PlaceholderText = "Ex: 000.000.000-00";
             this.modernTextBox14.Size = new System.Drawing.Size(250, 40);
@@ -544,7 +548,7 @@
             // modernTextBox13
             // 
             this.modernTextBox13.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox13.Location = new System.Drawing.Point(66, 740);
+            this.modernTextBox13.Location = new System.Drawing.Point(66, 551);
             this.modernTextBox13.Name = "modernTextBox13";
             this.modernTextBox13.PlaceholderText = "Ex: caua@gmail.com";
             this.modernTextBox13.Size = new System.Drawing.Size(250, 40);
@@ -558,14 +562,15 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1411, 777);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblTituloPrincipal);
+            this.Controls.Add(this.lblTituloF);
+            this.Controls.Add(this.lblDescritivo);
+            this.Controls.Add(this.lblTransforme);
+            this.Controls.Add(this.lblCompartilhe);
+            this.Controls.Add(this.lblDoe);
+            this.Controls.Add(this.panelCadastro);
+            this.Controls.Add(this.lblSubTituloF);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLoginVoluntario";
@@ -573,8 +578,8 @@
             this.Text = "Login de Voluntário ";
             this.Load += new System.EventHandler(this.frmLoginVoluntario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelCadastro.ResumeLayout(false);
+            this.panelCadastro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -584,46 +589,46 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTituloPrincipal;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblSubTituloF;
+        private System.Windows.Forms.Panel panelCadastro;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTituloF;
+        private System.Windows.Forms.Label lblDoe;
+        private System.Windows.Forms.Label lblCompartilhe;
+        private System.Windows.Forms.Label lblTransforme;
+        private System.Windows.Forms.Label lblDescritivo;
+        private System.Windows.Forms.Label lblTituloCriarConta;
+        private System.Windows.Forms.Label lblSubTituloCriarConta;
+        private System.Windows.Forms.Label lblNome;
         private ModernTextBox modernTextBox1;
         private ModernTextBox modernTextBox2;
         private ModernTextBox modernTextBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblSobrenome;
+        private System.Windows.Forms.Label lblEmail;
         private ModernTextBox modernTextBox4;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblDataNascimento;
         private ModernTextBox modernTextBox5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblTelefone;
+        private System.Windows.Forms.Label lblPontilhado;
+        private System.Windows.Forms.Label lblDadosPessoais;
+        private System.Windows.Forms.Label lblEndereco;
         private ModernTextBox modernTextBox7;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblCep;
         private ModernTextBox modernTextBox6;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblPontilhado2;
+        private System.Windows.Forms.Label lblResidencia;
+        private System.Windows.Forms.Label lblCPF;
         private ModernTextBox modernTextBox10;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblComplemento;
         private ModernTextBox modernTextBox8;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblCidade;
         private ModernTextBox modernTextBox9;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblConfirmeSenha;
         private ModernTextBox modernTextBox11;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblSenha;
         private ModernTextBox modernTextBox12;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button btnCriarConta;
+        private System.Windows.Forms.Label lblEspacoProBotao;
         private ModernTextBox modernTextBox24;
         private ModernTextBox modernTextBox23;
         private ModernTextBox modernTextBox22;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -8,14 +9,22 @@ public class ModernTextBox : UserControl
     private TextBox textBox;
     public string PlaceholderText { get; set; } = "Digite aqui...";
     public char PlaceholderChar { get; set; }
-
+    private bool isPlaceholderActive = true;
     private bool usePasswordChar = false;
     public bool EnablePlaceholder { get; set; } = true;
+
     public string TextValue
     {
         get => (textBox.Text == PlaceholderText) ? "" : textBox.Text;
         set => textBox.Text = value;
     }
+
+    public int SelectionStart
+    {
+        get => textBox.SelectionStart;
+        set => textBox.SelectionStart = value;
+    }
+
 
     //Mostrar senha
 
@@ -23,12 +32,13 @@ public class ModernTextBox : UserControl
     {
         textBox.UseSystemPasswordChar = !isPlaceholderActive && usePasswordChar;
     }
+
     public void MostrarSenha(bool mostrar)
     {
         textBox.UseSystemPasswordChar = !mostrar && usePasswordChar;
-
     }
 
+    // transforma o caracter em bolinha 
     public bool UseSystemPasswordChar
     {
         get => usePasswordChar;
@@ -52,9 +62,10 @@ public class ModernTextBox : UserControl
         set => textBox.MaxLength = value;
     }
 
-
+    // adicionado o evento de textchanged
+    [Browsable(true)]
+    [EditorBrowsable(EditorBrowsableState.Always)]
     public event EventHandler TextChanged;
-    private bool isPlaceholderActive = true;
 
     public ModernTextBox()
     {
@@ -72,23 +83,23 @@ public class ModernTextBox : UserControl
             Width = this.Width - 20
         };
 
+
         textBox.TextChanged += (s, e) =>
         {
             if (!isPlaceholderActive)
             {
-                TextChanged?.Invoke(this, e);
+                TextChanged?.Invoke(this, e); // Encaminha o evento corretamente
             }
         };
+
 
         textBox.GotFocus += RemovePlaceholder;
         textBox.LostFocus += SetPlaceholder;
 
         this.Controls.Add(textBox);
-
-        // Removida a chamada daqui:
-        // SetPlaceholder(null, null); 
     }
 
+    // fazendo o placeholder aparecer quando inicia o form
     protected override void OnCreateControl()
     {
         base.OnCreateControl();
@@ -122,6 +133,7 @@ public class ModernTextBox : UserControl
         }
     }
 
+    // arredodando as bordas e colocando elas com color white 
     protected override void OnPaint(PaintEventArgs e)
     {
         base.OnPaint(e);

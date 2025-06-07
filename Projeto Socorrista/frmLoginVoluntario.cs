@@ -50,13 +50,12 @@ namespace Projeto_Socorrista
         }
 
         // crianndo metodo de avaliar se a senha é forte ou não
-
         private void AvaliarForcaSenha(string senha)
         {
             int forca = 0;
 
             // Tamanho
-            if (senha.Length == 10)
+            if (senha.Length == 15)
                 forca++;
 
             // Contém letra
@@ -92,8 +91,6 @@ namespace Projeto_Socorrista
         }
 
         // verifica se a senha digitada tem caracter especial , número, letra e tamanho mínimo de 10 caracteres
-
-
         private void verificaSenhaForte(string senha)
         {
             Regex regexSenhaForte = new Regex(@"^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{10,}$"); ;

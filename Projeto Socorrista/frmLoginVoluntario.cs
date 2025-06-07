@@ -11,6 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MosaicoSolutions.ViaCep;
 using MySql.Data.MySqlClient;
 using Projeto_Socorrista.Classes;
+using System.Text.RegularExpressions;
 
 namespace Projeto_Socorrista
 {
@@ -36,7 +37,7 @@ namespace Projeto_Socorrista
         {
             MtxtConfirmeSenha.MaxLength = 15;
             MtxtSenha.MaxLength = 15;
-            MtxtCEP.MaxLength = 9; 
+            MtxtCEP.MaxLength = 9;
             MtxtCPF.MaxLength = 14;
             MtxtDataNascimento.MaxLength = 10;
             MtxtTelefone.MaxLength = 15;
@@ -48,10 +49,76 @@ namespace Projeto_Socorrista
             MtxtComplemento.MaxLength = 50;
         }
 
+        // crianndo metodo de avaliar se a senha é forte ou não
+
+        private void AvaliarForcaSenha(string senha)
+        {
+            int forca = 0;
+
+            // Tamanho
+            if (senha.Length == 10)
+                forca++;
+
+            // Contém letra
+            if (Regex.IsMatch(senha, @"[a-zA-Z]"))
+                forca++;
+
+            // Contém número
+            if (Regex.IsMatch(senha, @"\d"))
+                forca++;
+
+            // Contém caractere especial
+            if (Regex.IsMatch(senha, @"[\W_]"))
+                forca++;
+
+            // Atualiza o label conforme a força
+            switch (forca)
+            {
+                case 0:
+                case 1:
+                    lblError.Text = "Senha fraca";
+                    lblError.ForeColor = Color.Red;
+                    break;
+                case 2:
+                case 3:
+                    lblError.Text = "Senha média";
+                    lblError.ForeColor = Color.DarkOrange;
+                    break;
+                case 4:
+                    lblError.Text = "Senha forte";
+                    lblError.ForeColor = Color.Blue;
+                    break;
+            }
+        }
+
+        // verifica se a senha digitada tem caracter especial , número, letra e tamanho mínimo de 10 caracteres
+
+
+        private void verificaSenhaForte(string senha)
+        {
+            Regex regexSenhaForte = new Regex(@"^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_]).{10,}$"); ;
+
+            if (!regexSenhaForte.IsMatch(MtxtSenha.TextValue))
+            {
+                MessageBox.Show("A senha deve conter 15 caracteres e incluir letras, números e caracteres especiais.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblError.Text = "Ex: SenhaForte@2025";
+                lblError.ForeColor = Color.Red;
+                MtxtSenha.Focus();
+                return;
+            }
+
+            if (MtxtSenha.TextValue == "SenhaForte@2025")
+            {
+                MessageBox.Show("Não use a senha de exemplo.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
         private void frmLoginVoluntario_Load(object sender, EventArgs e)
         {
             configuracaoDeSenha();
             mudandoMaxLength();
+            MtxtSenha.TextChanged += (s, args) => AvaliarForcaSenha(MtxtSenha.TextValue);
         }
 
         // Trocando imagem ao clicar
@@ -129,7 +196,7 @@ namespace Projeto_Socorrista
             string CampoTelefone = MtxtTelefone.TextValue.Replace("(", "").Replace(")", "").Replace(" ", "").Replace("-", "");
 
             string campoFormatadoTelefone = "";
-         
+
             if (CampoTelefone.Length <= 2)
             {
                 campoFormatadoTelefone = "(" + CampoTelefone;
@@ -177,12 +244,12 @@ namespace Projeto_Socorrista
                 //14082006
                 campoFormatadoNascimento += campoNascimento.Substring(0, 2) + "/" + campoNascimento.Substring(2);
             }
-            else 
-             {
+            else
+            {
                 //14/08/2006
-                campoFormatadoNascimento += campoNascimento.Substring(0, 2) + "/" + campoNascimento.Substring(2, 2) + "/" + campoNascimento.Substring(4) ;
+                campoFormatadoNascimento += campoNascimento.Substring(0, 2) + "/" + campoNascimento.Substring(2, 2) + "/" + campoNascimento.Substring(4);
             }
-        
+
             MtxtDataNascimento.TextValue = campoFormatadoNascimento;
 
             // tenta manter o cursor no final
@@ -207,7 +274,7 @@ namespace Projeto_Socorrista
             {
                 campoFormatadoCEP = campoCEP;
             }
-            else 
+            else
             {
                 //12345678 → 12345-678
                 campoFormatadoCEP =
@@ -227,16 +294,24 @@ namespace Projeto_Socorrista
         public void buscaCEP(string cep)
         {
             var viaCEPService = ViaCepService.Default();
-            var endereco = viaCEPService.ObterEndereco(cep);
 
-            MtxtEndereco.TextValue = endereco.Logradouro;
-            MtxtCidade.TextValue = endereco.Localidade;
-            MtxtComplemento.TextValue = endereco.Complemento;
+            try
+            {
+                var endereco = viaCEPService.ObterEndereco(cep);
+
+                MtxtEndereco.TextValue = endereco.Logradouro;
+                MtxtCidade.TextValue = endereco.Localidade;
+                MtxtComplemento.TextValue = endereco.Complemento;
+            }
+            catch (Exception) {
+                MessageBox.Show("CEP invalído, por favor digitado um CEP existente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void MtxtCEP_KeyDown(object sender, KeyEventArgs e)
         {
-           
+
             if (e.KeyCode == Keys.Enter)
             {
                 string cep = MtxtCEP.TextValue.Replace("-", "");
@@ -246,7 +321,7 @@ namespace Projeto_Socorrista
 
         // Criando metodo que envia os dados do voluntário para o banco de dados
         private int enviarVoluntario(
-            string nome, string sobrenome, string email, char cpf, char telefone, string dataNascimento, string senha, char cep, string endereco, string complemeto, string cidade ) { 
+            string nome, string sobrenome, string email, string cpf, string telefone, string dataNascimento, string senha, string cep, string endereco, string complemeto, string cidade) {
             MySqlCommand comm = new MySqlCommand();
             comm.CommandText = "insert into tbVoluntario(nomeVoluntario, sobrenomeVoluntario, telCel, cpf, email, dataNascimento, endereco_rua, endereco_cep, endereco_complemento, endereco_cidade, senha) " +
                 "values (@nomeVoluntario, @sobrenomeVoluntario, @telCel, @cpf, @email, @dataNascimento, @endereco_rua, @endereco_cep, @endereco_complemento, @endereco_cidade, @senha);";
@@ -289,8 +364,44 @@ namespace Projeto_Socorrista
         {
             if (!verificaCamposVazios()) {
                 MessageBox.Show("Todos os campos devem ser preenchidos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
+            if (!MtxtSenha.TextValue.Equals(MtxtConfirmeSenha.TextValue)) {
+                MessageBox.Show("As senhas não são iguais", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (MtxtSenha.TextValue.Length < 15 && MtxtConfirmeSenha.TextValue.Length < 15) {
+                MessageBox.Show("Sua senha deve conter 15 caracteres", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            //Trazendo metodo que verifica a senha
+            verificaSenhaForte(MtxtSenha.TextValue);
+
+            string cep = MtxtCEP.TextValue.Replace("-", "");
+            string cpf = MtxtCPF.TextValue.Replace(".", "").Replace("-", "");
+            string telefone = MtxtTelefone.TextValue.Replace("(", "").Replace(")", "").Replace(" ", "").Replace("-", "");
+            string dataNascimento = MtxtDataNascimento.TextValue.Replace("/", "");
+            DateTime data = DateTime.ParseExact(dataNascimento, "ddMMyyyy", null);
+            string dataFormatada = data.ToString("yyyy-MM-dd");
+            // 14082006
+            // 01234567
+
+            // Enviando os dados do voluntário para o banco de dados
+
+            if (enviarVoluntario(MtxtNome.TextValue, MtxtSobrenome.TextValue, MtxtEmail.TextValue, cpf, telefone, dataFormatada,
+                MtxtSenha.TextValue, cep, MtxtEndereco.TextValue, MtxtComplemento.TextValue, MtxtCidade.TextValue) == 1)
+            {
+                MessageBox.Show("Cadastro realizado com sucesso", "Bem vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else {
+                MessageBox.Show("Erro ao cadastrar o voluntário", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
+    
+
     }
 }
-

@@ -9,7 +9,7 @@ namespace Projeto_Socorrista.Classes
 {
     public class ConectaBanco
     {
-        private static string Conexao = "Server=localhost; Port=3308; DataBase=dbgfrancisco; Uid=root; Pwd='123456'";
+        private static string Conexao = "Server=localhost; Port=3306; DataBase=dbgfrancisco; Uid=root; Pwd=''";
         private static MySqlConnection conn = null;
 
         public static MySqlConnection ObterConexao()

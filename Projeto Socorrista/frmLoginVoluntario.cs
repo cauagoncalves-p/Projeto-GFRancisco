@@ -273,6 +273,24 @@ namespace Projeto_Socorrista
 
             return resp;
         }
+
+        // Verificando se os campos estão vazios
+        private bool verificaCamposVazios()
+        {
+            if (MtxtCEP.TextValue.Equals("") || MtxtNome.TextValue.Equals("") || MtxtSobrenome.TextValue.Equals("") || MtxtEmail.TextValue.Equals("")
+                || MtxtTelefone.TextValue.Equals("") || MtxtCPF.TextValue.Equals("") || MtxtSenha.TextValue.Equals("") || MtxtDataNascimento.TextValue.Equals("") || MtxtEndereco.TextValue.Equals("") || MtxtCidade.TextValue.Equals("") || MtxtComplemento.TextValue.Equals(""))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void btnCriarConta_Click(object sender, EventArgs e)
+        {
+            if (!verificaCamposVazios()) {
+                MessageBox.Show("Todos os campos devem ser preenchidos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
 

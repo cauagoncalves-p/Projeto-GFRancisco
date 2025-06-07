@@ -1,4 +1,5 @@
-﻿namespace Projeto_Socorrista
+﻿
+namespace Projeto_Socorrista
 {
     partial class frmLoginVoluntario
     {

@@ -12,6 +12,7 @@ public class ModernTextBox : UserControl
     private bool isPlaceholderActive = true;
     private bool usePasswordChar = false;
     public bool EnablePlaceholder { get; set; } = true;
+    public event KeyEventHandler KeyDownCustom;
 
     public string TextValue
     {
@@ -92,11 +93,17 @@ public class ModernTextBox : UserControl
             }
         };
 
-
         textBox.GotFocus += RemovePlaceholder;
         textBox.LostFocus += SetPlaceholder;
 
         this.Controls.Add(textBox);
+
+        // Propagando o evento KeyDown do TextBox interno
+        textBox.KeyDown += (s, e) =>
+        {
+            this.OnKeyDown(e);             // dispara o evento KeyDown comum
+            KeyDownCustom?.Invoke(this, e); // dispara o evento personalizado (caso você use ele)
+        };
     }
 
     // fazendo o placeholder aparecer quando inicia o form

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using MosaicoSolutions.ViaCep;
+using MySql.Data.MySqlClient;
+using Projeto_Socorrista.Classes;
 
 namespace Projeto_Socorrista
 {
@@ -32,8 +34,8 @@ namespace Projeto_Socorrista
         // mudando o MaxLengh dos campos
         private void mudandoMaxLength()
         {
-            MtxtConfirmeSenha.MaxLength = 20;
-            MtxtSenha.MaxLength = 20;
+            MtxtConfirmeSenha.MaxLength = 15;
+            MtxtSenha.MaxLength = 15;
             MtxtCEP.MaxLength = 9; 
             MtxtCPF.MaxLength = 14;
             MtxtDataNascimento.MaxLength = 10;
@@ -219,6 +221,57 @@ namespace Projeto_Socorrista
 
             MtxtCEP.SelectionStart = MtxtCEP.TextValue.Length;
             editandoInternoCEP = false;
+        }
+
+        //criando o método busca cep
+        public void buscaCEP(string cep)
+        {
+            var viaCEPService = ViaCepService.Default();
+            var endereco = viaCEPService.ObterEndereco(cep);
+
+            MtxtEndereco.TextValue = endereco.Logradouro;
+            MtxtCidade.TextValue = endereco.Localidade;
+            MtxtComplemento.TextValue = endereco.Complemento;
+        }
+
+        private void MtxtCEP_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+            if (e.KeyCode == Keys.Enter)
+            {
+                string cep = MtxtCEP.TextValue.Replace("-", "");
+                buscaCEP(cep);
+            }
+        }
+
+        // Criando metodo que envia os dados do voluntário para o banco de dados
+        private int enviarVoluntario(
+            string nome, string sobrenome, string email, char cpf, char telefone, string dataNascimento, string senha, char cep, string endereco, string complemeto, string cidade ) { 
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "insert into tbVoluntario(nomeVoluntario, sobrenomeVoluntario, telCel, cpf, email, dataNascimento, endereco_rua, endereco_cep, endereco_complemento, endereco_cidade, senha) " +
+                "values (@nomeVoluntario, @sobrenomeVoluntario, @telCel, @cpf, @email, @dataNascimento, @endereco_rua, @endereco_cep, @endereco_complemento, @endereco_cidade, @senha);";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nomeVoluntario", MySqlDbType.VarChar, 100).Value = nome;
+            comm.Parameters.Add("@sobrenomeVoluntario", MySqlDbType.VarChar, 100).Value = sobrenome;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = email;
+            comm.Parameters.Add("cpf", MySqlDbType.VarChar, 14).Value = cpf;
+            comm.Parameters.Add("@telCel", MySqlDbType.VarChar, 11).Value = telefone;
+            comm.Parameters.Add("@dataNascimento", MySqlDbType.Date).Value = dataNascimento;
+            comm.Parameters.Add("senha", MySqlDbType.VarChar, 15).Value = senha;
+            comm.Parameters.Add("@endereco_rua", MySqlDbType.VarChar, 100).Value = endereco;
+            comm.Parameters.Add("@endereco_cep", MySqlDbType.VarChar, 8).Value = cep;
+            comm.Parameters.Add("@endereco_complemento", MySqlDbType.VarChar, 50).Value = complemeto;
+            comm.Parameters.Add("@endereco_cidade", MySqlDbType.VarChar, 50).Value = cidade;
+
+            comm.Connection = ConectaBanco.ObterConexao();
+
+            int resp = comm.ExecuteNonQuery();
+
+            ConectaBanco.FecharConexao();
+
+            return resp;
         }
     }
 }

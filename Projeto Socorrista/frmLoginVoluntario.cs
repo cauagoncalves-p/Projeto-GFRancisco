@@ -12,6 +12,8 @@ using MosaicoSolutions.ViaCep;
 using MySql.Data.MySqlClient;
 using Projeto_Socorrista.Classes;
 using System.Text.RegularExpressions;
+using System.Security.Cryptography;
+using ZstdSharp.Unsafe;
 
 namespace Projeto_Socorrista
 {
@@ -316,6 +318,24 @@ namespace Projeto_Socorrista
             }
         }
 
+        // criando metodo que criptografa a senha do voluntário
+        private string GerarHash(string senha)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(senha);
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in hash)
+                {
+                    sb.Append(b.ToString("x2"));
+                }
+
+                return sb.ToString();
+            }
+        }
+
         // Criando metodo que envia os dados do voluntário para o banco de dados
         private int enviarVoluntario(
             string nome, string sobrenome, string email, string cpf, string telefone, string dataNascimento, string senha, string cep, string endereco, string complemeto, string cidade) {
@@ -357,20 +377,74 @@ namespace Projeto_Socorrista
             return true;
         }
 
+        private bool verificaCampos() {
+
+            if (!verificaCamposVazios())
+            {
+                MessageBox.Show("Todos os campos devem ser preenchidos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!Regex.IsMatch(MtxtEmail.TextValue, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                MessageBox.Show("Email inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!Regex.IsMatch(MtxtCPF.TextValue, @"^[^a-zA-Z\s]+$"))
+            {
+                MessageBox.Show("CPF inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!Regex.IsMatch(MtxtTelefone.TextValue, @"^\(\d{2}\) \d{4,5}-\d{4}$"))
+            {
+                MessageBox.Show("Telefone inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!Regex.IsMatch(MtxtDataNascimento.TextValue, @"^[^a-zA-Z\s]+$"))
+            {
+                MessageBox.Show("Data de nascimento invalída", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (Convert.ToDateTime(MtxtDataNascimento.TextValue) > DateTime.Now)
+            {
+                MessageBox.Show("Data de nascimento inválida, não pode ser maior que a data atual", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (Convert.ToDateTime(MtxtDataNascimento.TextValue) > DateTime.Now.AddYears(-18))
+            {
+                MessageBox.Show("Você deve ter pelo menos 18 anos para se cadastrar", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (MtxtSenha.TextValue.Length < 15 && MtxtConfirmeSenha.TextValue.Length < 15)
+            {
+                MessageBox.Show("Sua senha deve conter 15 caracteres", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!MtxtSenha.TextValue.Equals(MtxtConfirmeSenha.TextValue))
+            {
+                MessageBox.Show("As senhas não são iguais", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!Regex.IsMatch(MtxtCEP.TextValue, @"^\d{5}-\d{3}$"))
+            {
+                MessageBox.Show("CEP inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+        }
         private void btnCriarConta_Click(object sender, EventArgs e)
         {
-            if (!verificaCamposVazios()) {
-                MessageBox.Show("Todos os campos devem ser preenchidos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (!MtxtSenha.TextValue.Equals(MtxtConfirmeSenha.TextValue)) {
-                MessageBox.Show("As senhas não são iguais", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (MtxtSenha.TextValue.Length < 15 && MtxtConfirmeSenha.TextValue.Length < 15) {
-                MessageBox.Show("Sua senha deve conter 15 caracteres", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (!verificaCampos())
+            {
                 return;
             }
 
@@ -383,13 +457,14 @@ namespace Projeto_Socorrista
             string dataNascimento = MtxtDataNascimento.TextValue.Replace("/", "");
             DateTime data = DateTime.ParseExact(dataNascimento, "ddMMyyyy", null);
             string dataFormatada = data.ToString("yyyy-MM-dd");
+            string senhaCriptografada = GerarHash(MtxtSenha.TextValue);
             // 14082006
             // 01234567
 
             // Enviando os dados do voluntário para o banco de dados
 
             if (enviarVoluntario(MtxtNome.TextValue, MtxtSobrenome.TextValue, MtxtEmail.TextValue, cpf, telefone, dataFormatada,
-                MtxtSenha.TextValue, cep, MtxtEndereco.TextValue, MtxtComplemento.TextValue, MtxtCidade.TextValue) == 1)
+                senhaCriptografada, cep, MtxtEndereco.TextValue, MtxtComplemento.TextValue, MtxtCidade.TextValue) == 1)
             {
                 MessageBox.Show("Cadastro realizado com sucesso", "Bem vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

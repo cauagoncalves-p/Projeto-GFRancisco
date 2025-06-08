@@ -366,6 +366,106 @@ namespace Projeto_Socorrista
             return resp;
         }
 
+        // criando metodo que verifica cpf existente
+        private bool verficaCPF(string cpf) {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbVoluntario where cpf = @cpf;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("cpf", MySqlDbType.VarChar, 14).Value = cpf;
+
+            comm.Connection = ConectaBanco.ObterConexao();
+
+            MySqlDataReader DR;
+
+            DR = comm.ExecuteReader();
+            DR.Read();
+            try {
+                string existeCPF = DR.GetString(1);
+                if (existeCPF.Equals(""))
+                {
+                    return false;
+                }
+            }
+            catch (Exception) {
+                return false;
+            }
+            
+            ConectaBanco.FecharConexao();
+
+            return true;
+        }
+
+        //// criando campo que verifica telefone existente 
+        private bool verificaTelCel(string telefone) {
+
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbVoluntario where telCel = @telCel;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("telCel", MySqlDbType.VarChar, 11).Value = telefone;
+
+            comm.Connection = ConectaBanco.ObterConexao();
+
+            MySqlDataReader DR;
+
+            DR = comm.ExecuteReader();
+            DR.Read();
+            try
+            {
+                string existeTelefone = DR.GetString(1);
+                if (existeTelefone.Equals(""))
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            ConectaBanco.FecharConexao();
+            return true;
+        }
+
+        // criando metodo que verifica email existente
+
+        private bool verificaEmail(string email)
+        {
+
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbVoluntario where email = @email;";
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("email", MySqlDbType.VarChar, 100).Value = email;
+
+            comm.Connection = ConectaBanco.ObterConexao();
+
+            MySqlDataReader DR;
+
+            DR = comm.ExecuteReader();
+            DR.Read();
+            try
+            {
+                string existeTelefone = DR.GetString(1);
+                if (existeTelefone.Equals(""))
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            ConectaBanco.FecharConexao();
+            return true;
+        }
+
+
+        //}
         // Verificando se os campos estão vazios
         private bool verificaCamposVazios()
         {
@@ -378,7 +478,6 @@ namespace Projeto_Socorrista
         }
 
         private bool verificaCampos() {
-
             if (!verificaCamposVazios())
             {
                 MessageBox.Show("Todos os campos devem ser preenchidos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -388,36 +487,42 @@ namespace Projeto_Socorrista
             if (!Regex.IsMatch(MtxtEmail.TextValue, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 MessageBox.Show("Email inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtEmail.Focus();
                 return false;
             }
 
             if (!Regex.IsMatch(MtxtCPF.TextValue, @"^[^a-zA-Z\s]+$"))
             {
                 MessageBox.Show("CPF inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtCPF.Focus();
                 return false;
             }
 
             if (!Regex.IsMatch(MtxtTelefone.TextValue, @"^\(\d{2}\) \d{4,5}-\d{4}$"))
             {
                 MessageBox.Show("Telefone inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtTelefone.Focus();
                 return false;
             }
 
             if (!Regex.IsMatch(MtxtDataNascimento.TextValue, @"^[^a-zA-Z\s]+$"))
             {
                 MessageBox.Show("Data de nascimento invalída", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtDataNascimento.Focus();
                 return false;
             }
 
             if (Convert.ToDateTime(MtxtDataNascimento.TextValue) > DateTime.Now)
             {
                 MessageBox.Show("Data de nascimento inválida, não pode ser maior que a data atual", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtDataNascimento.Focus();
                 return false;
             }
 
             if (Convert.ToDateTime(MtxtDataNascimento.TextValue) > DateTime.Now.AddYears(-18))
             {
                 MessageBox.Show("Você deve ter pelo menos 18 anos para se cadastrar", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtDataNascimento.Focus();
                 return false;
             }
 
@@ -430,15 +535,42 @@ namespace Projeto_Socorrista
             if (!MtxtSenha.TextValue.Equals(MtxtConfirmeSenha.TextValue))
             {
                 MessageBox.Show("As senhas não são iguais", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtSenha.Focus();
                 return false;
             }
 
             if (!Regex.IsMatch(MtxtCEP.TextValue, @"^\d{5}-\d{3}$"))
             {
                 MessageBox.Show("CEP inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtCEP.Focus();
                 return false;
             }
 
+            // verifica se o email ja existe no banco
+            if (verificaEmail(MtxtEmail.TextValue))
+            {
+                MessageBox.Show("O email informado já está em uso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtEmail.Focus();
+                return false;
+            }
+
+            // verifico se o cpf ja existe no banco
+            string cpf = MtxtCPF.TextValue.Replace(".", "").Replace("-", "");
+            if (verficaCPF(cpf))
+            {
+                MessageBox.Show("CPF informado já está em uso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtCPF.Focus();
+                return false;
+            }
+
+            //verifica se o telefone ja exite no banco 
+            string telefone = MtxtTelefone.TextValue.Replace("(", "").Replace(")", "").Replace(" ", "").Replace("-", "");
+            if (verificaTelCel(telefone))
+            {
+                MessageBox.Show("O telefone informado já está em uso", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtTelefone.Focus();
+                return false;
+            }
             return true;
         }
         private void btnCriarConta_Click(object sender, EventArgs e)

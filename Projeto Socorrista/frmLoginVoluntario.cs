@@ -477,12 +477,49 @@ namespace Projeto_Socorrista
             return true;
         }
 
-        private bool verificaCampos() {
-            if (!verificaCamposVazios())
+        private bool verificaLengthDosCampos() {
+
+            string cpf = MtxtCPF.TextValue.Replace(".", "").Replace("-", "");
+            if (cpf.Length < 11)
             {
-                MessageBox.Show("Todos os campos devem ser preenchidos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("O CPF informado está inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtCPF.Focus();
                 return false;
             }
+
+            string telefone = MtxtTelefone.TextValue.Replace("(", "").Replace(")", "").Replace(" ", "").Replace("-", "");
+            if (telefone.Length < 11)
+            {
+                MessageBox.Show("O telefone informado está inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtTelefone.Focus();
+                return false;
+            }
+
+            string dataNascimento = MtxtDataNascimento.TextValue.Replace("/", "");
+            if (dataNascimento.Length < 8)
+            {
+                MessageBox.Show("Data de nascimento inválida", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtDataNascimento.Focus();
+                return false;
+            }
+
+            if (MtxtSenha.TextValue.Length < 15 || MtxtConfirmeSenha.TextValue.Length < 15)
+            {
+                MessageBox.Show("Sua senha deve conter 15 caracteres", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            string cep = MtxtCEP.TextValue.Replace("-", "");
+            if (cep.Length < 8)
+            {
+                MessageBox.Show("O CEP informado está inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtCEP.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        private bool verificaFormatacaoDosCampos() {
 
             if (!Regex.IsMatch(MtxtEmail.TextValue, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
@@ -504,31 +541,24 @@ namespace Projeto_Socorrista
                 MtxtTelefone.Focus();
                 return false;
             }
-
-            if (!Regex.IsMatch(MtxtDataNascimento.TextValue, @"^[^a-zA-Z\s]+$"))
+            if (!DateTime.TryParse(MtxtDataNascimento.TextValue, out DateTime dataNascimento))
             {
-                MessageBox.Show("Data de nascimento invalída", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Data de nascimento inválida", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 MtxtDataNascimento.Focus();
                 return false;
             }
 
-            if (Convert.ToDateTime(MtxtDataNascimento.TextValue) > DateTime.Now)
+            if (dataNascimento > DateTime.Now)
             {
-                MessageBox.Show("Data de nascimento inválida, não pode ser maior que a data atual", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Data de nascimento não pode ser no futuro", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 MtxtDataNascimento.Focus();
                 return false;
             }
 
-            if (Convert.ToDateTime(MtxtDataNascimento.TextValue) > DateTime.Now.AddYears(-18))
+            if (dataNascimento > DateTime.Now.AddYears(-18))
             {
                 MessageBox.Show("Você deve ter pelo menos 18 anos para se cadastrar", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 MtxtDataNascimento.Focus();
-                return false;
-            }
-
-            if (MtxtSenha.TextValue.Length < 15 && MtxtConfirmeSenha.TextValue.Length < 15)
-            {
-                MessageBox.Show("Sua senha deve conter 15 caracteres", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -545,6 +575,11 @@ namespace Projeto_Socorrista
                 MtxtCEP.Focus();
                 return false;
             }
+
+            return true;
+        }
+
+        private bool verificaDadosExistentes() {
 
             // verifica se o email ja existe no banco
             if (verificaEmail(MtxtEmail.TextValue))
@@ -563,6 +598,7 @@ namespace Projeto_Socorrista
                 return false;
             }
 
+
             //verifica se o telefone ja exite no banco 
             string telefone = MtxtTelefone.TextValue.Replace("(", "").Replace(")", "").Replace(" ", "").Replace("-", "");
             if (verificaTelCel(telefone))
@@ -571,7 +607,34 @@ namespace Projeto_Socorrista
                 MtxtTelefone.Focus();
                 return false;
             }
+
             return true;
+        }
+
+        private bool verificaCampos() {
+
+            if (!verificaCamposVazios())
+            {
+                MessageBox.Show("Todos os campos devem ser preenchidos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!verificaFormatacaoDosCampos())
+            {
+                return false;
+            }
+
+            if (!verificaLengthDosCampos())
+            {
+                return false;
+            }
+
+            if (!verificaDadosExistentes()) {
+                return false;
+            }
+
+            return true;
+        
         }
         private void btnCriarConta_Click(object sender, EventArgs e)
         {
@@ -605,7 +668,7 @@ namespace Projeto_Socorrista
             }
 
         }
-    
 
+   
     }
 }

@@ -30,31 +30,20 @@ namespace Projeto_Socorrista
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroVoluntario));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblSubTituloF = new System.Windows.Forms.Label();
             this.lblDescritivo = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTituloF = new System.Windows.Forms.Label();
             this.lblDoe = new System.Windows.Forms.Label();
             this.lblCompartilhe = new System.Windows.Forms.Label();
             this.lblTransforme = new System.Windows.Forms.Label();
             this.panelCadastro = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblAtribuicao = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
-            this.MtxtNome = new ModernTextBox();
-            this.picMostrarSenha1 = new System.Windows.Forms.PictureBox();
-            this.picMonstrarSenha = new System.Windows.Forms.PictureBox();
-            this.MtxtComplemento = new ModernTextBox();
-            this.MtxtCidade = new ModernTextBox();
-            this.MtxtEndereco = new ModernTextBox();
-            this.MtxtCEP = new ModernTextBox();
-            this.MtxtSobrenome = new ModernTextBox();
-            this.MtxtConfirmeSenha = new ModernTextBox();
-            this.MtxtSenha = new ModernTextBox();
-            this.MtxtDataNascimento = new ModernTextBox();
             this.btnCriarConta = new System.Windows.Forms.Button();
-            this.MtxtTelefone = new ModernTextBox();
-            this.MtxtCPF = new ModernTextBox();
-            this.MtxtEmail = new ModernTextBox();
             this.lblEspacoProBotao = new System.Windows.Forms.Label();
             this.lblConfirmeSenha = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -72,29 +61,30 @@ namespace Projeto_Socorrista
             this.lblNome = new System.Windows.Forms.Label();
             this.lblSubTituloCriarConta = new System.Windows.Forms.Label();
             this.lblTituloCriarConta = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.MtxtBairro = new ModernTextBox();
-            this.lblBairro = new System.Windows.Forms.Label();
+            this.picMostrarSenha1 = new System.Windows.Forms.PictureBox();
+            this.picMonstrarSenha = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MtxtEstado = new ModernTextBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblAtribuicao = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.MtxtBairro = new ModernTextBox();
+            this.MtxtNome = new ModernTextBox();
+            this.MtxtComplemento = new ModernTextBox();
+            this.MtxtCidade = new ModernTextBox();
+            this.MtxtEndereco = new ModernTextBox();
+            this.MtxtCEP = new ModernTextBox();
+            this.MtxtSobrenome = new ModernTextBox();
+            this.MtxtConfirmeSenha = new ModernTextBox();
+            this.MtxtSenha = new ModernTextBox();
+            this.MtxtDataNascimento = new ModernTextBox();
+            this.MtxtTelefone = new ModernTextBox();
+            this.MtxtCPF = new ModernTextBox();
+            this.MtxtEmail = new ModernTextBox();
             this.panelCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMostrarSenha1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(727, 978);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // lblSubTituloF
             // 
@@ -102,7 +92,7 @@ namespace Projeto_Socorrista
             this.lblSubTituloF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.lblSubTituloF.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTituloF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.lblSubTituloF.Location = new System.Drawing.Point(258, 73);
+            this.lblSubTituloF.Location = new System.Drawing.Point(265, 70);
             this.lblSubTituloF.Name = "lblSubTituloF";
             this.lblSubTituloF.Size = new System.Drawing.Size(246, 55);
             this.lblSubTituloF.TabIndex = 1;
@@ -120,23 +110,13 @@ namespace Projeto_Socorrista
             this.lblDescritivo.TabIndex = 8;
             this.lblDescritivo.Text = resources.GetString("lblDescritivo.Text");
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(16, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(227, 223);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // lblTituloF
             // 
             this.lblTituloF.AutoSize = true;
             this.lblTituloF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.lblTituloF.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.lblTituloF.Location = new System.Drawing.Point(258, 153);
+            this.lblTituloF.Location = new System.Drawing.Point(265, 161);
             this.lblTituloF.Name = "lblTituloF";
             this.lblTituloF.Size = new System.Drawing.Size(260, 55);
             this.lblTituloF.TabIndex = 4;
@@ -148,7 +128,7 @@ namespace Projeto_Socorrista
             this.lblDoe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.lblDoe.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(156)))), ((int)(((byte)(241)))));
-            this.lblDoe.Location = new System.Drawing.Point(45, 306);
+            this.lblDoe.Location = new System.Drawing.Point(45, 290);
             this.lblDoe.Name = "lblDoe";
             this.lblDoe.Size = new System.Drawing.Size(131, 55);
             this.lblDoe.TabIndex = 5;
@@ -160,7 +140,7 @@ namespace Projeto_Socorrista
             this.lblCompartilhe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.lblCompartilhe.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompartilhe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.lblCompartilhe.Location = new System.Drawing.Point(45, 373);
+            this.lblCompartilhe.Location = new System.Drawing.Point(45, 354);
             this.lblCompartilhe.Name = "lblCompartilhe";
             this.lblCompartilhe.Size = new System.Drawing.Size(348, 55);
             this.lblCompartilhe.TabIndex = 6;
@@ -172,7 +152,7 @@ namespace Projeto_Socorrista
             this.lblTransforme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.lblTransforme.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransforme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(139)))), ((int)(((byte)(106)))));
-            this.lblTransforme.Location = new System.Drawing.Point(45, 442);
+            this.lblTransforme.Location = new System.Drawing.Point(45, 427);
             this.lblTransforme.Name = "lblTransforme";
             this.lblTransforme.Size = new System.Drawing.Size(326, 55);
             this.lblTransforme.TabIndex = 7;
@@ -228,6 +208,61 @@ namespace Projeto_Socorrista
             this.panelCadastro.Size = new System.Drawing.Size(683, 747);
             this.panelCadastro.TabIndex = 9;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(42, 1216);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(572, 25);
+            this.label2.TabIndex = 98;
+            this.label2.Text = "--------------------------------------------------------------------------------";
+            // 
+            // lblAtribuicao
+            // 
+            this.lblAtribuicao.AutoSize = true;
+            this.lblAtribuicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAtribuicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.lblAtribuicao.Location = new System.Drawing.Point(42, 1181);
+            this.lblAtribuicao.Name = "lblAtribuicao";
+            this.lblAtribuicao.Size = new System.Drawing.Size(108, 25);
+            this.lblAtribuicao.TabIndex = 97;
+            this.lblAtribuicao.Text = "Atribuição";
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.White;
+            this.lblEstado.Location = new System.Drawing.Point(352, 1062);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(79, 25);
+            this.lblEstado.TabIndex = 95;
+            this.lblEstado.Text = "Estado";
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBairro.ForeColor = System.Drawing.Color.White;
+            this.lblBairro.Location = new System.Drawing.Point(350, 948);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(69, 25);
+            this.lblBairro.TabIndex = 93;
+            this.lblBairro.Text = "Bairro";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(41, 784);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(572, 25);
+            this.label1.TabIndex = 92;
+            this.label1.Text = "--------------------------------------------------------------------------------";
+            // 
             // lblError
             // 
             this.lblError.AutoSize = true;
@@ -237,175 +272,6 @@ namespace Projeto_Socorrista
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 16);
             this.lblError.TabIndex = 91;
-            // 
-            // MtxtNome
-            // 
-            this.MtxtNome.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtNome.EnablePlaceholder = true;
-            this.MtxtNome.Location = new System.Drawing.Point(46, 356);
-            this.MtxtNome.MaxLength = 32767;
-            this.MtxtNome.Name = "MtxtNome";
-            this.MtxtNome.PasswordChar = '\0';
-            this.MtxtNome.PlaceholderChar = '\0';
-            this.MtxtNome.PlaceholderText = "Ex: Gonçalves";
-            this.MtxtNome.SelectionStart = 0;
-            this.MtxtNome.Size = new System.Drawing.Size(250, 40);
-            this.MtxtNome.TabIndex = 90;
-            this.MtxtNome.TextValue = "";
-            this.MtxtNome.UseSystemPasswordChar = false;
-            // 
-            // picMostrarSenha1
-            // 
-            this.picMostrarSenha1.Image = ((System.Drawing.Image)(resources.GetObject("picMostrarSenha1.Image")));
-            this.picMostrarSenha1.Location = new System.Drawing.Point(566, 680);
-            this.picMostrarSenha1.Name = "picMostrarSenha1";
-            this.picMostrarSenha1.Size = new System.Drawing.Size(26, 22);
-            this.picMostrarSenha1.TabIndex = 89;
-            this.picMostrarSenha1.TabStop = false;
-            this.picMostrarSenha1.Click += new System.EventHandler(this.picMostrarSenha1_Click);
-            // 
-            // picMonstrarSenha
-            // 
-            this.picMonstrarSenha.Image = ((System.Drawing.Image)(resources.GetObject("picMonstrarSenha.Image")));
-            this.picMonstrarSenha.Location = new System.Drawing.Point(258, 680);
-            this.picMonstrarSenha.Name = "picMonstrarSenha";
-            this.picMonstrarSenha.Size = new System.Drawing.Size(26, 22);
-            this.picMonstrarSenha.TabIndex = 88;
-            this.picMonstrarSenha.TabStop = false;
-            this.picMonstrarSenha.Click += new System.EventHandler(this.picMonstrarSenha_Click);
-            // 
-            // MtxtComplemento
-            // 
-            this.MtxtComplemento.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtComplemento.EnablePlaceholder = true;
-            this.MtxtComplemento.Location = new System.Drawing.Point(46, 992);
-            this.MtxtComplemento.MaxLength = 32767;
-            this.MtxtComplemento.Name = "MtxtComplemento";
-            this.MtxtComplemento.PasswordChar = '\0';
-            this.MtxtComplemento.PlaceholderChar = '\0';
-            this.MtxtComplemento.PlaceholderText = "Ex: 453, perto da estação";
-            this.MtxtComplemento.SelectionStart = 0;
-            this.MtxtComplemento.Size = new System.Drawing.Size(250, 40);
-            this.MtxtComplemento.TabIndex = 87;
-            this.MtxtComplemento.TextValue = "";
-            this.MtxtComplemento.UseSystemPasswordChar = false;
-            // 
-            // MtxtCidade
-            // 
-            this.MtxtCidade.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtCidade.EnablePlaceholder = true;
-            this.MtxtCidade.Location = new System.Drawing.Point(46, 1101);
-            this.MtxtCidade.MaxLength = 32767;
-            this.MtxtCidade.Name = "MtxtCidade";
-            this.MtxtCidade.PasswordChar = '\0';
-            this.MtxtCidade.PlaceholderChar = '\0';
-            this.MtxtCidade.PlaceholderText = "Ex: São Paulo";
-            this.MtxtCidade.SelectionStart = 0;
-            this.MtxtCidade.Size = new System.Drawing.Size(250, 40);
-            this.MtxtCidade.TabIndex = 86;
-            this.MtxtCidade.TextValue = "";
-            this.MtxtCidade.UseSystemPasswordChar = false;
-            // 
-            // MtxtEndereco
-            // 
-            this.MtxtEndereco.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtEndereco.EnablePlaceholder = true;
-            this.MtxtEndereco.Location = new System.Drawing.Point(353, 874);
-            this.MtxtEndereco.MaxLength = 32767;
-            this.MtxtEndereco.Name = "MtxtEndereco";
-            this.MtxtEndereco.PasswordChar = '\0';
-            this.MtxtEndereco.PlaceholderChar = '\0';
-            this.MtxtEndereco.PlaceholderText = "Ex: Senac Largo Treze";
-            this.MtxtEndereco.SelectionStart = 0;
-            this.MtxtEndereco.Size = new System.Drawing.Size(250, 40);
-            this.MtxtEndereco.TabIndex = 85;
-            this.MtxtEndereco.TextValue = "";
-            this.MtxtEndereco.UseSystemPasswordChar = false;
-            // 
-            // MtxtCEP
-            // 
-            this.MtxtCEP.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtCEP.EnablePlaceholder = true;
-            this.MtxtCEP.Location = new System.Drawing.Point(48, 874);
-            this.MtxtCEP.MaxLength = 32767;
-            this.MtxtCEP.Name = "MtxtCEP";
-            this.MtxtCEP.PasswordChar = '\0';
-            this.MtxtCEP.PlaceholderChar = '\0';
-            this.MtxtCEP.PlaceholderText = "Ex: 00000-000";
-            this.MtxtCEP.SelectionStart = 0;
-            this.MtxtCEP.Size = new System.Drawing.Size(250, 40);
-            this.MtxtCEP.TabIndex = 84;
-            this.MtxtCEP.TextValue = "";
-            this.MtxtCEP.UseSystemPasswordChar = false;
-            this.MtxtCEP.TextChanged += new System.EventHandler(this.MtxtCEP_TextChanged);
-            this.MtxtCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MtxtCEP_KeyDown);
-            // 
-            // MtxtSobrenome
-            // 
-            this.MtxtSobrenome.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtSobrenome.EnablePlaceholder = true;
-            this.MtxtSobrenome.Location = new System.Drawing.Point(353, 356);
-            this.MtxtSobrenome.MaxLength = 32767;
-            this.MtxtSobrenome.Name = "MtxtSobrenome";
-            this.MtxtSobrenome.PasswordChar = '\0';
-            this.MtxtSobrenome.PlaceholderChar = '\0';
-            this.MtxtSobrenome.PlaceholderText = "Ex: Gonçalves";
-            this.MtxtSobrenome.SelectionStart = 0;
-            this.MtxtSobrenome.Size = new System.Drawing.Size(250, 40);
-            this.MtxtSobrenome.TabIndex = 83;
-            this.MtxtSobrenome.TextValue = "";
-            this.MtxtSobrenome.UseSystemPasswordChar = false;
-            // 
-            // MtxtConfirmeSenha
-            // 
-            this.MtxtConfirmeSenha.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtConfirmeSenha.EnablePlaceholder = true;
-            this.MtxtConfirmeSenha.Font = new System.Drawing.Font("Wingdings", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.MtxtConfirmeSenha.Location = new System.Drawing.Point(353, 672);
-            this.MtxtConfirmeSenha.MaxLength = 32767;
-            this.MtxtConfirmeSenha.Name = "MtxtConfirmeSenha";
-            this.MtxtConfirmeSenha.PasswordChar = '\0';
-            this.MtxtConfirmeSenha.PlaceholderChar = '\0';
-            this.MtxtConfirmeSenha.PlaceholderText = "";
-            this.MtxtConfirmeSenha.SelectionStart = 0;
-            this.MtxtConfirmeSenha.Size = new System.Drawing.Size(250, 40);
-            this.MtxtConfirmeSenha.TabIndex = 82;
-            this.MtxtConfirmeSenha.TextValue = "";
-            this.MtxtConfirmeSenha.UseSystemPasswordChar = false;
-            // 
-            // MtxtSenha
-            // 
-            this.MtxtSenha.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtSenha.EnablePlaceholder = true;
-            this.MtxtSenha.Font = new System.Drawing.Font("Wingdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.MtxtSenha.Location = new System.Drawing.Point(50, 672);
-            this.MtxtSenha.MaxLength = 32767;
-            this.MtxtSenha.Name = "MtxtSenha";
-            this.MtxtSenha.PasswordChar = '\0';
-            this.MtxtSenha.PlaceholderChar = '\0';
-            this.MtxtSenha.PlaceholderText = "";
-            this.MtxtSenha.SelectionStart = 0;
-            this.MtxtSenha.Size = new System.Drawing.Size(250, 40);
-            this.MtxtSenha.TabIndex = 81;
-            this.MtxtSenha.TextValue = "";
-            this.MtxtSenha.UseSystemPasswordChar = false;
-            // 
-            // MtxtDataNascimento
-            // 
-            this.MtxtDataNascimento.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtDataNascimento.EnablePlaceholder = true;
-            this.MtxtDataNascimento.Location = new System.Drawing.Point(353, 561);
-            this.MtxtDataNascimento.MaxLength = 32767;
-            this.MtxtDataNascimento.Name = "MtxtDataNascimento";
-            this.MtxtDataNascimento.PasswordChar = '\0';
-            this.MtxtDataNascimento.PlaceholderChar = '\0';
-            this.MtxtDataNascimento.PlaceholderText = "Ex: 00/00/0000";
-            this.MtxtDataNascimento.SelectionStart = 0;
-            this.MtxtDataNascimento.Size = new System.Drawing.Size(250, 40);
-            this.MtxtDataNascimento.TabIndex = 80;
-            this.MtxtDataNascimento.TextValue = "";
-            this.MtxtDataNascimento.UseSystemPasswordChar = false;
-            this.MtxtDataNascimento.TextChanged += new System.EventHandler(this.MtxtDataNascimento_TextChanged);
             // 
             // btnCriarConta
             // 
@@ -421,56 +287,6 @@ namespace Projeto_Socorrista
             this.btnCriarConta.Text = "Criar conta";
             this.btnCriarConta.UseVisualStyleBackColor = false;
             this.btnCriarConta.Click += new System.EventHandler(this.btnCriarConta_Click);
-            // 
-            // MtxtTelefone
-            // 
-            this.MtxtTelefone.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtTelefone.EnablePlaceholder = true;
-            this.MtxtTelefone.Location = new System.Drawing.Point(47, 561);
-            this.MtxtTelefone.MaxLength = 32767;
-            this.MtxtTelefone.Name = "MtxtTelefone";
-            this.MtxtTelefone.PasswordChar = '\0';
-            this.MtxtTelefone.PlaceholderChar = '\0';
-            this.MtxtTelefone.PlaceholderText = "Ex: 00 00000-0000";
-            this.MtxtTelefone.SelectionStart = 0;
-            this.MtxtTelefone.Size = new System.Drawing.Size(250, 40);
-            this.MtxtTelefone.TabIndex = 79;
-            this.MtxtTelefone.TextValue = "";
-            this.MtxtTelefone.UseSystemPasswordChar = false;
-            this.MtxtTelefone.TextChanged += new System.EventHandler(this.MtxtTelefone_TextChanged);
-            // 
-            // MtxtCPF
-            // 
-            this.MtxtCPF.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtCPF.EnablePlaceholder = true;
-            this.MtxtCPF.Location = new System.Drawing.Point(353, 461);
-            this.MtxtCPF.MaxLength = 32767;
-            this.MtxtCPF.Name = "MtxtCPF";
-            this.MtxtCPF.PasswordChar = '\0';
-            this.MtxtCPF.PlaceholderChar = '\0';
-            this.MtxtCPF.PlaceholderText = "Ex: 000.000.000-00";
-            this.MtxtCPF.SelectionStart = 0;
-            this.MtxtCPF.Size = new System.Drawing.Size(250, 40);
-            this.MtxtCPF.TabIndex = 78;
-            this.MtxtCPF.TextValue = "";
-            this.MtxtCPF.UseSystemPasswordChar = false;
-            this.MtxtCPF.TextChanged += new System.EventHandler(this.MtxtCPF_TextChanged);
-            // 
-            // MtxtEmail
-            // 
-            this.MtxtEmail.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtEmail.EnablePlaceholder = true;
-            this.MtxtEmail.Location = new System.Drawing.Point(46, 461);
-            this.MtxtEmail.MaxLength = 32767;
-            this.MtxtEmail.Name = "MtxtEmail";
-            this.MtxtEmail.PasswordChar = '\0';
-            this.MtxtEmail.PlaceholderChar = '\0';
-            this.MtxtEmail.PlaceholderText = "Ex: caua@gmail.com";
-            this.MtxtEmail.SelectionStart = 0;
-            this.MtxtEmail.Size = new System.Drawing.Size(250, 40);
-            this.MtxtEmail.TabIndex = 77;
-            this.MtxtEmail.TextValue = "";
-            this.MtxtEmail.UseSystemPasswordChar = false;
             // 
             // lblEspacoProBotao
             // 
@@ -662,43 +478,46 @@ namespace Projeto_Socorrista
             this.lblTituloCriarConta.TabIndex = 58;
             this.lblTituloCriarConta.Text = "Bem vindo voluntário";
             // 
-            // label1
+            // picMostrarSenha1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(41, 784);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(572, 25);
-            this.label1.TabIndex = 92;
-            this.label1.Text = "--------------------------------------------------------------------------------";
+            this.picMostrarSenha1.Image = ((System.Drawing.Image)(resources.GetObject("picMostrarSenha1.Image")));
+            this.picMostrarSenha1.Location = new System.Drawing.Point(566, 680);
+            this.picMostrarSenha1.Name = "picMostrarSenha1";
+            this.picMostrarSenha1.Size = new System.Drawing.Size(26, 22);
+            this.picMostrarSenha1.TabIndex = 89;
+            this.picMostrarSenha1.TabStop = false;
+            this.picMostrarSenha1.Click += new System.EventHandler(this.picMostrarSenha1_Click);
             // 
-            // MtxtBairro
+            // picMonstrarSenha
             // 
-            this.MtxtBairro.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtBairro.EnablePlaceholder = true;
-            this.MtxtBairro.Location = new System.Drawing.Point(353, 992);
-            this.MtxtBairro.MaxLength = 32767;
-            this.MtxtBairro.Name = "MtxtBairro";
-            this.MtxtBairro.PasswordChar = '\0';
-            this.MtxtBairro.PlaceholderChar = '\0';
-            this.MtxtBairro.PlaceholderText = "Ex: Grajaú";
-            this.MtxtBairro.SelectionStart = 0;
-            this.MtxtBairro.Size = new System.Drawing.Size(250, 40);
-            this.MtxtBairro.TabIndex = 94;
-            this.MtxtBairro.TextValue = "";
-            this.MtxtBairro.UseSystemPasswordChar = false;
+            this.picMonstrarSenha.Image = ((System.Drawing.Image)(resources.GetObject("picMonstrarSenha.Image")));
+            this.picMonstrarSenha.Location = new System.Drawing.Point(258, 680);
+            this.picMonstrarSenha.Name = "picMonstrarSenha";
+            this.picMonstrarSenha.Size = new System.Drawing.Size(26, 22);
+            this.picMonstrarSenha.TabIndex = 88;
+            this.picMonstrarSenha.TabStop = false;
+            this.picMonstrarSenha.Click += new System.EventHandler(this.picMonstrarSenha_Click);
             // 
-            // lblBairro
+            // pictureBox2
             // 
-            this.lblBairro.AutoSize = true;
-            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.ForeColor = System.Drawing.Color.White;
-            this.lblBairro.Location = new System.Drawing.Point(350, 948);
-            this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(69, 25);
-            this.lblBairro.TabIndex = 93;
-            this.lblBairro.Text = "Bairro";
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(16, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(227, 223);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-53, -124);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(778, 978);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // MtxtEstado
             // 
@@ -716,40 +535,222 @@ namespace Projeto_Socorrista
             this.MtxtEstado.TextValue = "";
             this.MtxtEstado.UseSystemPasswordChar = false;
             // 
-            // lblEstado
+            // MtxtBairro
             // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.ForeColor = System.Drawing.Color.White;
-            this.lblEstado.Location = new System.Drawing.Point(352, 1062);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(79, 25);
-            this.lblEstado.TabIndex = 95;
-            this.lblEstado.Text = "Estado";
+            this.MtxtBairro.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtBairro.EnablePlaceholder = true;
+            this.MtxtBairro.Location = new System.Drawing.Point(353, 992);
+            this.MtxtBairro.MaxLength = 32767;
+            this.MtxtBairro.Name = "MtxtBairro";
+            this.MtxtBairro.PasswordChar = '\0';
+            this.MtxtBairro.PlaceholderChar = '\0';
+            this.MtxtBairro.PlaceholderText = "Ex: Grajaú";
+            this.MtxtBairro.SelectionStart = 0;
+            this.MtxtBairro.Size = new System.Drawing.Size(250, 40);
+            this.MtxtBairro.TabIndex = 94;
+            this.MtxtBairro.TextValue = "";
+            this.MtxtBairro.UseSystemPasswordChar = false;
             // 
-            // label2
+            // MtxtNome
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(42, 1216);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(572, 25);
-            this.label2.TabIndex = 98;
-            this.label2.Text = "--------------------------------------------------------------------------------";
+            this.MtxtNome.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtNome.EnablePlaceholder = true;
+            this.MtxtNome.Location = new System.Drawing.Point(46, 356);
+            this.MtxtNome.MaxLength = 32767;
+            this.MtxtNome.Name = "MtxtNome";
+            this.MtxtNome.PasswordChar = '\0';
+            this.MtxtNome.PlaceholderChar = '\0';
+            this.MtxtNome.PlaceholderText = "Ex: Gonçalves";
+            this.MtxtNome.SelectionStart = 0;
+            this.MtxtNome.Size = new System.Drawing.Size(250, 40);
+            this.MtxtNome.TabIndex = 90;
+            this.MtxtNome.TextValue = "";
+            this.MtxtNome.UseSystemPasswordChar = false;
             // 
-            // lblAtribuicao
+            // MtxtComplemento
             // 
-            this.lblAtribuicao.AutoSize = true;
-            this.lblAtribuicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAtribuicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.lblAtribuicao.Location = new System.Drawing.Point(42, 1181);
-            this.lblAtribuicao.Name = "lblAtribuicao";
-            this.lblAtribuicao.Size = new System.Drawing.Size(108, 25);
-            this.lblAtribuicao.TabIndex = 97;
-            this.lblAtribuicao.Text = "Atribuição";
+            this.MtxtComplemento.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtComplemento.EnablePlaceholder = true;
+            this.MtxtComplemento.Location = new System.Drawing.Point(46, 992);
+            this.MtxtComplemento.MaxLength = 32767;
+            this.MtxtComplemento.Name = "MtxtComplemento";
+            this.MtxtComplemento.PasswordChar = '\0';
+            this.MtxtComplemento.PlaceholderChar = '\0';
+            this.MtxtComplemento.PlaceholderText = "Ex: 453, perto da estação";
+            this.MtxtComplemento.SelectionStart = 0;
+            this.MtxtComplemento.Size = new System.Drawing.Size(250, 40);
+            this.MtxtComplemento.TabIndex = 87;
+            this.MtxtComplemento.TextValue = "";
+            this.MtxtComplemento.UseSystemPasswordChar = false;
             // 
-            // frmLoginVoluntario
+            // MtxtCidade
+            // 
+            this.MtxtCidade.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtCidade.EnablePlaceholder = true;
+            this.MtxtCidade.Location = new System.Drawing.Point(46, 1101);
+            this.MtxtCidade.MaxLength = 32767;
+            this.MtxtCidade.Name = "MtxtCidade";
+            this.MtxtCidade.PasswordChar = '\0';
+            this.MtxtCidade.PlaceholderChar = '\0';
+            this.MtxtCidade.PlaceholderText = "Ex: São Paulo";
+            this.MtxtCidade.SelectionStart = 0;
+            this.MtxtCidade.Size = new System.Drawing.Size(250, 40);
+            this.MtxtCidade.TabIndex = 86;
+            this.MtxtCidade.TextValue = "";
+            this.MtxtCidade.UseSystemPasswordChar = false;
+            // 
+            // MtxtEndereco
+            // 
+            this.MtxtEndereco.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtEndereco.EnablePlaceholder = true;
+            this.MtxtEndereco.Location = new System.Drawing.Point(353, 874);
+            this.MtxtEndereco.MaxLength = 32767;
+            this.MtxtEndereco.Name = "MtxtEndereco";
+            this.MtxtEndereco.PasswordChar = '\0';
+            this.MtxtEndereco.PlaceholderChar = '\0';
+            this.MtxtEndereco.PlaceholderText = "Ex: Senac Largo Treze";
+            this.MtxtEndereco.SelectionStart = 0;
+            this.MtxtEndereco.Size = new System.Drawing.Size(250, 40);
+            this.MtxtEndereco.TabIndex = 85;
+            this.MtxtEndereco.TextValue = "";
+            this.MtxtEndereco.UseSystemPasswordChar = false;
+            // 
+            // MtxtCEP
+            // 
+            this.MtxtCEP.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtCEP.EnablePlaceholder = true;
+            this.MtxtCEP.Location = new System.Drawing.Point(48, 874);
+            this.MtxtCEP.MaxLength = 32767;
+            this.MtxtCEP.Name = "MtxtCEP";
+            this.MtxtCEP.PasswordChar = '\0';
+            this.MtxtCEP.PlaceholderChar = '\0';
+            this.MtxtCEP.PlaceholderText = "Ex: 00000-000";
+            this.MtxtCEP.SelectionStart = 0;
+            this.MtxtCEP.Size = new System.Drawing.Size(250, 40);
+            this.MtxtCEP.TabIndex = 84;
+            this.MtxtCEP.TextValue = "";
+            this.MtxtCEP.UseSystemPasswordChar = false;
+            this.MtxtCEP.TextChanged += new System.EventHandler(this.MtxtCEP_TextChanged);
+            this.MtxtCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MtxtCEP_KeyDown);
+            // 
+            // MtxtSobrenome
+            // 
+            this.MtxtSobrenome.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtSobrenome.EnablePlaceholder = true;
+            this.MtxtSobrenome.Location = new System.Drawing.Point(353, 356);
+            this.MtxtSobrenome.MaxLength = 32767;
+            this.MtxtSobrenome.Name = "MtxtSobrenome";
+            this.MtxtSobrenome.PasswordChar = '\0';
+            this.MtxtSobrenome.PlaceholderChar = '\0';
+            this.MtxtSobrenome.PlaceholderText = "Ex: Gonçalves";
+            this.MtxtSobrenome.SelectionStart = 0;
+            this.MtxtSobrenome.Size = new System.Drawing.Size(250, 40);
+            this.MtxtSobrenome.TabIndex = 83;
+            this.MtxtSobrenome.TextValue = "";
+            this.MtxtSobrenome.UseSystemPasswordChar = false;
+            // 
+            // MtxtConfirmeSenha
+            // 
+            this.MtxtConfirmeSenha.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtConfirmeSenha.EnablePlaceholder = true;
+            this.MtxtConfirmeSenha.Font = new System.Drawing.Font("Wingdings", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MtxtConfirmeSenha.Location = new System.Drawing.Point(353, 672);
+            this.MtxtConfirmeSenha.MaxLength = 32767;
+            this.MtxtConfirmeSenha.Name = "MtxtConfirmeSenha";
+            this.MtxtConfirmeSenha.PasswordChar = '\0';
+            this.MtxtConfirmeSenha.PlaceholderChar = '\0';
+            this.MtxtConfirmeSenha.PlaceholderText = "";
+            this.MtxtConfirmeSenha.SelectionStart = 0;
+            this.MtxtConfirmeSenha.Size = new System.Drawing.Size(250, 40);
+            this.MtxtConfirmeSenha.TabIndex = 82;
+            this.MtxtConfirmeSenha.TextValue = "";
+            this.MtxtConfirmeSenha.UseSystemPasswordChar = false;
+            // 
+            // MtxtSenha
+            // 
+            this.MtxtSenha.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtSenha.EnablePlaceholder = true;
+            this.MtxtSenha.Font = new System.Drawing.Font("Wingdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.MtxtSenha.Location = new System.Drawing.Point(50, 672);
+            this.MtxtSenha.MaxLength = 32767;
+            this.MtxtSenha.Name = "MtxtSenha";
+            this.MtxtSenha.PasswordChar = '\0';
+            this.MtxtSenha.PlaceholderChar = '\0';
+            this.MtxtSenha.PlaceholderText = "";
+            this.MtxtSenha.SelectionStart = 0;
+            this.MtxtSenha.Size = new System.Drawing.Size(250, 40);
+            this.MtxtSenha.TabIndex = 81;
+            this.MtxtSenha.TextValue = "";
+            this.MtxtSenha.UseSystemPasswordChar = false;
+            // 
+            // MtxtDataNascimento
+            // 
+            this.MtxtDataNascimento.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtDataNascimento.EnablePlaceholder = true;
+            this.MtxtDataNascimento.Location = new System.Drawing.Point(353, 561);
+            this.MtxtDataNascimento.MaxLength = 32767;
+            this.MtxtDataNascimento.Name = "MtxtDataNascimento";
+            this.MtxtDataNascimento.PasswordChar = '\0';
+            this.MtxtDataNascimento.PlaceholderChar = '\0';
+            this.MtxtDataNascimento.PlaceholderText = "Ex: 00/00/0000";
+            this.MtxtDataNascimento.SelectionStart = 0;
+            this.MtxtDataNascimento.Size = new System.Drawing.Size(250, 40);
+            this.MtxtDataNascimento.TabIndex = 80;
+            this.MtxtDataNascimento.TextValue = "";
+            this.MtxtDataNascimento.UseSystemPasswordChar = false;
+            this.MtxtDataNascimento.TextChanged += new System.EventHandler(this.MtxtDataNascimento_TextChanged);
+            // 
+            // MtxtTelefone
+            // 
+            this.MtxtTelefone.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtTelefone.EnablePlaceholder = true;
+            this.MtxtTelefone.Location = new System.Drawing.Point(47, 561);
+            this.MtxtTelefone.MaxLength = 32767;
+            this.MtxtTelefone.Name = "MtxtTelefone";
+            this.MtxtTelefone.PasswordChar = '\0';
+            this.MtxtTelefone.PlaceholderChar = '\0';
+            this.MtxtTelefone.PlaceholderText = "Ex: 00 00000-0000";
+            this.MtxtTelefone.SelectionStart = 0;
+            this.MtxtTelefone.Size = new System.Drawing.Size(250, 40);
+            this.MtxtTelefone.TabIndex = 79;
+            this.MtxtTelefone.TextValue = "";
+            this.MtxtTelefone.UseSystemPasswordChar = false;
+            this.MtxtTelefone.TextChanged += new System.EventHandler(this.MtxtTelefone_TextChanged);
+            // 
+            // MtxtCPF
+            // 
+            this.MtxtCPF.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtCPF.EnablePlaceholder = true;
+            this.MtxtCPF.Location = new System.Drawing.Point(353, 461);
+            this.MtxtCPF.MaxLength = 32767;
+            this.MtxtCPF.Name = "MtxtCPF";
+            this.MtxtCPF.PasswordChar = '\0';
+            this.MtxtCPF.PlaceholderChar = '\0';
+            this.MtxtCPF.PlaceholderText = "Ex: 000.000.000-00";
+            this.MtxtCPF.SelectionStart = 0;
+            this.MtxtCPF.Size = new System.Drawing.Size(250, 40);
+            this.MtxtCPF.TabIndex = 78;
+            this.MtxtCPF.TextValue = "";
+            this.MtxtCPF.UseSystemPasswordChar = false;
+            this.MtxtCPF.TextChanged += new System.EventHandler(this.MtxtCPF_TextChanged);
+            // 
+            // MtxtEmail
+            // 
+            this.MtxtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtEmail.EnablePlaceholder = true;
+            this.MtxtEmail.Location = new System.Drawing.Point(46, 461);
+            this.MtxtEmail.MaxLength = 32767;
+            this.MtxtEmail.Name = "MtxtEmail";
+            this.MtxtEmail.PasswordChar = '\0';
+            this.MtxtEmail.PlaceholderChar = '\0';
+            this.MtxtEmail.PlaceholderText = "Ex: caua@gmail.com";
+            this.MtxtEmail.SelectionStart = 0;
+            this.MtxtEmail.Size = new System.Drawing.Size(250, 40);
+            this.MtxtEmail.TabIndex = 77;
+            this.MtxtEmail.TextValue = "";
+            this.MtxtEmail.UseSystemPasswordChar = false;
+            // 
+            // frmCadastroVoluntario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -767,16 +768,16 @@ namespace Projeto_Socorrista
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmLoginVoluntario";
+            this.Name = "frmCadastroVoluntario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login de Voluntário ";
             this.Load += new System.EventHandler(this.frmLoginVoluntario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelCadastro.ResumeLayout(false);
             this.panelCadastro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMostrarSenha1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -677,6 +677,9 @@ namespace Projeto_Socorrista
 
         }
 
-   
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

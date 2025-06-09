@@ -17,9 +17,9 @@ using ZstdSharp.Unsafe;
 
 namespace Projeto_Socorrista
 {
-    public partial class frmLoginVoluntario : Form
+    public partial class frmCadastroVoluntario : Form
     {
-        public frmLoginVoluntario()
+        public frmCadastroVoluntario()
         {
             InitializeComponent();
         }
@@ -301,11 +301,12 @@ namespace Projeto_Socorrista
                 MtxtEndereco.TextValue = endereco.Logradouro;
                 MtxtCidade.TextValue = endereco.Localidade;
                 MtxtComplemento.TextValue = endereco.Complemento;
+                MtxtBairro.TextValue = endereco.Bairro;
+                MtxtEstado.TextValue = endereco.UF;
             }
             catch (Exception) {
                 MessageBox.Show("CEP invalído, por favor digitado um CEP existente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         private void MtxtCEP_KeyDown(object sender, KeyEventArgs e)
@@ -470,7 +471,7 @@ namespace Projeto_Socorrista
         private bool verificaCamposVazios()
         {
             if (MtxtCEP.TextValue.Equals("") || MtxtNome.TextValue.Equals("") || MtxtSobrenome.TextValue.Equals("") || MtxtEmail.TextValue.Equals("")
-                || MtxtTelefone.TextValue.Equals("") || MtxtCPF.TextValue.Equals("") || MtxtSenha.TextValue.Equals("") || MtxtDataNascimento.TextValue.Equals("") || MtxtEndereco.TextValue.Equals("") || MtxtCidade.TextValue.Equals("") || MtxtComplemento.TextValue.Equals(""))
+                || MtxtTelefone.TextValue.Equals("") || MtxtCPF.TextValue.Equals("") || MtxtSenha.TextValue.Equals("") || MtxtDataNascimento.TextValue.Equals("") || MtxtEndereco.TextValue.Equals("") || MtxtCidade.TextValue.Equals("") || MtxtEstado.TextValue.Equals("") || MtxtBairro.TextValue.Equals(""))
             {
                 return false;
             }
@@ -520,7 +521,6 @@ namespace Projeto_Socorrista
         }
 
         private bool verificaFormatacaoDosCampos() {
-
             if (!Regex.IsMatch(MtxtEmail.TextValue, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
                 MessageBox.Show("Email inválido", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -541,6 +541,7 @@ namespace Projeto_Socorrista
                 MtxtTelefone.Focus();
                 return false;
             }
+
             if (!DateTime.TryParse(MtxtDataNascimento.TextValue, out DateTime dataNascimento))
             {
                 MessageBox.Show("Data de nascimento inválida", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -558,6 +559,13 @@ namespace Projeto_Socorrista
             if (dataNascimento > DateTime.Now.AddYears(-18))
             {
                 MessageBox.Show("Você deve ter pelo menos 18 anos para se cadastrar", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MtxtDataNascimento.Focus();
+                return false;
+            }
+
+            if (dataNascimento < DateTime.Now.AddYears(-90))
+            {
+                MessageBox.Show("Você esta com idade avançada para ser um colaborador", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 MtxtDataNascimento.Focus();
                 return false;
             }

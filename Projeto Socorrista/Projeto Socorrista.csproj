@@ -114,6 +114,12 @@
     <Compile Include="frmCadastroVoluntario.Designer.cs">
       <DependentUpon>frmCadastroVoluntario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCarregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarregar.Designer.cs">
+      <DependentUpon>frmCarregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEnviaCodigoCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCadastroVoluntario.resx">
       <DependentUpon>frmCadastroVoluntario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarregar.resx">
+      <DependentUpon>frmCarregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEnviaCodigoCadastro.resx">
       <DependentUpon>frmEnviaCodigoCadastro.cs</DependentUpon>
@@ -166,6 +175,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SenhaVisivel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main Scene.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -129,35 +129,10 @@
        moral ou espiritual, o “GFSA” não faria distinção alguma quanto a sexo, cor, raça, profissão, nacionalidade, 
        condição social, credo político ou religioso.</value>
   </data>
+  <metadata name="process1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="picMostrarSenha1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHOSURBVEhLtZQt
-        S0RBFIZnXcRtu5rWsJYNhkUQ/AuL2MyCmASDIBjUJBgMJptFRItFraLYRAxmi+AvEFS0iAbx+j6Xmctc
-        OeAH48CzzLzn3HP2zMwZl2XZv2KKKTHFlJhiSkzRQqMhRsSY6Ld8LEwxoNEV2+JOIMQ8iWMxLirW92CL
-        zrXFqQjB7sWZ2BBLgqQX4l1gvxGTZqzSwrmaWBNv4kMciI63VQVbBFWvtcS6eBAIW6JWillMnKuLK8Hi
-        XIxGtmnxKFgA86nI3hRUyOJaDBU27xAH3xe90cczXn8Vu2JPUCFanKQiVgSV34qm10vBN0VxYBpsC//2
-        RQxGOltDEmw9Qfe2ecGESgYQOEyyLseO3pn9ZrJj2KiEybBhW/C2Exb8kGDOcPxrglVv48/nZVAOSWa/
-        OP5qi5gLbhILtr0eDNwCDoYkiyI+h58ecp849HoePNcjhyFBJSwoLb8F3vbdNeX5uBQsiuC5LUy8I40W
-        SqR5aKKWt1mN1hFHgsqpiia1G60kqu0F7c+C54BngeeBZ4Lngqbi+cAOVNw2Y1kiaNA4E4Jb9ixCsAAP
-        IEm71vcBU7TQ4Lax12xRw/KxMMWUmGJKTDElppiOzH0CxzCw5van4BEAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="picMonstrarSenha.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHOSURBVEhLtZQt
-        S0RBFIZnXcRtu5rWsJYNhkUQ/AuL2MyCmASDIBjUJBgMJptFRItFraLYRAxmi+AvEFS0iAbx+j6Xmctc
-        OeAH48CzzLzn3HP2zMwZl2XZv2KKKTHFlJhiSkzRQqMhRsSY6Ld8LEwxoNEV2+JOIMQ8iWMxLirW92CL
-        zrXFqQjB7sWZ2BBLgqQX4l1gvxGTZqzSwrmaWBNv4kMciI63VQVbBFWvtcS6eBAIW6JWillMnKuLK8Hi
-        XIxGtmnxKFgA86nI3hRUyOJaDBU27xAH3xe90cczXn8Vu2JPUCFanKQiVgSV34qm10vBN0VxYBpsC//2
-        RQxGOltDEmw9Qfe2ecGESgYQOEyyLseO3pn9ZrJj2KiEybBhW/C2Exb8kGDOcPxrglVv48/nZVAOSWa/
-        OP5qi5gLbhILtr0eDNwCDoYkiyI+h58ecp849HoePNcjhyFBJSwoLb8F3vbdNeX5uBQsiuC5LUy8I40W
-        SqR5aKKWt1mN1hFHgsqpiia1G60kqu0F7c+C54BngeeBZ4Lngqbi+cAOVNw2Y1kiaNA4E4Jb9ixCsAAP
-        IEm71vcBU7TQ4Lax12xRw/KxMMWUmGJKTDElppiOzH0CxzCw5van4BEAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAN0AAADiCAYAAADK6MJiAAAABGdBTUEAALGPC/xhBQAATctJREFUeF7t

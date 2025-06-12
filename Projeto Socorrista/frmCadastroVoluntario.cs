@@ -14,6 +14,7 @@ using Projeto_Socorrista.Classes;
 using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 using ZstdSharp.Unsafe;
+using System.Threading;
 
 namespace Projeto_Socorrista
 {
@@ -339,10 +340,10 @@ namespace Projeto_Socorrista
 
         // Criando metodo que envia os dados do voluntário para o banco de dados
         private int enviarVoluntario(
-            string nome, string sobrenome, string email, string cpf, string telefone, string dataNascimento, string senha, string cep, string endereco, string complemeto, string cidade) {
+            string nome, string sobrenome, string email, string cpf, string telefone, string dataNascimento, string senha, string cep, string endereco, string complemeto, string cidade, int Id_atribuicao) {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "insert into tbVoluntario(nomeVoluntario, sobrenomeVoluntario, telCel, cpf, email, dataNascimento, endereco_rua, endereco_cep, endereco_complemento, endereco_cidade, senha) " +
-                "values (@nomeVoluntario, @sobrenomeVoluntario, @telCel, @cpf, @email, @dataNascimento, @endereco_rua, @endereco_cep, @endereco_complemento, @endereco_cidade, @senha);";
+            comm.CommandText = "insert into tbVoluntario(nomeVoluntario, sobrenomeVoluntario, telCel, cpf, email, dataNascimento, endereco_rua, endereco_cep, endereco_complemento, endereco_cidade, senha, Id_atribuicao) " +
+                "values (@nomeVoluntario, @sobrenomeVoluntario, @telCel, @cpf, @email, @dataNascimento, @endereco_rua, @endereco_cep, @endereco_complemento, @endereco_cidade, @senha, @Id_atribuicao);";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
@@ -357,6 +358,8 @@ namespace Projeto_Socorrista
             comm.Parameters.Add("@endereco_cep", MySqlDbType.VarChar, 8).Value = cep;
             comm.Parameters.Add("@endereco_complemento", MySqlDbType.VarChar, 50).Value = complemeto;
             comm.Parameters.Add("@endereco_cidade", MySqlDbType.VarChar, 50).Value = cidade;
+            comm.Parameters.Add("@Id_atribuicao", MySqlDbType.VarChar, 50).Value = Id_atribuicao;
+
 
             comm.Connection = ConectaBanco.ObterConexao();
 
@@ -667,9 +670,10 @@ namespace Projeto_Socorrista
             // Enviando os dados do voluntário para o banco de dados
 
             if (enviarVoluntario(MtxtNome.TextValue, MtxtSobrenome.TextValue, MtxtEmail.TextValue, cpf, telefone, dataFormatada,
-                senhaCriptografada, cep, MtxtEndereco.TextValue, MtxtComplemento.TextValue, MtxtCidade.TextValue) == 1)
+                senhaCriptografada, cep, MtxtEndereco.TextValue, MtxtComplemento.TextValue, MtxtCidade.TextValue, Convert.ToInt32(MtxtIdAtribuicao.TextValue)) == 1)
             {
-                MessageBox.Show("Cadastro realizado com sucesso", "Bem vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                MessageBox.Show("Conta criada com sucesso!", "Bem vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else {
                 MessageBox.Show("Erro ao cadastrar o voluntário", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);

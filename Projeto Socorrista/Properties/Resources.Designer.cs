@@ -63,6 +63,16 @@ namespace Projeto_Socorrista.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gif_senha {
+            get {
+                object obj = ResourceManager.GetObject("gif_senha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Main_Scene {
             get {
                 object obj = ResourceManager.GetObject("Main_Scene", resourceCulture);

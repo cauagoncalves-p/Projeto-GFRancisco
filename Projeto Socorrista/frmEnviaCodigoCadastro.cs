@@ -18,9 +18,13 @@ namespace Projeto_Socorrista
             InitializeComponent();
         }
 
+        // Declare no início da sua classe
+        private TextBox[] textBoxes;
+
         private void frmEnviaCodigoCadastro_Load(object sender, EventArgs e)
         {
             picGif.Image = Properties.Resources.gif_senha;
+
             txtN1.BringToFront();
             txtN2.BringToFront();
             txtN3.BringToFront();
@@ -28,39 +32,88 @@ namespace Projeto_Socorrista
             txtN5.BringToFront();
             txtN6.BringToFront();
 
-            txtN1.Enter += textBox_Enter;
-            txtN2.Enter += textBox_Enter;
-            txtN3.Enter += textBox_Enter;
-            txtN4.Enter += textBox_Enter;
-            txtN5.Enter += textBox_Enter;
-            txtN6.Enter += textBox_Enter;
 
-            txtN1.KeyUp += textBox_KeyUp;
-            txtN2.KeyUp += textBox_KeyUp;
-            txtN3.KeyUp += textBox_KeyUp;
-            txtN4.KeyUp += textBox_KeyUp;
-            txtN5.KeyUp += textBox_KeyUp;
-            txtN6.KeyUp += textBox_KeyUp;
+            textBoxes = new TextBox[] { txtN1, txtN2, txtN3, txtN4, txtN5, txtN6 };
+
+            foreach (var box in textBoxes)
+            {
+                box.KeyUp += TextBox_KeyUp;
+                box.Leave += TextBox_Leave;
+                box.Enter += TextBox_Enter;
+            }
+        }
+        private bool TodosOsCamposPreenchidos()
+        {
+            return textBoxes.All(tb => tb.Text.Length == 1);
         }
 
-        private void textBox_KeyUp(object sender, KeyEventArgs e)
+        private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            TextBox atual = sender as TextBox;
-            int posicaoCursor = atual.SelectionStart;
+            var currentTextBox = (TextBox)sender;
 
-            if (atual.Text.Length == 1)
+            if (e.KeyCode == Keys.Back)
             {
-                this.SelectNextControl(atual, true, true, true, true);
+                if (currentTextBox.Text.Length == 0 && currentTextBox.SelectionStart == 0)
+                {
+                    MoveFocusToPrevious(currentTextBox);
+                }
+            }
+            else if (e.KeyCode == Keys.Enter)
+            {
+                if (TodosOsCamposPreenchidos())
+                {
+                    MessageBox.Show("Código completo! 🎉", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, preencha todos os números.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                if (currentTextBox.Text.Length == 1)
+                {
+                    MoveFocusToNext(currentTextBox);
+                }
             }
         }
 
-        private void textBox_Enter(object sender, EventArgs e)
+        private void MoveFocusToNext(TextBox current)
         {
-            TextBox atual = sender as TextBox;
-
-            if (atual.Text == "0")  
+            int index = Array.IndexOf(textBoxes, current);
+            if (index >= 0 && index < textBoxes.Length - 1)
             {
-                atual.Text = "";
+                textBoxes[index + 1].Focus();
+                textBoxes[index + 1].SelectAll();
+            }
+        }
+
+        private void MoveFocusToPrevious(TextBox current)
+        {
+            int index = Array.IndexOf(textBoxes, current);
+            if (index > 0)
+            {
+                textBoxes[index - 1].Focus();
+                textBoxes[index - 1].SelectAll();
+            }
+        }
+
+        
+        private void TextBox_Enter(object sender, EventArgs e)
+        {
+            var currentTextBox = (TextBox)sender;
+            if (currentTextBox.Text == "0")
+            {
+                currentTextBox.Text = "";
+            }
+        }
+
+        private void TextBox_Leave(object sender, EventArgs e)
+        {
+            var currentTextBox = (TextBox)sender;
+            if (string.IsNullOrWhiteSpace(currentTextBox.Text))
+            {
+                currentTextBox.Text = "0";
             }
         }
     }

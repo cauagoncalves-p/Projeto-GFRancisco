@@ -16,7 +16,7 @@ namespace Projeto_Socorrista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEnviaCodigoCadastro());
+            Application.Run(new frmEnviaCodigoCadastro("Pedro"));
         }
     }
 }

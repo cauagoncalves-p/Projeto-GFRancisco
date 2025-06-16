@@ -74,11 +74,11 @@
             this.panelLogin.Controls.Add(this.lblEmail);
             this.panelLogin.Controls.Add(this.lblSubTituloCriarConta);
             this.panelLogin.Controls.Add(this.lblTituloCriarConta);
+            this.panelLogin.Font = new System.Drawing.Font("Cooper Black", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.panelLogin.Location = new System.Drawing.Point(953, 0);
-            this.panelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogin.Location = new System.Drawing.Point(715, 0);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(925, 927);
+            this.panelLogin.Size = new System.Drawing.Size(694, 753);
             this.panelLogin.TabIndex = 10;
             // 
             // lblLinkCriarConta
@@ -87,10 +87,9 @@
             this.lblLinkCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLinkCriarConta.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLinkCriarConta.LinkColor = System.Drawing.Color.White;
-            this.lblLinkCriarConta.Location = new System.Drawing.Point(704, 821);
-            this.lblLinkCriarConta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLinkCriarConta.Location = new System.Drawing.Point(528, 667);
             this.lblLinkCriarConta.Name = "lblLinkCriarConta";
-            this.lblLinkCriarConta.Size = new System.Drawing.Size(129, 29);
+            this.lblLinkCriarConta.Size = new System.Drawing.Size(100, 24);
             this.lblLinkCriarConta.TabIndex = 93;
             this.lblLinkCriarConta.TabStop = true;
             this.lblLinkCriarConta.Text = "Criar conta";
@@ -101,10 +100,9 @@
             this.lblNãoTemConta.AutoSize = true;
             this.lblNãoTemConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNãoTemConta.ForeColor = System.Drawing.Color.White;
-            this.lblNãoTemConta.Location = new System.Drawing.Point(537, 822);
-            this.lblNãoTemConta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNãoTemConta.Location = new System.Drawing.Point(403, 668);
             this.lblNãoTemConta.Name = "lblNãoTemConta";
-            this.lblNãoTemConta.Size = new System.Drawing.Size(180, 29);
+            this.lblNãoTemConta.Size = new System.Drawing.Size(142, 24);
             this.lblNãoTemConta.TabIndex = 92;
             this.lblNãoTemConta.Text = "Não tem conta?";
             // 
@@ -113,19 +111,17 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.White;
-            this.lblError.Location = new System.Drawing.Point(65, 892);
-            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblError.Location = new System.Drawing.Point(49, 725);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 20);
+            this.lblError.Size = new System.Drawing.Size(0, 16);
             this.lblError.TabIndex = 91;
             // 
             // picMonstrarSenha
             // 
             this.picMonstrarSenha.Image = ((System.Drawing.Image)(resources.GetObject("picMonstrarSenha.Image")));
-            this.picMonstrarSenha.Location = new System.Drawing.Point(752, 617);
-            this.picMonstrarSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picMonstrarSenha.Location = new System.Drawing.Point(585, 501);
             this.picMonstrarSenha.Name = "picMonstrarSenha";
-            this.picMonstrarSenha.Size = new System.Drawing.Size(35, 27);
+            this.picMonstrarSenha.Size = new System.Drawing.Size(26, 22);
             this.picMonstrarSenha.TabIndex = 88;
             this.picMonstrarSenha.TabStop = false;
             // 
@@ -134,15 +130,14 @@
             this.MtxtSenha.BackColor = System.Drawing.Color.Transparent;
             this.MtxtSenha.EnablePlaceholder = true;
             this.MtxtSenha.Font = new System.Drawing.Font("Wingdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.MtxtSenha.Location = new System.Drawing.Point(59, 603);
-            this.MtxtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MtxtSenha.Location = new System.Drawing.Point(71, 490);
             this.MtxtSenha.MaxLength = 32767;
             this.MtxtSenha.Name = "MtxtSenha";
             this.MtxtSenha.PasswordChar = '\0';
             this.MtxtSenha.PlaceholderChar = '\0';
             this.MtxtSenha.PlaceholderText = "";
             this.MtxtSenha.SelectionStart = 0;
-            this.MtxtSenha.Size = new System.Drawing.Size(743, 49);
+            this.MtxtSenha.Size = new System.Drawing.Size(557, 40);
             this.MtxtSenha.TabIndex = 81;
             this.MtxtSenha.TextValue = "";
             this.MtxtSenha.UseSystemPasswordChar = false;
@@ -154,10 +149,9 @@
             this.btnCriarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCriarConta.ForeColor = System.Drawing.Color.White;
-            this.btnCriarConta.Location = new System.Drawing.Point(59, 711);
-            this.btnCriarConta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCriarConta.Location = new System.Drawing.Point(71, 585);
             this.btnCriarConta.Name = "btnCriarConta";
-            this.btnCriarConta.Size = new System.Drawing.Size(743, 57);
+            this.btnCriarConta.Size = new System.Drawing.Size(562, 46);
             this.btnCriarConta.TabIndex = 75;
             this.btnCriarConta.Text = "Criar conta";
             this.btnCriarConta.UseVisualStyleBackColor = false;
@@ -166,15 +160,14 @@
             // 
             this.MtxtEmail.BackColor = System.Drawing.Color.Transparent;
             this.MtxtEmail.EnablePlaceholder = true;
-            this.MtxtEmail.Location = new System.Drawing.Point(59, 470);
-            this.MtxtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MtxtEmail.Location = new System.Drawing.Point(71, 387);
             this.MtxtEmail.MaxLength = 32767;
             this.MtxtEmail.Name = "MtxtEmail";
             this.MtxtEmail.PasswordChar = '\0';
             this.MtxtEmail.PlaceholderChar = '\0';
             this.MtxtEmail.PlaceholderText = "Ex: caua@gmail.com";
             this.MtxtEmail.SelectionStart = 0;
-            this.MtxtEmail.Size = new System.Drawing.Size(743, 49);
+            this.MtxtEmail.Size = new System.Drawing.Size(557, 40);
             this.MtxtEmail.TabIndex = 77;
             this.MtxtEmail.TextValue = "";
             this.MtxtEmail.UseSystemPasswordChar = false;
@@ -184,10 +177,9 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(55, 558);
-            this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSenha.Location = new System.Drawing.Point(66, 447);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(92, 31);
+            this.lblSenha.Size = new System.Drawing.Size(74, 25);
             this.lblSenha.TabIndex = 73;
             this.lblSenha.Text = "Senha";
             // 
@@ -196,10 +188,9 @@
             this.lblPontilhado.AutoSize = true;
             this.lblPontilhado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPontilhado.ForeColor = System.Drawing.Color.White;
-            this.lblPontilhado.Location = new System.Drawing.Point(55, 345);
-            this.lblPontilhado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPontilhado.Location = new System.Drawing.Point(61, 296);
             this.lblPontilhado.Name = "lblPontilhado";
-            this.lblPontilhado.Size = new System.Drawing.Size(734, 31);
+            this.lblPontilhado.Size = new System.Drawing.Size(572, 25);
             this.lblPontilhado.TabIndex = 65;
             this.lblPontilhado.Text = "--------------------------------------------------------------------------------";
             // 
@@ -208,10 +199,9 @@
             this.lblDadosPessoais.AutoSize = true;
             this.lblDadosPessoais.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDadosPessoais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.lblDadosPessoais.Location = new System.Drawing.Point(59, 297);
-            this.lblDadosPessoais.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDadosPessoais.Location = new System.Drawing.Point(61, 260);
             this.lblDadosPessoais.Name = "lblDadosPessoais";
-            this.lblDadosPessoais.Size = new System.Drawing.Size(80, 31);
+            this.lblDadosPessoais.Size = new System.Drawing.Size(65, 25);
             this.lblDadosPessoais.TabIndex = 64;
             this.lblDadosPessoais.Text = "Login";
             // 
@@ -220,10 +210,9 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(55, 412);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(66, 337);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(81, 31);
+            this.lblEmail.Size = new System.Drawing.Size(65, 25);
             this.lblEmail.TabIndex = 61;
             this.lblEmail.Text = "Email";
             // 
@@ -231,12 +220,11 @@
             // 
             this.lblSubTituloCriarConta.AutoSize = true;
             this.lblSubTituloCriarConta.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubTituloCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTituloCriarConta.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTituloCriarConta.ForeColor = System.Drawing.Color.White;
-            this.lblSubTituloCriarConta.Location = new System.Drawing.Point(24, 154);
-            this.lblSubTituloCriarConta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubTituloCriarConta.Location = new System.Drawing.Point(34, 119);
             this.lblSubTituloCriarConta.Name = "lblSubTituloCriarConta";
-            this.lblSubTituloCriarConta.Size = new System.Drawing.Size(680, 69);
+            this.lblSubTituloCriarConta.Size = new System.Drawing.Size(622, 55);
             this.lblSubTituloCriarConta.TabIndex = 59;
             this.lblSubTituloCriarConta.Text = "Informe seu login abaixo";
             // 
@@ -244,12 +232,11 @@
             // 
             this.lblTituloCriarConta.AutoSize = true;
             this.lblTituloCriarConta.BackColor = System.Drawing.Color.Transparent;
-            this.lblTituloCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloCriarConta.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloCriarConta.ForeColor = System.Drawing.Color.White;
-            this.lblTituloCriarConta.Location = new System.Drawing.Point(75, 46);
-            this.lblTituloCriarConta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTituloCriarConta.Location = new System.Drawing.Point(56, 37);
             this.lblTituloCriarConta.Name = "lblTituloCriarConta";
-            this.lblTituloCriarConta.Size = new System.Drawing.Size(588, 69);
+            this.lblTituloCriarConta.Size = new System.Drawing.Size(555, 55);
             this.lblTituloCriarConta.TabIndex = 58;
             this.lblTituloCriarConta.Text = "Bem vindo voluntário";
             // 
@@ -257,10 +244,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -48);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(959, 1204);
+            this.pictureBox1.Size = new System.Drawing.Size(719, 978);
             this.pictureBox1.TabIndex = 94;
             this.pictureBox1.TabStop = false;
             // 
@@ -268,10 +254,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(16, 46);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 37);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(303, 274);
+            this.pictureBox2.Size = new System.Drawing.Size(227, 223);
             this.pictureBox2.TabIndex = 95;
             this.pictureBox2.TabStop = false;
             // 
@@ -279,12 +264,11 @@
             // 
             this.lblTituloF.AutoSize = true;
             this.lblTituloF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblTituloF.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloF.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.lblTituloF.Location = new System.Drawing.Point(352, 191);
-            this.lblTituloF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTituloF.Location = new System.Drawing.Point(264, 155);
             this.lblTituloF.Name = "lblTituloF";
-            this.lblTituloF.Size = new System.Drawing.Size(290, 69);
+            this.lblTituloF.Size = new System.Drawing.Size(260, 55);
             this.lblTituloF.TabIndex = 97;
             this.lblTituloF.Text = "Francisco";
             // 
@@ -292,12 +276,11 @@
             // 
             this.lblSubTituloF.AutoSize = true;
             this.lblSubTituloF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblSubTituloF.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTituloF.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubTituloF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.lblSubTituloF.Location = new System.Drawing.Point(352, 89);
-            this.lblSubTituloF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubTituloF.Location = new System.Drawing.Point(264, 72);
             this.lblSubTituloF.Name = "lblSubTituloF";
-            this.lblSubTituloF.Size = new System.Drawing.Size(276, 69);
+            this.lblSubTituloF.Size = new System.Drawing.Size(246, 55);
             this.lblSubTituloF.TabIndex = 96;
             this.lblSubTituloF.Text = "Grupo G.";
             // 
@@ -305,12 +288,11 @@
             // 
             this.lblTransforme.AutoSize = true;
             this.lblTransforme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblTransforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransforme.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransforme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(139)))), ((int)(((byte)(106)))));
-            this.lblTransforme.Location = new System.Drawing.Point(16, 585);
-            this.lblTransforme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTransforme.Location = new System.Drawing.Point(12, 475);
             this.lblTransforme.Name = "lblTransforme";
-            this.lblTransforme.Size = new System.Drawing.Size(513, 69);
+            this.lblTransforme.Size = new System.Drawing.Size(443, 55);
             this.lblTransforme.TabIndex = 100;
             this.lblTransforme.Text = "Doe com coração.";
             // 
@@ -318,12 +300,11 @@
             // 
             this.lblCompartilhe.AutoSize = true;
             this.lblCompartilhe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblCompartilhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompartilhe.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompartilhe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.lblCompartilhe.Location = new System.Drawing.Point(16, 502);
-            this.lblCompartilhe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCompartilhe.Location = new System.Drawing.Point(12, 408);
             this.lblCompartilhe.Name = "lblCompartilhe";
-            this.lblCompartilhe.Size = new System.Drawing.Size(481, 69);
+            this.lblCompartilhe.Size = new System.Drawing.Size(437, 55);
             this.lblCompartilhe.TabIndex = 99;
             this.lblCompartilhe.Text = "Ajude com amor.";
             // 
@@ -331,12 +312,11 @@
             // 
             this.lblDoe.AutoSize = true;
             this.lblDoe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.lblDoe.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoe.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(156)))), ((int)(((byte)(241)))));
-            this.lblDoe.Location = new System.Drawing.Point(16, 415);
-            this.lblDoe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDoe.Location = new System.Drawing.Point(12, 337);
             this.lblDoe.Name = "lblDoe";
-            this.lblDoe.Size = new System.Drawing.Size(638, 69);
+            this.lblDoe.Size = new System.Drawing.Size(583, 55);
             this.lblDoe.TabIndex = 98;
             this.lblDoe.Text = "Transforme vidas hoje.";
             this.lblDoe.Click += new System.EventHandler(this.lblDoe_Click);
@@ -347,18 +327,17 @@
             this.lblDescritivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.lblDescritivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescritivo.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblDescritivo.Location = new System.Drawing.Point(31, 678);
-            this.lblDescritivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescritivo.Location = new System.Drawing.Point(23, 551);
             this.lblDescritivo.Name = "lblDescritivo";
-            this.lblDescritivo.Size = new System.Drawing.Size(770, 216);
+            this.lblDescritivo.Size = new System.Drawing.Size(618, 162);
             this.lblDescritivo.TabIndex = 101;
             this.lblDescritivo.Text = resources.GetString("lblDescritivo.Text");
             // 
             // frmLoginVoluntario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1877, 921);
+            this.ClientSize = new System.Drawing.Size(1408, 748);
             this.Controls.Add(this.lblDescritivo);
             this.Controls.Add(this.lblTransforme);
             this.Controls.Add(this.lblCompartilhe);
@@ -368,7 +347,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelLogin);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLoginVoluntario";

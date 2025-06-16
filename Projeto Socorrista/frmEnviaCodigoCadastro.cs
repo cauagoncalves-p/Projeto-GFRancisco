@@ -17,6 +17,7 @@ namespace Projeto_Socorrista
     public partial class frmEnviaCodigoCadastro : Form
     {
         private string _nomeVoluntario;
+        string codigoGerado;
         public frmEnviaCodigoCadastro(string nomeVolunario)
         {
             InitializeComponent();
@@ -51,7 +52,21 @@ namespace Projeto_Socorrista
         }
         private bool TodosOsCamposPreenchidos()
         {
-            return textBoxes.All(tb => tb.Text.Length == 1);
+            if (textBoxes.All(tb => tb.Text.Length == 1)) {
+                return true;
+            }
+            string codigo = txtN1.Text + txtN2.Text + txtN3.Text + txtN4.Text + txtN5.Text + txtN6.Text;
+
+            if (codigo == codigoGerado)
+            {
+                return true;
+            }
+            else {
+                MessageBox.Show("Erro");
+                return false;
+            }
+
+            return false; 
         }
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {

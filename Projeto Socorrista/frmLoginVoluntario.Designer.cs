@@ -35,7 +35,7 @@
             this.lblError = new System.Windows.Forms.Label();
             this.picMonstrarSenha = new System.Windows.Forms.PictureBox();
             this.MtxtSenha = new ModernTextBox();
-            this.btnCriarConta = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.MtxtEmail = new ModernTextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblPontilhado = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.panelLogin.Controls.Add(this.lblError);
             this.panelLogin.Controls.Add(this.picMonstrarSenha);
             this.panelLogin.Controls.Add(this.MtxtSenha);
-            this.panelLogin.Controls.Add(this.btnCriarConta);
+            this.panelLogin.Controls.Add(this.btnEntrar);
             this.panelLogin.Controls.Add(this.MtxtEmail);
             this.panelLogin.Controls.Add(this.lblSenha);
             this.panelLogin.Controls.Add(this.lblPontilhado);
@@ -85,8 +85,9 @@
             // 
             this.lblLinkCriarConta.AutoSize = true;
             this.lblLinkCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLinkCriarConta.ForeColor = System.Drawing.Color.White;
             this.lblLinkCriarConta.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lblLinkCriarConta.LinkColor = System.Drawing.Color.White;
+            this.lblLinkCriarConta.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
             this.lblLinkCriarConta.Location = new System.Drawing.Point(528, 667);
             this.lblLinkCriarConta.Name = "lblLinkCriarConta";
             this.lblLinkCriarConta.Size = new System.Drawing.Size(100, 24);
@@ -100,7 +101,7 @@
             this.lblNãoTemConta.AutoSize = true;
             this.lblNãoTemConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNãoTemConta.ForeColor = System.Drawing.Color.White;
-            this.lblNãoTemConta.Location = new System.Drawing.Point(403, 668);
+            this.lblNãoTemConta.Location = new System.Drawing.Point(380, 667);
             this.lblNãoTemConta.Name = "lblNãoTemConta";
             this.lblNãoTemConta.Size = new System.Drawing.Size(142, 24);
             this.lblNãoTemConta.TabIndex = 92;
@@ -124,6 +125,7 @@
             this.picMonstrarSenha.Size = new System.Drawing.Size(26, 22);
             this.picMonstrarSenha.TabIndex = 88;
             this.picMonstrarSenha.TabStop = false;
+            this.picMonstrarSenha.Click += new System.EventHandler(this.picMonstrarSenha_Click);
             // 
             // MtxtSenha
             // 
@@ -142,19 +144,20 @@
             this.MtxtSenha.TextValue = "";
             this.MtxtSenha.UseSystemPasswordChar = false;
             // 
-            // btnCriarConta
+            // btnEntrar
             // 
-            this.btnCriarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(115)))));
-            this.btnCriarConta.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCriarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriarConta.ForeColor = System.Drawing.Color.White;
-            this.btnCriarConta.Location = new System.Drawing.Point(71, 585);
-            this.btnCriarConta.Name = "btnCriarConta";
-            this.btnCriarConta.Size = new System.Drawing.Size(562, 46);
-            this.btnCriarConta.TabIndex = 75;
-            this.btnCriarConta.Text = "Criar conta";
-            this.btnCriarConta.UseVisualStyleBackColor = false;
+            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(115)))));
+            this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Location = new System.Drawing.Point(71, 585);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(562, 46);
+            this.btnEntrar.TabIndex = 75;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // MtxtEmail
             // 
@@ -319,7 +322,6 @@
             this.lblDoe.Size = new System.Drawing.Size(583, 55);
             this.lblDoe.TabIndex = 98;
             this.lblDoe.Text = "Transforme vidas hoje.";
-            this.lblDoe.Click += new System.EventHandler(this.lblDoe_Click);
             // 
             // lblDescritivo
             // 
@@ -368,7 +370,7 @@
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.PictureBox picMonstrarSenha;
         private ModernTextBox MtxtSenha;
-        private System.Windows.Forms.Button btnCriarConta;
+        private System.Windows.Forms.Button btnEntrar;
         private ModernTextBox MtxtEmail;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblPontilhado;

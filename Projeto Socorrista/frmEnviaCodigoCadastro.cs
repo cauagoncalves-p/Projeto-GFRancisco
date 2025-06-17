@@ -22,7 +22,7 @@ namespace Projeto_Socorrista
         {
             InitializeComponent();
             _nomeVoluntario = nomeVolunario;
-            string codigoGerado = gerarCodigoAleatorio();
+            codigoGerado = gerarCodigoAleatorio();
             enviarCodigo("cauagoncalves2190@gmail.com", codigoGerado);
         }
 
@@ -52,21 +52,12 @@ namespace Projeto_Socorrista
         }
         private bool TodosOsCamposPreenchidos()
         {
-            if (textBoxes.All(tb => tb.Text.Length == 1)) {
-                return true;
-            }
-            string codigo = txtN1.Text + txtN2.Text + txtN3.Text + txtN4.Text + txtN5.Text + txtN6.Text;
 
-            if (codigo == codigoGerado)
+            if (textBoxes.All(tb => tb.Text.Length == 1))
             {
                 return true;
             }
-            else {
-                MessageBox.Show("Erro");
-                return false;
-            }
-
-            return false; 
+            return false;   
         }
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
@@ -81,9 +72,14 @@ namespace Projeto_Socorrista
             }
             else if (e.KeyCode == Keys.Enter)
             {
-                if (TodosOsCamposPreenchidos())
+                string codigo = txtN1.Text + txtN2.Text + txtN3.Text + txtN4.Text + txtN5.Text + txtN6.Text;
+
+                if (TodosOsCamposPreenchidos() && codigo == codigoGerado)
                 {
-                    MessageBox.Show("Código completo! 🎉", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Código confirmado 🎉", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (TodosOsCamposPreenchidos() && codigo != codigoGerado) {
+                    MessageBox.Show("O Código informado está incorreto!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

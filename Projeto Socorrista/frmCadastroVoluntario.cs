@@ -679,15 +679,48 @@ namespace Projeto_Socorrista
             // Enviando os dados do voluntário para o banco de dados
 
             if (enviarVoluntario(MtxtNome.TextValue, MtxtSobrenome.TextValue, MtxtEmail.TextValue, cpf, telefone, dataFormatada,
-                senhaCriptografada, cep, MtxtEndereco.TextValue, MtxtComplemento.TextValue, MtxtCidade.TextValue,Convert.ToInt32(MtxtIdAtribuicao.TextValue), salt ) == 1)
+                senhaCriptografada, cep, MtxtEndereco.TextValue, MtxtComplemento.TextValue, MtxtCidade.TextValue, Convert.ToInt32(MtxtIdAtribuicao.TextValue), salt) == 1)
             {
-
                 MessageBox.Show("Conta criada com sucesso!", "Bem vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                frmEnviaCodigoCadastro enviarCodigo = new frmEnviaCodigoCadastro(MtxtEmail.TextValue,MtxtNome.TextValue, BuscarVoluntarioPorEmail(MtxtEmail.TextValue));
+                enviarCodigo.ShowDialog();
+                this.Show();
             }
             else {
                 MessageBox.Show("Erro ao cadastrar o voluntário", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+
+        private (string nome, string email) BuscarVoluntarioPorEmail(string email)
+        {
+
+            string nome = "";
+            string emailVoluntario = "";
+
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select nomeVoluntario, email from tbVolunarios where email = @email";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = email;
+
+            comm.Connection = ConectaBanco.ObterConexao(); 
+
+            using (MySqlDataReader DR = comm.ExecuteReader())
+            {
+                if (DR.Read())
+                {
+                    nome = DR.GetString(0);
+                    emailVoluntario = DR.GetString(1);
+                }
+            }
+
+            ConectaBanco.FecharConexao();
+
+            return (nome, emailVoluntario);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -76,7 +76,10 @@ namespace Projeto_Socorrista
 
                 if (TodosOsCamposPreenchidos() && codigo == codigoGerado)
                 {
-                    MessageBox.Show("Código confirmado 🎉", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show("Código confirmado 🎉", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (result == DialogResult.OK) {
+                        
+                    }
                 }
                 else if (TodosOsCamposPreenchidos() && codigo != codigoGerado) {
                     MessageBox.Show("O Código informado está incorreto!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);

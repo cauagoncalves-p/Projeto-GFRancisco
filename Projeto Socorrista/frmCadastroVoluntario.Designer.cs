@@ -37,15 +37,9 @@ namespace Projeto_Socorrista
             this.lblCompartilhe = new System.Windows.Forms.Label();
             this.lblTransforme = new System.Windows.Forms.Label();
             this.panelCadastro = new System.Windows.Forms.Panel();
-            this.lblError = new System.Windows.Forms.Label();
-            this.btnCriarConta = new System.Windows.Forms.Button();
-            this.lblEspacoProBotao = new System.Windows.Forms.Label();
-            this.process1 = new System.Diagnostics.Process();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblDadosPessoais = new System.Windows.Forms.Label();
-            this.lblSubTituloCriarConta = new System.Windows.Forms.Label();
-            this.lblTituloCriarConta = new System.Windows.Forms.Label();
+            this.lblSobrenome = new System.Windows.Forms.Label();
+            this.picMonstrarSenha = new System.Windows.Forms.PictureBox();
+            this.picMostrarSenha1 = new System.Windows.Forms.PictureBox();
             this.MtxtIdAtribuicao = new ModernTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblAtribuicao = new System.Windows.Forms.Label();
@@ -79,14 +73,20 @@ namespace Projeto_Socorrista
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.picMostrarSenha1 = new System.Windows.Forms.PictureBox();
-            this.picMonstrarSenha = new System.Windows.Forms.PictureBox();
-            this.lblSobrenome = new System.Windows.Forms.Label();
+            this.lblDadosPessoais = new System.Windows.Forms.Label();
+            this.lblSubTituloCriarConta = new System.Windows.Forms.Label();
+            this.lblTituloCriarConta = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
+            this.lblEspacoProBotao = new System.Windows.Forms.Label();
+            this.btnCriarConta = new System.Windows.Forms.Button();
+            this.process1 = new System.Diagnostics.Process();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelCadastro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMostrarSenha1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMostrarSenha1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSubTituloF
@@ -213,107 +213,36 @@ namespace Projeto_Socorrista
             this.panelCadastro.Size = new System.Drawing.Size(680, 749);
             this.panelCadastro.TabIndex = 9;
             // 
-            // lblError
+            // lblSobrenome
             // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.Color.White;
-            this.lblError.Location = new System.Drawing.Point(33, 1440);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 16);
-            this.lblError.TabIndex = 91;
+            this.lblSobrenome.AutoSize = true;
+            this.lblSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSobrenome.ForeColor = System.Drawing.Color.White;
+            this.lblSobrenome.Location = new System.Drawing.Point(360, 320);
+            this.lblSobrenome.Name = "lblSobrenome";
+            this.lblSobrenome.Size = new System.Drawing.Size(115, 25);
+            this.lblSobrenome.TabIndex = 138;
+            this.lblSobrenome.Text = "Sobenome";
             // 
-            // btnCriarConta
+            // picMonstrarSenha
             // 
-            this.btnCriarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(115)))));
-            this.btnCriarConta.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCriarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriarConta.ForeColor = System.Drawing.Color.White;
-            this.btnCriarConta.Location = new System.Drawing.Point(45, 1349);
-            this.btnCriarConta.Name = "btnCriarConta";
-            this.btnCriarConta.Size = new System.Drawing.Size(557, 57);
-            this.btnCriarConta.TabIndex = 75;
-            this.btnCriarConta.Text = "Criar conta";
-            this.btnCriarConta.UseVisualStyleBackColor = false;
-            this.btnCriarConta.Click += new System.EventHandler(this.btnCriarConta_Click);
+            this.picMonstrarSenha.Image = global::Projeto_Socorrista.Properties.Resources.SenhaVisivel;
+            this.picMonstrarSenha.Location = new System.Drawing.Point(254, 680);
+            this.picMonstrarSenha.Name = "picMonstrarSenha";
+            this.picMonstrarSenha.Size = new System.Drawing.Size(26, 26);
+            this.picMonstrarSenha.TabIndex = 137;
+            this.picMonstrarSenha.TabStop = false;
+            this.picMonstrarSenha.Click += new System.EventHandler(this.picMonstrarSenha_Click);
             // 
-            // lblEspacoProBotao
+            // picMostrarSenha1
             // 
-            this.lblEspacoProBotao.AutoSize = true;
-            this.lblEspacoProBotao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspacoProBotao.ForeColor = System.Drawing.Color.White;
-            this.lblEspacoProBotao.Location = new System.Drawing.Point(47, 1418);
-            this.lblEspacoProBotao.Name = "lblEspacoProBotao";
-            this.lblEspacoProBotao.Size = new System.Drawing.Size(24, 50);
-            this.lblEspacoProBotao.TabIndex = 76;
-            this.lblEspacoProBotao.Text = "p\r\np";
-            // 
-            // process1
-            // 
-            this.process1.StartInfo.Domain = "";
-            this.process1.StartInfo.LoadUserProfile = false;
-            this.process1.StartInfo.Password = null;
-            this.process1.StartInfo.StandardErrorEncoding = null;
-            this.process1.StartInfo.StandardOutputEncoding = null;
-            this.process1.StartInfo.UserName = "";
-            this.process1.SynchronizingObject = this;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(16, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(227, 223);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-31, -68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(778, 978);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // lblDadosPessoais
-            // 
-            this.lblDadosPessoais.AutoSize = true;
-            this.lblDadosPessoais.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDadosPessoais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.lblDadosPessoais.Location = new System.Drawing.Point(40, 218);
-            this.lblDadosPessoais.Name = "lblDadosPessoais";
-            this.lblDadosPessoais.Size = new System.Drawing.Size(174, 25);
-            this.lblDadosPessoais.TabIndex = 102;
-            this.lblDadosPessoais.Text = "Dados Pessoais:";
-            // 
-            // lblSubTituloCriarConta
-            // 
-            this.lblSubTituloCriarConta.AutoSize = true;
-            this.lblSubTituloCriarConta.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubTituloCriarConta.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubTituloCriarConta.ForeColor = System.Drawing.Color.White;
-            this.lblSubTituloCriarConta.Location = new System.Drawing.Point(47, 86);
-            this.lblSubTituloCriarConta.Name = "lblSubTituloCriarConta";
-            this.lblSubTituloCriarConta.Size = new System.Drawing.Size(586, 55);
-            this.lblSubTituloCriarConta.TabIndex = 101;
-            this.lblSubTituloCriarConta.Text = "Vamos criar sua conta?";
-            // 
-            // lblTituloCriarConta
-            // 
-            this.lblTituloCriarConta.AutoSize = true;
-            this.lblTituloCriarConta.BackColor = System.Drawing.Color.Transparent;
-            this.lblTituloCriarConta.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloCriarConta.ForeColor = System.Drawing.Color.White;
-            this.lblTituloCriarConta.Location = new System.Drawing.Point(66, 20);
-            this.lblTituloCriarConta.Name = "lblTituloCriarConta";
-            this.lblTituloCriarConta.Size = new System.Drawing.Size(555, 55);
-            this.lblTituloCriarConta.TabIndex = 100;
-            this.lblTituloCriarConta.Text = "Bem vindo voluntário";
+            this.picMostrarSenha1.Image = global::Projeto_Socorrista.Properties.Resources.SenhaVisivel;
+            this.picMostrarSenha1.Location = new System.Drawing.Point(574, 681);
+            this.picMostrarSenha1.Name = "picMostrarSenha1";
+            this.picMostrarSenha1.Size = new System.Drawing.Size(26, 26);
+            this.picMostrarSenha1.TabIndex = 136;
+            this.picMostrarSenha1.TabStop = false;
+            this.picMostrarSenha1.Click += new System.EventHandler(this.picMostrarSenha1_Click);
             // 
             // MtxtIdAtribuicao
             // 
@@ -760,36 +689,107 @@ namespace Projeto_Socorrista
             this.lblNome.TabIndex = 103;
             this.lblNome.Text = "Nome";
             // 
-            // picMostrarSenha1
+            // lblDadosPessoais
             // 
-            this.picMostrarSenha1.Image = global::Projeto_Socorrista.Properties.Resources.SenhaVisivel;
-            this.picMostrarSenha1.Location = new System.Drawing.Point(574, 681);
-            this.picMostrarSenha1.Name = "picMostrarSenha1";
-            this.picMostrarSenha1.Size = new System.Drawing.Size(26, 26);
-            this.picMostrarSenha1.TabIndex = 136;
-            this.picMostrarSenha1.TabStop = false;
-            this.picMostrarSenha1.Click += new System.EventHandler(this.picMostrarSenha1_Click);
+            this.lblDadosPessoais.AutoSize = true;
+            this.lblDadosPessoais.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDadosPessoais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.lblDadosPessoais.Location = new System.Drawing.Point(40, 218);
+            this.lblDadosPessoais.Name = "lblDadosPessoais";
+            this.lblDadosPessoais.Size = new System.Drawing.Size(174, 25);
+            this.lblDadosPessoais.TabIndex = 102;
+            this.lblDadosPessoais.Text = "Dados Pessoais:";
             // 
-            // picMonstrarSenha
+            // lblSubTituloCriarConta
             // 
-            this.picMonstrarSenha.Image = global::Projeto_Socorrista.Properties.Resources.SenhaVisivel;
-            this.picMonstrarSenha.Location = new System.Drawing.Point(254, 680);
-            this.picMonstrarSenha.Name = "picMonstrarSenha";
-            this.picMonstrarSenha.Size = new System.Drawing.Size(26, 26);
-            this.picMonstrarSenha.TabIndex = 137;
-            this.picMonstrarSenha.TabStop = false;
-            this.picMonstrarSenha.Click += new System.EventHandler(this.picMonstrarSenha_Click);
+            this.lblSubTituloCriarConta.AutoSize = true;
+            this.lblSubTituloCriarConta.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubTituloCriarConta.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTituloCriarConta.ForeColor = System.Drawing.Color.White;
+            this.lblSubTituloCriarConta.Location = new System.Drawing.Point(47, 86);
+            this.lblSubTituloCriarConta.Name = "lblSubTituloCriarConta";
+            this.lblSubTituloCriarConta.Size = new System.Drawing.Size(586, 55);
+            this.lblSubTituloCriarConta.TabIndex = 101;
+            this.lblSubTituloCriarConta.Text = "Vamos criar sua conta?";
             // 
-            // lblSobrenome
+            // lblTituloCriarConta
             // 
-            this.lblSobrenome.AutoSize = true;
-            this.lblSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSobrenome.ForeColor = System.Drawing.Color.White;
-            this.lblSobrenome.Location = new System.Drawing.Point(360, 320);
-            this.lblSobrenome.Name = "lblSobrenome";
-            this.lblSobrenome.Size = new System.Drawing.Size(115, 25);
-            this.lblSobrenome.TabIndex = 138;
-            this.lblSobrenome.Text = "Sobenome";
+            this.lblTituloCriarConta.AutoSize = true;
+            this.lblTituloCriarConta.BackColor = System.Drawing.Color.Transparent;
+            this.lblTituloCriarConta.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloCriarConta.ForeColor = System.Drawing.Color.White;
+            this.lblTituloCriarConta.Location = new System.Drawing.Point(66, 20);
+            this.lblTituloCriarConta.Name = "lblTituloCriarConta";
+            this.lblTituloCriarConta.Size = new System.Drawing.Size(555, 55);
+            this.lblTituloCriarConta.TabIndex = 100;
+            this.lblTituloCriarConta.Text = "Bem vindo voluntário";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.White;
+            this.lblError.Location = new System.Drawing.Point(33, 1440);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 16);
+            this.lblError.TabIndex = 91;
+            // 
+            // lblEspacoProBotao
+            // 
+            this.lblEspacoProBotao.AutoSize = true;
+            this.lblEspacoProBotao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspacoProBotao.ForeColor = System.Drawing.Color.White;
+            this.lblEspacoProBotao.Location = new System.Drawing.Point(47, 1418);
+            this.lblEspacoProBotao.Name = "lblEspacoProBotao";
+            this.lblEspacoProBotao.Size = new System.Drawing.Size(24, 50);
+            this.lblEspacoProBotao.TabIndex = 76;
+            this.lblEspacoProBotao.Text = "p\r\np";
+            // 
+            // btnCriarConta
+            // 
+            this.btnCriarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(115)))));
+            this.btnCriarConta.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCriarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCriarConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarConta.ForeColor = System.Drawing.Color.White;
+            this.btnCriarConta.Location = new System.Drawing.Point(45, 1344);
+            this.btnCriarConta.Name = "btnCriarConta";
+            this.btnCriarConta.Size = new System.Drawing.Size(557, 43);
+            this.btnCriarConta.TabIndex = 75;
+            this.btnCriarConta.Text = "Criar conta";
+            this.btnCriarConta.UseVisualStyleBackColor = false;
+            this.btnCriarConta.Click += new System.EventHandler(this.btnCriarConta_Click);
+            // 
+            // process1
+            // 
+            this.process1.StartInfo.Domain = "";
+            this.process1.StartInfo.LoadUserProfile = false;
+            this.process1.StartInfo.Password = null;
+            this.process1.StartInfo.StandardErrorEncoding = null;
+            this.process1.StartInfo.StandardOutputEncoding = null;
+            this.process1.StartInfo.UserName = "";
+            this.process1.SynchronizingObject = this;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(16, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(227, 223);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-31, -68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(778, 978);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmCadastroVoluntario
             // 
@@ -815,10 +815,10 @@ namespace Projeto_Socorrista
             this.Load += new System.EventHandler(this.frmLoginVoluntario_Load);
             this.panelCadastro.ResumeLayout(false);
             this.panelCadastro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMostrarSenha1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMostrarSenha1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

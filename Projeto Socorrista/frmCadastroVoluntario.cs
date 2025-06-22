@@ -683,7 +683,10 @@ namespace Projeto_Socorrista
             {
                 MessageBox.Show("Conta criada com sucesso!", "Bem vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                frmEnviaCodigoCadastro enviarCodigo = new frmEnviaCodigoCadastro(MtxtEmail.TextValue,MtxtNome.TextValue, BuscarVoluntarioPorEmail(MtxtEmail.TextValue));
+                nomeVoluntario = BuscarVoluntarioPorEmail(MtxtEmail.TextValue).nome;
+                emailVoluntario = BuscarVoluntarioPorEmail(MtxtEmail.TextValue).email;
+
+                frmEnviaCodigoCadastro enviarCodigo = new frmEnviaCodigoCadastro(nomeVoluntario, emailVoluntario);
                 enviarCodigo.ShowDialog();
                 this.Show();
             }
@@ -693,7 +696,8 @@ namespace Projeto_Socorrista
 
         }
 
-
+        public string nomeVoluntario = "";
+        public string emailVoluntario = "";
         private (string nome, string email) BuscarVoluntarioPorEmail(string email)
         {
 
@@ -701,21 +705,21 @@ namespace Projeto_Socorrista
             string emailVoluntario = "";
 
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "select nomeVoluntario, email from tbVolunarios where email = @email";
+            comm.CommandText = "select nomeVoluntario, email from tbVoluntario where email = @email";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
             comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = email;
 
-            comm.Connection = ConectaBanco.ObterConexao(); 
+            comm.Connection = ConectaBanco.ObterConexao();
 
-            using (MySqlDataReader DR = comm.ExecuteReader())
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+
+            while (DR.Read())
             {
-                if (DR.Read())
-                {
-                    nome = DR.GetString(0);
-                    emailVoluntario = DR.GetString(1);
-                }
+                nome = DR.GetString(0);
+                emailVoluntario = DR.GetString(1);
             }
 
             ConectaBanco.FecharConexao();

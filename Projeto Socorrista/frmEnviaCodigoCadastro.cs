@@ -17,13 +17,13 @@ namespace Projeto_Socorrista
     public partial class frmEnviaCodigoCadastro : Form
     {
         private string _nomeVoluntario;
+        private string _emailVoluntario;
         string codigoGerado;
-        public frmEnviaCodigoCadastro(string nomeVolunario)
+        public frmEnviaCodigoCadastro(string nomeVolunario, string emailVoluntario)
         {
             InitializeComponent();
             _nomeVoluntario = nomeVolunario;
-            codigoGerado = gerarCodigoAleatorio();
-            enviarCodigo("cauagoncalves2190@gmail.com", codigoGerado);
+            _emailVoluntario = emailVoluntario;
         }
 
         // Declare no início da sua classe
@@ -31,6 +31,10 @@ namespace Projeto_Socorrista
 
         private void frmEnviaCodigoCadastro_Load(object sender, EventArgs e)
         {
+          
+            codigoGerado = gerarCodigoAleatorio();
+            enviarCodigo(_emailVoluntario, codigoGerado);
+            lblEmail.Text = _emailVoluntario;
             picGif.Image = Properties.Resources.gif_senha;
 
             txtN1.BringToFront();

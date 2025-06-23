@@ -119,6 +119,7 @@ namespace Projeto_Socorrista
             configuracaoDeSenha();
             mudandoMaxLength();
             MtxtSenha.TextChanged += (s, args) => AvaliarForcaSenha(MtxtSenha.TextValue);
+            carregaAtribuicao();
         }
 
         // Trocando imagem ao clicar
@@ -727,6 +728,28 @@ namespace Projeto_Socorrista
             return (nome, emailVoluntario);
         }
 
+
+        private void carregaAtribuicao() { 
+
+            MySqlCommand comm = new MySqlCommand();
+            string sql = "select * from  tbatribuicao";
+            MySqlDataAdapter DA = new MySqlDataAdapter(sql, ConectaBanco.ObterConexao());
+            DataTable dt = new DataTable();
+
+            if (DA.Fill(dt) < 1)
+            {
+                dgvAtribuicao.DataSource = "Sem atribuições no momento";
+            }
+            else {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dgvAtribuicao.Rows.Add(dr.ItemArray);
+                }
+            }
+
+            ConectaBanco.FecharConexao();
+
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

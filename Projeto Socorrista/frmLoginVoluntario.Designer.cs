@@ -51,6 +51,8 @@
             this.lblCompartilhe = new System.Windows.Forms.Label();
             this.lblDoe = new System.Windows.Forms.Label();
             this.lblDescritivo = new System.Windows.Forms.Label();
+            this.lbllinkTrocarSenha = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,6 +63,8 @@
             // 
             this.panelLogin.AutoScroll = true;
             this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(115)))));
+            this.panelLogin.Controls.Add(this.label1);
+            this.panelLogin.Controls.Add(this.lbllinkTrocarSenha);
             this.panelLogin.Controls.Add(this.lblLinkCriarConta);
             this.panelLogin.Controls.Add(this.lblNãoTemConta);
             this.panelLogin.Controls.Add(this.lblError);
@@ -88,7 +92,7 @@
             this.lblLinkCriarConta.ForeColor = System.Drawing.Color.White;
             this.lblLinkCriarConta.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLinkCriarConta.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.lblLinkCriarConta.Location = new System.Drawing.Point(528, 667);
+            this.lblLinkCriarConta.Location = new System.Drawing.Point(215, 664);
             this.lblLinkCriarConta.Name = "lblLinkCriarConta";
             this.lblLinkCriarConta.Size = new System.Drawing.Size(100, 24);
             this.lblLinkCriarConta.TabIndex = 93;
@@ -101,7 +105,7 @@
             this.lblNãoTemConta.AutoSize = true;
             this.lblNãoTemConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNãoTemConta.ForeColor = System.Drawing.Color.White;
-            this.lblNãoTemConta.Location = new System.Drawing.Point(380, 667);
+            this.lblNãoTemConta.Location = new System.Drawing.Point(67, 664);
             this.lblNãoTemConta.Name = "lblNãoTemConta";
             this.lblNãoTemConta.Size = new System.Drawing.Size(142, 24);
             this.lblNãoTemConta.TabIndex = 92;
@@ -335,6 +339,31 @@
             this.lblDescritivo.TabIndex = 101;
             this.lblDescritivo.Text = resources.GetString("lblDescritivo.Text");
             // 
+            // lbllinkTrocarSenha
+            // 
+            this.lbllinkTrocarSenha.AutoSize = true;
+            this.lbllinkTrocarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllinkTrocarSenha.ForeColor = System.Drawing.Color.White;
+            this.lbllinkTrocarSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lbllinkTrocarSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.lbllinkTrocarSenha.Location = new System.Drawing.Point(568, 664);
+            this.lbllinkTrocarSenha.Name = "lbllinkTrocarSenha";
+            this.lbllinkTrocarSenha.Size = new System.Drawing.Size(64, 24);
+            this.lbllinkTrocarSenha.TabIndex = 94;
+            this.lbllinkTrocarSenha.TabStop = true;
+            this.lbllinkTrocarSenha.Text = "Alterar";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(383, 664);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(179, 24);
+            this.label1.TabIndex = 95;
+            this.label1.Text = "Esqueceu a senha?";
+            // 
             // frmLoginVoluntario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,5 +417,7 @@
         private System.Windows.Forms.Label lblCompartilhe;
         private System.Windows.Forms.Label lblDoe;
         private System.Windows.Forms.Label lblDescritivo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel lbllinkTrocarSenha;
     }
 }

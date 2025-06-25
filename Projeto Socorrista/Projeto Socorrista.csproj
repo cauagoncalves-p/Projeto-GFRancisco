@@ -120,6 +120,12 @@
     <Compile Include="frmEnviaCodigoCadastro.Designer.cs">
       <DependentUpon>frmEnviaCodigoCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEnviarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnviarSenha.Designer.cs">
+      <DependentUpon>frmEnviarSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoginVoluntario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEnviaCodigoCadastro.resx">
       <DependentUpon>frmEnviaCodigoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnviarSenha.resx">
+      <DependentUpon>frmEnviarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoginVoluntario.resx">
       <DependentUpon>frmLoginVoluntario.cs</DependentUpon>

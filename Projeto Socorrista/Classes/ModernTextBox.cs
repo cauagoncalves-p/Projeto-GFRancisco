@@ -63,6 +63,13 @@ public class ModernTextBox : UserControl
         set => textBox.MaxLength = value;
     }
 
+    public Color TextBoxBackColor
+    {
+        get => textBox.BackColor;
+        set => textBox.BackColor = value;
+    }
+
+
     // adicionado o evento de textchanged
     [Browsable(true)]
     [EditorBrowsable(EditorBrowsableState.Always)]

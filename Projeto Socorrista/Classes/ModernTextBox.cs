@@ -69,6 +69,20 @@ public class ModernTextBox : UserControl
         set => textBox.BackColor = value;
     }
 
+    private Color placeholderColor = Color.LightGray;
+
+    [Browsable(true)]
+    [EditorBrowsable(EditorBrowsableState.Always)]
+    public Color PlaceholderColor
+    {
+        get => placeholderColor;
+        set
+        {
+            placeholderColor = value;
+            if (isPlaceholderActive)
+                textBox.ForeColor = value;
+        }
+    }
 
     // adicionado o evento de textchanged
     [Browsable(true)]
@@ -143,7 +157,7 @@ public class ModernTextBox : UserControl
         {
             isPlaceholderActive = false;
             textBox.Text = "";
-            textBox.ForeColor = Color.White;
+            textBox.ForeColor = placeholderColor;
         }
     }
 

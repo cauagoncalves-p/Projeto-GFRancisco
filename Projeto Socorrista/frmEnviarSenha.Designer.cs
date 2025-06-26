@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.modernTextBox1 = new ModernTextBox();
+            this.modernTextBox2 = new ModernTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +74,7 @@
             // 
             this.modernTextBox1.BackColor = System.Drawing.Color.Transparent;
             this.modernTextBox1.EnablePlaceholder = true;
-            this.modernTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.modernTextBox1.ForeColor = System.Drawing.Color.Blue;
             this.modernTextBox1.Location = new System.Drawing.Point(415, 296);
             this.modernTextBox1.MaxLength = 32767;
             this.modernTextBox1.Name = "modernTextBox1";
@@ -83,8 +84,26 @@
             this.modernTextBox1.SelectionStart = 0;
             this.modernTextBox1.Size = new System.Drawing.Size(567, 40);
             this.modernTextBox1.TabIndex = 107;
+            this.modernTextBox1.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
             this.modernTextBox1.TextValue = "";
             this.modernTextBox1.UseSystemPasswordChar = false;
+            // 
+            // modernTextBox2
+            // 
+            this.modernTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.modernTextBox2.EnablePlaceholder = true;
+            this.modernTextBox2.Location = new System.Drawing.Point(485, 502);
+            this.modernTextBox2.MaxLength = 32767;
+            this.modernTextBox2.Name = "modernTextBox2";
+            this.modernTextBox2.PasswordChar = '\0';
+            this.modernTextBox2.PlaceholderChar = '\0';
+            this.modernTextBox2.PlaceholderText = "Digite aqui...";
+            this.modernTextBox2.SelectionStart = 0;
+            this.modernTextBox2.Size = new System.Drawing.Size(250, 40);
+            this.modernTextBox2.TabIndex = 108;
+            this.modernTextBox2.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
+            this.modernTextBox2.TextValue = "";
+            this.modernTextBox2.UseSystemPasswordChar = false;
             // 
             // frmEnviarSenha
             // 
@@ -92,6 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1362, 748);
+            this.Controls.Add(this.modernTextBox2);
             this.Controls.Add(this.modernTextBox1);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.label2);
@@ -110,5 +130,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEmail;
         private ModernTextBox modernTextBox1;
+        private ModernTextBox modernTextBox2;
     }
 }

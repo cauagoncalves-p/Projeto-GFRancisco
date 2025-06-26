@@ -16,7 +16,7 @@ namespace Projeto_Socorrista
         {
             InitializeComponent();
             modernTextBox1.TextBoxBackColor = ColorTranslator.FromHtml("#FBF9F9");
-
+            modernTextBox1.PlaceholderColor = Color.Black;
         }
     }
 }

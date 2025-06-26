@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.modernTextBox1 = new ModernTextBox();
-            this.modernTextBox2 = new ModernTextBox();
+            this.MtxtEmail = new ModernTextBox();
+            this.btnEnviar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -41,7 +41,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.label1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(156)))), ((int)(((byte)(241)))));
-            this.label1.Location = new System.Drawing.Point(395, 65);
+            this.label1.Location = new System.Drawing.Point(395, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(541, 55);
             this.label1.TabIndex = 104;
@@ -53,7 +53,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(410, 137);
+            this.label2.Location = new System.Drawing.Point(430, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(436, 87);
             this.label2.TabIndex = 105;
@@ -64,46 +64,44 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Black;
-            this.lblEmail.Location = new System.Drawing.Point(410, 259);
+            this.lblEmail.Location = new System.Drawing.Point(409, 301);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(65, 25);
             this.lblEmail.TabIndex = 106;
             this.lblEmail.Text = "Email";
             // 
-            // modernTextBox1
+            // MtxtEmail
             // 
-            this.modernTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox1.EnablePlaceholder = true;
-            this.modernTextBox1.ForeColor = System.Drawing.Color.Blue;
-            this.modernTextBox1.Location = new System.Drawing.Point(415, 296);
-            this.modernTextBox1.MaxLength = 32767;
-            this.modernTextBox1.Name = "modernTextBox1";
-            this.modernTextBox1.PasswordChar = '\0';
-            this.modernTextBox1.PlaceholderChar = '\0';
-            this.modernTextBox1.PlaceholderText = "Ex: cauagoncalves@gmail.com";
-            this.modernTextBox1.SelectionStart = 0;
-            this.modernTextBox1.Size = new System.Drawing.Size(567, 40);
-            this.modernTextBox1.TabIndex = 107;
-            this.modernTextBox1.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.modernTextBox1.TextValue = "";
-            this.modernTextBox1.UseSystemPasswordChar = false;
+            this.MtxtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtEmail.BorderColorB = System.Drawing.Color.White;
+            this.MtxtEmail.EnablePlaceholder = true;
+            this.MtxtEmail.ForeColor = System.Drawing.Color.Blue;
+            this.MtxtEmail.Location = new System.Drawing.Point(414, 356);
+            this.MtxtEmail.MaxLength = 32767;
+            this.MtxtEmail.Name = "MtxtEmail";
+            this.MtxtEmail.PasswordChar = '\0';
+            this.MtxtEmail.PlaceholderChar = '\0';
+            this.MtxtEmail.PlaceholderColor = System.Drawing.Color.LightGray;
+            this.MtxtEmail.PlaceholderText = "Ex: cauagoncalves@gmail.com";
+            this.MtxtEmail.SelectionStart = 0;
+            this.MtxtEmail.Size = new System.Drawing.Size(567, 40);
+            this.MtxtEmail.TabIndex = 107;
+            this.MtxtEmail.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
+            this.MtxtEmail.TextValue = "";
+            this.MtxtEmail.UseSystemPasswordChar = false;
             // 
-            // modernTextBox2
+            // btnEnviar
             // 
-            this.modernTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.modernTextBox2.EnablePlaceholder = true;
-            this.modernTextBox2.Location = new System.Drawing.Point(485, 502);
-            this.modernTextBox2.MaxLength = 32767;
-            this.modernTextBox2.Name = "modernTextBox2";
-            this.modernTextBox2.PasswordChar = '\0';
-            this.modernTextBox2.PlaceholderChar = '\0';
-            this.modernTextBox2.PlaceholderText = "Digite aqui...";
-            this.modernTextBox2.SelectionStart = 0;
-            this.modernTextBox2.Size = new System.Drawing.Size(250, 40);
-            this.modernTextBox2.TabIndex = 108;
-            this.modernTextBox2.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.modernTextBox2.TextValue = "";
-            this.modernTextBox2.UseSystemPasswordChar = false;
+            this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(115)))));
+            this.btnEnviar.FlatAppearance.BorderSize = 0;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.Location = new System.Drawing.Point(451, 453);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(485, 47);
+            this.btnEnviar.TabIndex = 108;
+            this.btnEnviar.Text = "Enviar e-mail";
+            this.btnEnviar.UseVisualStyleBackColor = false;
             // 
             // frmEnviarSenha
             // 
@@ -111,8 +109,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1362, 748);
-            this.Controls.Add(this.modernTextBox2);
-            this.Controls.Add(this.modernTextBox1);
+            this.Controls.Add(this.btnEnviar);
+            this.Controls.Add(this.MtxtEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -129,7 +127,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEmail;
-        private ModernTextBox modernTextBox1;
-        private ModernTextBox modernTextBox2;
+        private ModernTextBox MtxtEmail;
+        private System.Windows.Forms.Button btnEnviar;
     }
 }

@@ -70,6 +70,7 @@ public class ModernTextBox : UserControl
     }
 
     private Color placeholderColor = Color.LightGray;
+    private Color BorderColor = Color.White;
 
     [Browsable(true)]
     [EditorBrowsable(EditorBrowsableState.Always)]
@@ -84,14 +85,27 @@ public class ModernTextBox : UserControl
         }
     }
 
+    [Browsable(true)]
+    [EditorBrowsable(EditorBrowsableState.Always)]
+    public Color BorderColorB
+    {
+        get => BorderColor;
+        set
+        {
+            BorderColor = value;
+            this.Invalidate(); 
+        }
+    }
+
+
     // adicionado o evento de textchanged
     [Browsable(true)]
     [EditorBrowsable(EditorBrowsableState.Always)]
     public event EventHandler TextChanged;
 
     public ModernTextBox()
-    {
-        this.Size = new Size(250, 40);
+    { 
+        this.Size = new Size(400, 40);
         this.BackColor = Color.Transparent;
         this.DoubleBuffered = true;
 
@@ -141,7 +155,6 @@ public class ModernTextBox : UserControl
     private void SetPlaceholder(object sender, EventArgs e)
     {
         if (!EnablePlaceholder) return;
-
         if (string.IsNullOrWhiteSpace(textBox.Text))
         {
             isPlaceholderActive = true;
@@ -179,7 +192,7 @@ public class ModernTextBox : UserControl
             path.AddArc(rect.X, rect.Bottom - radius, radius, radius, 90, 90);
             path.CloseFigure();
 
-            using (Pen pen = new Pen(Color.White, 1.5f))
+            using (Pen pen = new Pen(BorderColor , 1.5f))
             {
                 g.DrawPath(pen, path);
             }

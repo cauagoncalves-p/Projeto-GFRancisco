@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,24 @@ namespace Projeto_Socorrista
         public frmEnviarSenha()
         {
             InitializeComponent();
-            modernTextBox1.TextBoxBackColor = ColorTranslator.FromHtml("#FBF9F9");
-            modernTextBox1.PlaceholderColor = Color.Black;
+            MtxtEmail.TextBoxBackColor = ColorTranslator.FromHtml("#FBF9F9");
+            MtxtEmail.PlaceholderColor = Color.Black;
+            MtxtEmail.BorderColorB = Color.Black;
+
+        }
+
+        private bool verificaEmail(string email) {
+
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select email, from tbVoluntarios where email = @email";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = email;
+
+
+
+            return false;
         }
     }
 }

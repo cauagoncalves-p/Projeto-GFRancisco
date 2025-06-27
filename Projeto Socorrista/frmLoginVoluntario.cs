@@ -114,5 +114,14 @@ namespace Projeto_Socorrista
                 MessageBox.Show("Email ou senha incorretos.");
             }
         }
+
+        private void lbllinkTrocarSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            frmEnviarSenha frmEnviar = new frmEnviarSenha();
+            frmEnviar.ShowDialog();
+            this.Show();
+
+        }
     }
 }

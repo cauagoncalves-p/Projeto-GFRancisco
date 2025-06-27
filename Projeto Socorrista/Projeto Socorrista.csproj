@@ -132,6 +132,18 @@
     <Compile Include="frmLoginVoluntario.Designer.cs">
       <DependentUpon>frmLoginVoluntario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuPrincipal.Designer.cs">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrocarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrocarSenha.Designer.cs">
+      <DependentUpon>frmTrocarSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCadastroVoluntario.resx">

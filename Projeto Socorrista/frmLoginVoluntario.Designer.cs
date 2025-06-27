@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginVoluntario));
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbllinkTrocarSenha = new System.Windows.Forms.LinkLabel();
             this.lblLinkCriarConta = new System.Windows.Forms.LinkLabel();
             this.lblNãoTemConta = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@
             this.lblCompartilhe = new System.Windows.Forms.Label();
             this.lblDoe = new System.Windows.Forms.Label();
             this.lblDescritivo = new System.Windows.Forms.Label();
-            this.lbllinkTrocarSenha = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMonstrarSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +84,32 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(694, 753);
             this.panelLogin.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(383, 664);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(179, 24);
+            this.label1.TabIndex = 95;
+            this.label1.Text = "Esqueceu a senha?";
+            // 
+            // lbllinkTrocarSenha
+            // 
+            this.lbllinkTrocarSenha.AutoSize = true;
+            this.lbllinkTrocarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllinkTrocarSenha.ForeColor = System.Drawing.Color.White;
+            this.lbllinkTrocarSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lbllinkTrocarSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
+            this.lbllinkTrocarSenha.Location = new System.Drawing.Point(568, 664);
+            this.lbllinkTrocarSenha.Name = "lbllinkTrocarSenha";
+            this.lbllinkTrocarSenha.Size = new System.Drawing.Size(64, 24);
+            this.lbllinkTrocarSenha.TabIndex = 94;
+            this.lbllinkTrocarSenha.TabStop = true;
+            this.lbllinkTrocarSenha.Text = "Alterar";
+            this.lbllinkTrocarSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbllinkTrocarSenha_LinkClicked);
             // 
             // lblLinkCriarConta
             // 
@@ -134,6 +160,7 @@
             // MtxtSenha
             // 
             this.MtxtSenha.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtSenha.BorderColorB = System.Drawing.Color.White;
             this.MtxtSenha.EnablePlaceholder = true;
             this.MtxtSenha.Font = new System.Drawing.Font("Wingdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.MtxtSenha.Location = new System.Drawing.Point(71, 490);
@@ -141,10 +168,12 @@
             this.MtxtSenha.Name = "MtxtSenha";
             this.MtxtSenha.PasswordChar = '\0';
             this.MtxtSenha.PlaceholderChar = '\0';
+            this.MtxtSenha.PlaceholderColor = System.Drawing.Color.LightGray;
             this.MtxtSenha.PlaceholderText = "";
             this.MtxtSenha.SelectionStart = 0;
             this.MtxtSenha.Size = new System.Drawing.Size(557, 40);
             this.MtxtSenha.TabIndex = 81;
+            this.MtxtSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
             this.MtxtSenha.TextValue = "";
             this.MtxtSenha.UseSystemPasswordChar = false;
             // 
@@ -166,16 +195,19 @@
             // MtxtEmail
             // 
             this.MtxtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtEmail.BorderColorB = System.Drawing.Color.White;
             this.MtxtEmail.EnablePlaceholder = true;
             this.MtxtEmail.Location = new System.Drawing.Point(71, 387);
             this.MtxtEmail.MaxLength = 32767;
             this.MtxtEmail.Name = "MtxtEmail";
             this.MtxtEmail.PasswordChar = '\0';
             this.MtxtEmail.PlaceholderChar = '\0';
+            this.MtxtEmail.PlaceholderColor = System.Drawing.Color.LightGray;
             this.MtxtEmail.PlaceholderText = "Ex: caua@gmail.com";
             this.MtxtEmail.SelectionStart = 0;
             this.MtxtEmail.Size = new System.Drawing.Size(557, 40);
             this.MtxtEmail.TabIndex = 77;
+            this.MtxtEmail.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
             this.MtxtEmail.TextValue = "";
             this.MtxtEmail.UseSystemPasswordChar = false;
             // 
@@ -338,31 +370,6 @@
             this.lblDescritivo.Size = new System.Drawing.Size(618, 162);
             this.lblDescritivo.TabIndex = 101;
             this.lblDescritivo.Text = resources.GetString("lblDescritivo.Text");
-            // 
-            // lbllinkTrocarSenha
-            // 
-            this.lbllinkTrocarSenha.AutoSize = true;
-            this.lbllinkTrocarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllinkTrocarSenha.ForeColor = System.Drawing.Color.White;
-            this.lbllinkTrocarSenha.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lbllinkTrocarSenha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(119)))), ((int)(((byte)(0)))));
-            this.lbllinkTrocarSenha.Location = new System.Drawing.Point(568, 664);
-            this.lbllinkTrocarSenha.Name = "lbllinkTrocarSenha";
-            this.lbllinkTrocarSenha.Size = new System.Drawing.Size(64, 24);
-            this.lbllinkTrocarSenha.TabIndex = 94;
-            this.lbllinkTrocarSenha.TabStop = true;
-            this.lbllinkTrocarSenha.Text = "Alterar";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(383, 664);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 24);
-            this.label1.TabIndex = 95;
-            this.label1.Text = "Esqueceu a senha?";
             // 
             // frmLoginVoluntario
             // 

@@ -18,12 +18,14 @@ namespace Projeto_Socorrista
     {
         private string _codigoGerado;
         private string _emailVoluntario;
+        private string _origem;
 
-        public frmEnviaCodigoCadastro(string codigoGerado, string emailVoluntario)
+        public frmEnviaCodigoCadastro(string codigoGerado, string emailVoluntario, string origim)
         {
             InitializeComponent();
             _codigoGerado = codigoGerado;
             _emailVoluntario = emailVoluntario;
+            _origem = origim;
         }
 
         // Declare no início da sua classe
@@ -75,19 +77,30 @@ namespace Projeto_Socorrista
             }
             else if (e.KeyCode == Keys.Enter)
             {
-                string codigo = txtN1.Text + txtN2.Text + txtN3.Text + txtN4.Text + txtN5.Text + txtN6.Text;
+                string codigoDigitado = txtN1.Text + txtN2.Text + txtN3.Text + txtN4.Text + txtN5.Text + txtN6.Text;
 
-                if (TodosOsCamposPreenchidos() && codigo == _codigoGerado)
+                if (TodosOsCamposPreenchidos() && codigoDigitado == _codigoGerado)
                 {
-                    DialogResult result = MessageBox.Show("Código confirmado 🎉", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (result == DialogResult.OK)
-                    {
+                    MessageBox.Show("Código confirmado 🎉", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    if (_origem == "Password")
+                    {
+                        this.Hide();
+                        frmTrocarSenha frm = new frmTrocarSenha();
+                        frm.ShowDialog();
+                        this.Show();
+                    }
+                    else if (_origem == "CadastroVoluntario")
+                    {
+                        this.Hide();
+                        frmMenuPrincipal frm = new frmMenuPrincipal();
+                        frm.ShowDialog();
+                        this.Show();
                     }
                 }
-                else if (TodosOsCamposPreenchidos() && codigo != _codigoGerado)
+                else if (TodosOsCamposPreenchidos() && codigoDigitado != _codigoGerado)
                 {
-                    MessageBox.Show("O Código informado está incorreto!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("O código informado está incorreto!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -102,6 +115,7 @@ namespace Projeto_Socorrista
                 }
             }
         }
+
         private void MoveFocusToNext(TextBox current)
         {
             int index = Array.IndexOf(textBoxes, current);

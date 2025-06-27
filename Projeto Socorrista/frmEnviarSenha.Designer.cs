@@ -102,6 +102,7 @@
             this.btnEnviar.TabIndex = 108;
             this.btnEnviar.Text = "Enviar e-mail";
             this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // frmEnviarSenha
             // 

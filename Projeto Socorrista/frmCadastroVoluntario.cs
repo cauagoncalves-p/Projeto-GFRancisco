@@ -468,8 +468,8 @@ namespace Projeto_Socorrista
             DR.Read();
             try
             {
-                string existeTelefone = DR.GetString(1);
-                if (existeTelefone.Equals(""))
+                string existeEmail = DR.GetString(1);
+                if (existeEmail.Equals(""))
                 {
                     return false;
                 }
@@ -695,7 +695,7 @@ namespace Projeto_Socorrista
                 if (enviarEmail)
                 {
                     this.Hide();
-                    frmEnviaCodigoCadastro enviarCodigo = new frmEnviaCodigoCadastro(codigoGerado,emailVoluntario);
+                    frmEnviaCodigoCadastro enviarCodigo = new frmEnviaCodigoCadastro(codigoGerado,emailVoluntario, "CadastroVoluntario");
                     enviarCodigo.ShowDialog();
                     this.Show();
                 }

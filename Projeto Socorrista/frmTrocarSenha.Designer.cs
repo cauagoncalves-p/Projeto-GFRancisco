@@ -28,12 +28,154 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.MtxtSenha = new ModernTextBox();
+            this.MtxtConfimeSenha = new ModernTextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblConfirmeSenha = new System.Windows.Forms.Label();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // MtxtSenha
+            // 
+            this.MtxtSenha.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtSenha.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtSenha.EnablePlaceholder = true;
+            this.MtxtSenha.ForeColor = System.Drawing.Color.Black;
+            this.MtxtSenha.Location = new System.Drawing.Point(462, 381);
+            this.MtxtSenha.MaxLength = 32767;
+            this.MtxtSenha.Name = "MtxtSenha";
+            this.MtxtSenha.PasswordChar = '\0';
+            this.MtxtSenha.PlaceholderChar = '\0';
+            this.MtxtSenha.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtSenha.PlaceholderText = "Ex: SenhaForte@2025";
+            this.MtxtSenha.SelectionStart = 0;
+            this.MtxtSenha.Size = new System.Drawing.Size(400, 40);
+            this.MtxtSenha.TabIndex = 0;
+            this.MtxtSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.MtxtSenha.TextValue = "";
+            this.MtxtSenha.UseSystemPasswordChar = false;
+            // 
+            // MtxtConfimeSenha
+            // 
+            this.MtxtConfimeSenha.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtConfimeSenha.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtConfimeSenha.EnablePlaceholder = true;
+            this.MtxtConfimeSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MtxtConfimeSenha.Location = new System.Drawing.Point(462, 497);
+            this.MtxtConfimeSenha.MaxLength = 32767;
+            this.MtxtConfimeSenha.Name = "MtxtConfimeSenha";
+            this.MtxtConfimeSenha.PasswordChar = '\0';
+            this.MtxtConfimeSenha.PlaceholderChar = '\0';
+            this.MtxtConfimeSenha.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtConfimeSenha.PlaceholderText = "Ex: SenhaForte@2025";
+            this.MtxtConfimeSenha.SelectionStart = 0;
+            this.MtxtConfimeSenha.Size = new System.Drawing.Size(400, 41);
+            this.MtxtConfimeSenha.TabIndex = 1;
+            this.MtxtConfimeSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.MtxtConfimeSenha.TextValue = "";
+            this.MtxtConfimeSenha.UseSystemPasswordChar = false;
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Location = new System.Drawing.Point(459, 339);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(56, 23);
+            this.lblSenha.TabIndex = 2;
+            this.lblSenha.Text = "Senha";
+            // 
+            // lblConfirmeSenha
+            // 
+            this.lblConfirmeSenha.AutoSize = true;
+            this.lblConfirmeSenha.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(459, 451);
+            this.lblConfirmeSenha.Name = "lblConfirmeSenha";
+            this.lblConfirmeSenha.Size = new System.Drawing.Size(150, 23);
+            this.lblConfirmeSenha.TabIndex = 3;
+            this.lblConfirmeSenha.Text = "Confirme sua senha";
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(115)))));
+            this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Location = new System.Drawing.Point(463, 601);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(399, 44);
+            this.btnSalvar.TabIndex = 4;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(156)))), ((int)(((byte)(241)))));
+            this.label1.Location = new System.Drawing.Point(415, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(513, 55);
+            this.label1.TabIndex = 105;
+            this.label1.Text = "Redefinir sua senha ";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(445, 181);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(446, 119);
+            this.panel1.TabIndex = 107;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(178, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(239, 58);
+            this.label2.TabIndex = 108;
+            this.label2.Text = "A nova senha precisa ser \r\ndiferente da senha atual";
+            // 
+            // frmTrocarSenha
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmTrocarSenha";
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.ClientSize = new System.Drawing.Size(1362, 748);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.lblConfirmeSenha);
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.MtxtConfimeSenha);
+            this.Controls.Add(this.MtxtSenha);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Name = "frmTrocarSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Redefinir senha ";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private ModernTextBox MtxtSenha;
+        private ModernTextBox MtxtConfimeSenha;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.Label lblConfirmeSenha;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -349,9 +349,9 @@
             this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(80, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(404, 29);
+            this.label2.Size = new System.Drawing.Size(449, 29);
             this.label2.TabIndex = 104;
-            this.label2.Text = "Um código foi enviado para o email :";
+            this.label2.Text = "Um código foi enviado para o seu email :";
             // 
             // label1
             // 

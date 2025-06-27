@@ -158,6 +158,9 @@
     <EmbeddedResource Include="frmLoginVoluntario.resx">
       <DependentUpon>frmLoginVoluntario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTrocarSenha.resx">
+      <DependentUpon>frmTrocarSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.MtxtEmail = new ModernTextBox();
             this.btnEnviar = new System.Windows.Forms.Button();
+            this.MtxtEmail = new ModernTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -70,26 +70,6 @@
             this.lblEmail.TabIndex = 106;
             this.lblEmail.Text = "Email";
             // 
-            // MtxtEmail
-            // 
-            this.MtxtEmail.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtEmail.BorderColorB = System.Drawing.Color.White;
-            this.MtxtEmail.EnablePlaceholder = true;
-            this.MtxtEmail.ForeColor = System.Drawing.Color.Blue;
-            this.MtxtEmail.Location = new System.Drawing.Point(414, 356);
-            this.MtxtEmail.MaxLength = 32767;
-            this.MtxtEmail.Name = "MtxtEmail";
-            this.MtxtEmail.PasswordChar = '\0';
-            this.MtxtEmail.PlaceholderChar = '\0';
-            this.MtxtEmail.PlaceholderColor = System.Drawing.Color.LightGray;
-            this.MtxtEmail.PlaceholderText = "Ex: cauagoncalves@gmail.com";
-            this.MtxtEmail.SelectionStart = 0;
-            this.MtxtEmail.Size = new System.Drawing.Size(567, 40);
-            this.MtxtEmail.TabIndex = 107;
-            this.MtxtEmail.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
-            this.MtxtEmail.TextValue = "";
-            this.MtxtEmail.UseSystemPasswordChar = false;
-            // 
             // btnEnviar
             // 
             this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(161)))), ((int)(((byte)(115)))));
@@ -104,14 +84,33 @@
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
+            // MtxtEmail
+            // 
+            this.MtxtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtEmail.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtEmail.EnablePlaceholder = true;
+            this.MtxtEmail.Location = new System.Drawing.Point(405, 364);
+            this.MtxtEmail.MaxLength = 32767;
+            this.MtxtEmail.Name = "MtxtEmail";
+            this.MtxtEmail.PasswordChar = '\0';
+            this.MtxtEmail.PlaceholderChar = '\0';
+            this.MtxtEmail.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtEmail.PlaceholderText = "Ex: cauagoncalves2190@gmail.com";
+            this.MtxtEmail.SelectionStart = 0;
+            this.MtxtEmail.Size = new System.Drawing.Size(556, 40);
+            this.MtxtEmail.TabIndex = 109;
+            this.MtxtEmail.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.MtxtEmail.TextValue = "";
+            this.MtxtEmail.UseSystemPasswordChar = false;
+            // 
             // frmEnviarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1362, 748);
-            this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.MtxtEmail);
+            this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -128,7 +127,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblEmail;
-        private ModernTextBox MtxtEmail;
         private System.Windows.Forms.Button btnEnviar;
+        private ModernTextBox MtxtEmail;
     }
 }

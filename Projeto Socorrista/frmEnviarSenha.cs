@@ -19,9 +19,6 @@ namespace Projeto_Socorrista
         public frmEnviarSenha()
         {
             InitializeComponent();
-            MtxtEmail.TextBoxBackColor = ColorTranslator.FromHtml("#FBF9F9");
-            MtxtEmail.PlaceholderColor = Color.Black;
-            MtxtEmail.BorderColorB = Color.Black;
         }
 
         // criando metodo que verifica email existente

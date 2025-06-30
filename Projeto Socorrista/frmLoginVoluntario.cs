@@ -72,7 +72,7 @@ namespace Projeto_Socorrista
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
-            comm.Parameters.Add("@email", MySqlDbType.VarChar,100).Value = email;  
+            comm.Parameters.Add("@email", MySqlDbType.VarChar,100).Value = email;
             comm.Connection = ConectaBanco.ObterConexao();
 
             using (MySqlDataReader dr = comm.ExecuteReader())
@@ -107,7 +107,6 @@ namespace Projeto_Socorrista
             if (verificaUsers(email, senha))
             {
                 MessageBox.Show("Login efetuado com sucesso!");
-                
             }
             else
             {

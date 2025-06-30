@@ -138,6 +138,12 @@
     <Compile Include="frmMenuPrincipal.Designer.cs">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReceberAlimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceberAlimentos.Designer.cs">
+      <DependentUpon>frmReceberAlimentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTrocarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoginVoluntario.resx">
       <DependentUpon>frmLoginVoluntario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuPrincipal.resx">
+      <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceberAlimentos.resx">
+      <DependentUpon>frmReceberAlimentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrocarSenha.resx">
       <DependentUpon>frmTrocarSenha.cs</DependentUpon>
@@ -200,7 +212,9 @@
   <ItemGroup>
     <None Include="Resources\gif senha.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="icons\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Sources\logo.jpg" />
   </ItemGroup>

@@ -16,16 +16,16 @@ namespace Projeto_Socorrista
 {
     public partial class frmEnviaCodigoCadastro : Form
     {
-        private string _codigoGerado;
-        private string _emailVoluntario;
-        private string _origem;
+        private string codigoGerado;
+        private string emailVoluntario;
+        private string origem;
 
         public frmEnviaCodigoCadastro(string codigoGerado, string emailVoluntario, string origim)
         {
             InitializeComponent();
-            _codigoGerado = codigoGerado;
-            _emailVoluntario = emailVoluntario;
-            _origem = origim;
+            this.codigoGerado = codigoGerado;
+            this.emailVoluntario = emailVoluntario;
+            this.origem = origim;
         }
 
         // Declare no início da sua classe
@@ -35,7 +35,7 @@ namespace Projeto_Socorrista
         {
 
    
-            lblEmail.Text = _emailVoluntario;
+            lblEmail.Text = emailVoluntario;
             picGif.Image = Properties.Resources.gif_senha;
 
             txtN1.BringToFront();
@@ -79,18 +79,18 @@ namespace Projeto_Socorrista
             {
                 string codigoDigitado = txtN1.Text + txtN2.Text + txtN3.Text + txtN4.Text + txtN5.Text + txtN6.Text;
 
-                if (TodosOsCamposPreenchidos() && codigoDigitado == _codigoGerado)
+                if (TodosOsCamposPreenchidos() && codigoDigitado == codigoGerado)
                 {
                     MessageBox.Show("Código confirmado 🎉", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    if (_origem == "Password")
+                    if (origem == "Password")
                     {
                         this.Hide();
-                        frmTrocarSenha frm = new frmTrocarSenha();
+                        frmTrocarSenha frm = new frmTrocarSenha(emailVoluntario);
                         frm.ShowDialog();
                         this.Show();
                     }
-                    else if (_origem == "CadastroVoluntario")
+                    else if (origem == "CadastroVoluntario")
                     {
                         this.Hide();
                         frmMenuPrincipal frm = new frmMenuPrincipal();
@@ -98,7 +98,7 @@ namespace Projeto_Socorrista
                         this.Show();
                     }
                 }
-                else if (TodosOsCamposPreenchidos() && codigoDigitado != _codigoGerado)
+                else if (TodosOsCamposPreenchidos() && codigoDigitado != codigoGerado)
                 {
                     MessageBox.Show("O código informado está incorreto!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

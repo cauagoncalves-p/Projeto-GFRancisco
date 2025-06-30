@@ -28,56 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MtxtSenha = new ModernTextBox();
-            this.MtxtConfimeSenha = new ModernTextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTrocarSenha));
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblConfirmeSenha = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.MtxtConfimeSenha = new ModernTextBox();
+            this.MtxtSenha = new ModernTextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // MtxtSenha
-            // 
-            this.MtxtSenha.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtSenha.BorderColorB = System.Drawing.Color.Black;
-            this.MtxtSenha.EnablePlaceholder = true;
-            this.MtxtSenha.ForeColor = System.Drawing.Color.Black;
-            this.MtxtSenha.Location = new System.Drawing.Point(462, 381);
-            this.MtxtSenha.MaxLength = 32767;
-            this.MtxtSenha.Name = "MtxtSenha";
-            this.MtxtSenha.PasswordChar = '\0';
-            this.MtxtSenha.PlaceholderChar = '\0';
-            this.MtxtSenha.PlaceholderColor = System.Drawing.Color.Black;
-            this.MtxtSenha.PlaceholderText = "Ex: SenhaForte@2025";
-            this.MtxtSenha.SelectionStart = 0;
-            this.MtxtSenha.Size = new System.Drawing.Size(400, 40);
-            this.MtxtSenha.TabIndex = 0;
-            this.MtxtSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.MtxtSenha.TextValue = "";
-            this.MtxtSenha.UseSystemPasswordChar = false;
-            // 
-            // MtxtConfimeSenha
-            // 
-            this.MtxtConfimeSenha.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtConfimeSenha.BorderColorB = System.Drawing.Color.Black;
-            this.MtxtConfimeSenha.EnablePlaceholder = true;
-            this.MtxtConfimeSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MtxtConfimeSenha.Location = new System.Drawing.Point(462, 497);
-            this.MtxtConfimeSenha.MaxLength = 32767;
-            this.MtxtConfimeSenha.Name = "MtxtConfimeSenha";
-            this.MtxtConfimeSenha.PasswordChar = '\0';
-            this.MtxtConfimeSenha.PlaceholderChar = '\0';
-            this.MtxtConfimeSenha.PlaceholderColor = System.Drawing.Color.Black;
-            this.MtxtConfimeSenha.PlaceholderText = "Ex: SenhaForte@2025";
-            this.MtxtConfimeSenha.SelectionStart = 0;
-            this.MtxtConfimeSenha.Size = new System.Drawing.Size(400, 41);
-            this.MtxtConfimeSenha.TabIndex = 1;
-            this.MtxtConfimeSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.MtxtConfimeSenha.TextValue = "";
-            this.MtxtConfimeSenha.UseSystemPasswordChar = false;
             // 
             // lblSenha
             // 
@@ -110,6 +73,7 @@
             this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label1
             // 
@@ -126,6 +90,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(445, 181);
             this.panel1.Name = "panel1";
@@ -137,11 +102,62 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 27);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(109, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(239, 58);
             this.label2.TabIndex = 108;
             this.label2.Text = "A nova senha precisa ser \r\ndiferente da senha atual";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(18, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 108;
+            this.pictureBox1.TabStop = false;
+            // 
+            // MtxtConfimeSenha
+            // 
+            this.MtxtConfimeSenha.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtConfimeSenha.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtConfimeSenha.EnablePlaceholder = true;
+            this.MtxtConfimeSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MtxtConfimeSenha.Location = new System.Drawing.Point(462, 497);
+            this.MtxtConfimeSenha.MaxLength = 32767;
+            this.MtxtConfimeSenha.Name = "MtxtConfimeSenha";
+            this.MtxtConfimeSenha.PasswordChar = '\0';
+            this.MtxtConfimeSenha.PlaceholderChar = '\0';
+            this.MtxtConfimeSenha.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtConfimeSenha.PlaceholderText = "Ex: SenhaForte@2025";
+            this.MtxtConfimeSenha.SelectionStart = 0;
+            this.MtxtConfimeSenha.Size = new System.Drawing.Size(400, 41);
+            this.MtxtConfimeSenha.TabIndex = 1;
+            this.MtxtConfimeSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.MtxtConfimeSenha.TextValue = "";
+            this.MtxtConfimeSenha.UseSystemPasswordChar = false;
+            // 
+            // MtxtSenha
+            // 
+            this.MtxtSenha.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtSenha.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtSenha.EnablePlaceholder = true;
+            this.MtxtSenha.ForeColor = System.Drawing.Color.Black;
+            this.MtxtSenha.Location = new System.Drawing.Point(462, 381);
+            this.MtxtSenha.MaxLength = 32767;
+            this.MtxtSenha.Name = "MtxtSenha";
+            this.MtxtSenha.PasswordChar = '\0';
+            this.MtxtSenha.PlaceholderChar = '\0';
+            this.MtxtSenha.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtSenha.PlaceholderText = "Ex: SenhaForte@2025";
+            this.MtxtSenha.SelectionStart = 0;
+            this.MtxtSenha.Size = new System.Drawing.Size(400, 40);
+            this.MtxtSenha.TabIndex = 0;
+            this.MtxtSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.MtxtSenha.TextValue = "";
+            this.MtxtSenha.UseSystemPasswordChar = false;
             // 
             // frmTrocarSenha
             // 
@@ -162,6 +178,7 @@
             this.Text = "Redefinir senha ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +194,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

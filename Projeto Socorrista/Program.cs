@@ -16,7 +16,7 @@ namespace Projeto_Socorrista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmEnviarSenha());
+            Application.Run(new frmReceberAlimentos());
         }
     }
 }

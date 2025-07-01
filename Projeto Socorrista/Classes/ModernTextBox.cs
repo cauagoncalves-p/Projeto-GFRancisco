@@ -12,6 +12,7 @@ public class ModernTextBox : UserControl
     private bool isPlaceholderActive = true;
     private bool usePasswordChar = false;
     public bool EnablePlaceholder { get; set; } = true;
+
     public event KeyEventHandler KeyDownCustom;
 
     public string TextValue
@@ -63,12 +64,29 @@ public class ModernTextBox : UserControl
         set => textBox.MaxLength = value;
     }
 
+    public bool WordWrap
+    {
+        get => textBox.WordWrap;
+        set
+        {
+            textBox.Multiline = true; 
+            textBox.WordWrap = value;
+        }
+    }
     public Color TextBoxBackColor
     {
         get => textBox.BackColor;
         set => textBox.BackColor = value;
     }
 
+    public Size Tamanho {
+
+        get => new Size(textBox.Width, textBox.Height);
+        set { 
+            textBox.Width = value.Width;
+            textBox.Height = value.Height;
+        }
+    }
     private Color placeholderColor = Color.LightGray;
     private Color BorderColor = Color.White;
 
@@ -105,7 +123,7 @@ public class ModernTextBox : UserControl
 
     public ModernTextBox()
     { 
-        this.Size = new Size(400, 40);
+        
         this.BackColor = Color.Transparent;
         this.DoubleBuffered = true;
 
@@ -116,7 +134,7 @@ public class ModernTextBox : UserControl
             BackColor = ColorTranslator.FromHtml("#009E70"),
             Font = new Font("Segoe UI", 10),
             Location = new Point(10, 10),
-            Width = this.Width - 20
+            Width = this.Width - 20,
         };
 
 
@@ -132,6 +150,8 @@ public class ModernTextBox : UserControl
         textBox.LostFocus += SetPlaceholder;
 
         this.Controls.Add(textBox);
+
+        this.Tamanho = new Size(400, 100);
 
         // Propagando o evento KeyDown do TextBox interno
         textBox.KeyDown += (s, e) =>

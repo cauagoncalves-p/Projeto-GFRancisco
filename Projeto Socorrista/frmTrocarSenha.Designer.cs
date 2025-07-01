@@ -34,8 +34,8 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.MtxtConfimeSenha = new ModernTextBox();
             this.MtxtSenha = new ModernTextBox();
             this.panel1.SuspendLayout();
@@ -97,6 +97,16 @@
             this.panel1.Size = new System.Drawing.Size(446, 119);
             this.panel1.TabIndex = 107;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(18, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 108;
+            this.pictureBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -108,16 +118,6 @@
             this.label2.Size = new System.Drawing.Size(239, 58);
             this.label2.TabIndex = 108;
             this.label2.Text = "A nova senha precisa ser \r\ndiferente da senha atual";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 37);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 108;
-            this.pictureBox1.TabStop = false;
             // 
             // MtxtConfimeSenha
             // 
@@ -135,6 +135,7 @@
             this.MtxtConfimeSenha.SelectionStart = 0;
             this.MtxtConfimeSenha.Size = new System.Drawing.Size(400, 41);
             this.MtxtConfimeSenha.TabIndex = 1;
+            this.MtxtConfimeSenha.Tamanho = new System.Drawing.Size(380, 18);
             this.MtxtConfimeSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.MtxtConfimeSenha.TextValue = "";
             this.MtxtConfimeSenha.UseSystemPasswordChar = false;
@@ -155,6 +156,7 @@
             this.MtxtSenha.SelectionStart = 0;
             this.MtxtSenha.Size = new System.Drawing.Size(400, 40);
             this.MtxtSenha.TabIndex = 0;
+            this.MtxtSenha.Tamanho = new System.Drawing.Size(380, 18);
             this.MtxtSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.MtxtSenha.TextValue = "";
             this.MtxtSenha.UseSystemPasswordChar = false;

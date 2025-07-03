@@ -3,10 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,7 +23,47 @@ namespace Projeto_Socorrista
             this.emailVoluntario = emailVoluntario;
         }
 
-      
+        // crianndo metodo de avaliar se a senha é forte ou não
+        private void AvaliarForcaSenha(string senha)
+        {
+            int forca = 0;
+
+            // Tamanho
+            if (senha.Length == 15)
+                forca++;
+
+            // Contém letra
+            if (Regex.IsMatch(senha, @"[a-zA-Z]"))
+                forca++;
+
+            // Contém número
+            if (Regex.IsMatch(senha, @"\d"))
+                forca++;
+
+            // Contém caractere especial
+            if (Regex.IsMatch(senha, @"[\W_]"))
+                forca++;
+
+            // Atualiza o label conforme a força
+            switch (forca)
+            {
+                case 0:
+                case 1:
+                    lblError.Text = "Senha fraca";
+                    lblError.ForeColor = Color.Red;
+                    break;
+                case 2:
+                case 3:
+                    lblError.Text = "Senha média";
+                    lblError.ForeColor = Color.DarkOrange;
+                    break;
+                case 4:
+                    lblError.Text = "Senha forte";
+                    lblError.ForeColor = Color.Blue;
+                    break;
+            }
+        }
+
         // cria um numero aleatorio para conctenar com a senha 
         public string GerarSaltSeguro(int tamanho = 16)
         {
@@ -49,6 +91,7 @@ namespace Projeto_Socorrista
                 return sb.ToString();
             }
         }
+
         private int trocarSenha(string senha, string salt,string email) {
             MySqlCommand comm = new MySqlCommand();
             comm.CommandText = "update tbVoluntario set senha = @senha, salt = @salt where email = @email;";

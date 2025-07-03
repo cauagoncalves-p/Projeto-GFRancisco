@@ -164,7 +164,7 @@
             this.MtxtSenha.EnablePlaceholder = true;
             this.MtxtSenha.Font = new System.Drawing.Font("Wingdings", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.MtxtSenha.Location = new System.Drawing.Point(71, 490);
-            this.MtxtSenha.MaxLength = 32767;
+            this.MtxtSenha.MaxLength = 15;
             this.MtxtSenha.Name = "MtxtSenha";
             this.MtxtSenha.PasswordChar = '\0';
             this.MtxtSenha.PlaceholderChar = '\0';
@@ -173,9 +173,11 @@
             this.MtxtSenha.SelectionStart = 0;
             this.MtxtSenha.Size = new System.Drawing.Size(557, 40);
             this.MtxtSenha.TabIndex = 81;
+            this.MtxtSenha.Tamanho = new System.Drawing.Size(400, 18);
             this.MtxtSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
             this.MtxtSenha.TextValue = "";
             this.MtxtSenha.UseSystemPasswordChar = false;
+            this.MtxtSenha.WordWrap = true;
             // 
             // btnEntrar
             // 
@@ -198,7 +200,7 @@
             this.MtxtEmail.BorderColorB = System.Drawing.Color.White;
             this.MtxtEmail.EnablePlaceholder = true;
             this.MtxtEmail.Location = new System.Drawing.Point(71, 387);
-            this.MtxtEmail.MaxLength = 32767;
+            this.MtxtEmail.MaxLength = 100;
             this.MtxtEmail.Name = "MtxtEmail";
             this.MtxtEmail.PasswordChar = '\0';
             this.MtxtEmail.PlaceholderChar = '\0';
@@ -207,9 +209,11 @@
             this.MtxtEmail.SelectionStart = 0;
             this.MtxtEmail.Size = new System.Drawing.Size(557, 40);
             this.MtxtEmail.TabIndex = 77;
+            this.MtxtEmail.Tamanho = new System.Drawing.Size(500, 18);
             this.MtxtEmail.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
             this.MtxtEmail.TextValue = "";
             this.MtxtEmail.UseSystemPasswordChar = false;
+            this.MtxtEmail.WordWrap = true;
             // 
             // lblSenha
             // 

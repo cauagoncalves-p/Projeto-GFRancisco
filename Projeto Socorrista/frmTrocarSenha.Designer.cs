@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.MtxtConfimeSenha = new ModernTextBox();
             this.MtxtSenha = new ModernTextBox();
+            this.lblError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -139,6 +140,7 @@
             this.MtxtConfimeSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.MtxtConfimeSenha.TextValue = "";
             this.MtxtConfimeSenha.UseSystemPasswordChar = false;
+            this.MtxtConfimeSenha.WordWrap = true;
             // 
             // MtxtSenha
             // 
@@ -160,6 +162,16 @@
             this.MtxtSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.MtxtSenha.TextValue = "";
             this.MtxtSenha.UseSystemPasswordChar = false;
+            this.MtxtSenha.WordWrap = true;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.Location = new System.Drawing.Point(460, 428);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 20);
+            this.lblError.TabIndex = 108;
             // 
             // frmTrocarSenha
             // 
@@ -167,6 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1362, 748);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvar);
@@ -197,5 +210,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblError;
     }
 }

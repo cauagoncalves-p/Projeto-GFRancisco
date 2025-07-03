@@ -48,33 +48,33 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblUltimasDoacoes = new System.Windows.Forms.Label();
             this.dgvRegistro = new System.Windows.Forms.DataGridView();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblObservacao = new System.Windows.Forms.Label();
-            this.MtxtInformacoes = new ModernTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.MtxtDescricao = new ModernTextBox();
-            this.cbxUnidadeMedida = new System.Windows.Forms.ComboBox();
-            this.lblUnidade = new System.Windows.Forms.Label();
-            this.lblQuantidade = new System.Windows.Forms.Label();
-            this.MtxtQuantidade = new ModernTextBox();
-            this.cbxTipoDoacao = new System.Windows.Forms.ComboBox();
-            this.lblTipoDoacao = new System.Windows.Forms.Label();
-            this.MtxtContatoDoador = new ModernTextBox();
-            this.lblContato = new System.Windows.Forms.Label();
-            this.lblDataDeReceber = new System.Windows.Forms.Label();
-            this.lblDoador = new System.Windows.Forms.Label();
-            this.MtxtDataRecebemento = new ModernTextBox();
-            this.MtxtDoador = new ModernTextBox();
-            this.lblRegistroDoacao = new System.Windows.Forms.Label();
-            this.lblLinha = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.lblDataDeReceber = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblObservacao = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.cbxUnidadeMedida = new System.Windows.Forms.ComboBox();
+            this.lblUnidade = new System.Windows.Forms.Label();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.cbxTipoDoacao = new System.Windows.Forms.ComboBox();
+            this.lblTipoDoacao = new System.Windows.Forms.Label();
+            this.lblContato = new System.Windows.Forms.Label();
+            this.lblDoador = new System.Windows.Forms.Label();
+            this.lblRegistroDoacao = new System.Windows.Forms.Label();
+            this.lblLinha = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.MtxtDataRecebemento = new ModernTextBox();
+            this.MtxtInformacoes = new ModernTextBox();
+            this.MtxtDescricao = new ModernTextBox();
+            this.MtxtQuantidade = new ModernTextBox();
+            this.MtxtContatoDoador = new ModernTextBox();
+            this.MtxtDoador = new ModernTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -323,7 +323,7 @@
             this.lblUltimasDoacoes.AutoSize = true;
             this.lblUltimasDoacoes.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUltimasDoacoes.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUltimasDoacoes.Location = new System.Drawing.Point(26, 904);
+            this.lblUltimasDoacoes.Location = new System.Drawing.Point(32, 903);
             this.lblUltimasDoacoes.Name = "lblUltimasDoacoes";
             this.lblUltimasDoacoes.Size = new System.Drawing.Size(219, 21);
             this.lblUltimasDoacoes.TabIndex = 38;
@@ -331,6 +331,7 @@
             // 
             // dgvRegistro
             // 
+            this.dgvRegistro.AllowUserToAddRows = false;
             this.dgvRegistro.AllowUserToOrderColumns = true;
             this.dgvRegistro.ColumnHeadersHeight = 30;
             this.dgvRegistro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -347,11 +348,36 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvRegistro.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRegistro.Location = new System.Drawing.Point(30, 947);
+            this.dgvRegistro.Location = new System.Drawing.Point(36, 946);
             this.dgvRegistro.Name = "dgvRegistro";
             this.dgvRegistro.RowHeadersVisible = false;
-            this.dgvRegistro.Size = new System.Drawing.Size(715, 238);
+            this.dgvRegistro.Size = new System.Drawing.Size(715, 281);
             this.dgvRegistro.TabIndex = 37;
+            // 
+            // date
+            // 
+            this.date.HeaderText = "Data";
+            this.date.Name = "date";
+            // 
+            // doador
+            // 
+            this.doador.HeaderText = "Doador";
+            this.doador.Name = "doador";
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            // 
+            // quantidade
+            // 
+            this.quantidade.HeaderText = "Quantidade";
+            this.quantidade.Name = "quantidade";
+            // 
+            // descricao
+            // 
+            this.descricao.HeaderText = "Descrições";
+            this.descricao.Name = "descricao";
             // 
             // btnRegistrar
             // 
@@ -360,7 +386,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(588, 833);
+            this.btnRegistrar.Location = new System.Drawing.Point(594, 844);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(157, 49);
             this.btnRegistrar.TabIndex = 36;
@@ -368,13 +394,24 @@
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // lblDataDeReceber
+            // 
+            this.lblDataDeReceber.AutoSize = true;
+            this.lblDataDeReceber.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataDeReceber.ForeColor = System.Drawing.Color.DimGray;
+            this.lblDataDeReceber.Location = new System.Drawing.Point(429, 91);
+            this.lblDataDeReceber.Name = "lblDataDeReceber";
+            this.lblDataDeReceber.Size = new System.Drawing.Size(170, 21);
+            this.lblDataDeReceber.TabIndex = 20;
+            this.lblDataDeReceber.Text = "Data de recebimento";
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnCancelar.Location = new System.Drawing.Point(421, 833);
+            this.btnCancelar.Location = new System.Drawing.Point(427, 844);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(140, 49);
             this.btnCancelar.TabIndex = 35;
@@ -386,40 +423,18 @@
             this.lblObservacao.AutoSize = true;
             this.lblObservacao.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservacao.ForeColor = System.Drawing.Color.DimGray;
-            this.lblObservacao.Location = new System.Drawing.Point(26, 660);
+            this.lblObservacao.Location = new System.Drawing.Point(32, 671);
             this.lblObservacao.Name = "lblObservacao";
             this.lblObservacao.Size = new System.Drawing.Size(115, 21);
             this.lblObservacao.TabIndex = 34;
             this.lblObservacao.Text = "Obeservações";
-            // 
-            // MtxtInformacoes
-            // 
-            this.MtxtInformacoes.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtInformacoes.BorderColorB = System.Drawing.Color.Black;
-            this.MtxtInformacoes.EnablePlaceholder = true;
-            this.MtxtInformacoes.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MtxtInformacoes.Location = new System.Drawing.Point(29, 694);
-            this.MtxtInformacoes.MaxLength = 32767;
-            this.MtxtInformacoes.Name = "MtxtInformacoes";
-            this.MtxtInformacoes.PasswordChar = '\0';
-            this.MtxtInformacoes.PlaceholderChar = '\0';
-            this.MtxtInformacoes.PlaceholderColor = System.Drawing.Color.Black;
-            this.MtxtInformacoes.PlaceholderText = "Informações adicionais";
-            this.MtxtInformacoes.SelectionStart = 0;
-            this.MtxtInformacoes.Size = new System.Drawing.Size(716, 112);
-            this.MtxtInformacoes.TabIndex = 33;
-            this.MtxtInformacoes.Tamanho = new System.Drawing.Size(700, 100);
-            this.MtxtInformacoes.TextBoxBackColor = System.Drawing.Color.White;
-            this.MtxtInformacoes.TextValue = "";
-            this.MtxtInformacoes.UseSystemPasswordChar = false;
-            this.MtxtInformacoes.WordWrap = true;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(26, 1203);
+            this.label9.Location = new System.Drawing.Point(32, 1240);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(18, 63);
             this.label9.TabIndex = 32;
@@ -430,33 +445,11 @@
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescricao.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDescricao.Location = new System.Drawing.Point(26, 489);
+            this.lblDescricao.Location = new System.Drawing.Point(31, 487);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(156, 21);
             this.lblDescricao.TabIndex = 31;
             this.lblDescricao.Text = "Descrição dos Itens";
-            // 
-            // MtxtDescricao
-            // 
-            this.MtxtDescricao.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtDescricao.BorderColorB = System.Drawing.Color.Black;
-            this.MtxtDescricao.EnablePlaceholder = true;
-            this.MtxtDescricao.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MtxtDescricao.Location = new System.Drawing.Point(29, 525);
-            this.MtxtDescricao.MaxLength = 32767;
-            this.MtxtDescricao.Name = "MtxtDescricao";
-            this.MtxtDescricao.PasswordChar = '\0';
-            this.MtxtDescricao.PlaceholderChar = '\0';
-            this.MtxtDescricao.PlaceholderColor = System.Drawing.Color.Black;
-            this.MtxtDescricao.PlaceholderText = "Descreva os alimentos recebidos";
-            this.MtxtDescricao.SelectionStart = 0;
-            this.MtxtDescricao.Size = new System.Drawing.Size(716, 112);
-            this.MtxtDescricao.TabIndex = 30;
-            this.MtxtDescricao.Tamanho = new System.Drawing.Size(700, 100);
-            this.MtxtDescricao.TextBoxBackColor = System.Drawing.SystemColors.Window;
-            this.MtxtDescricao.TextValue = "";
-            this.MtxtDescricao.UseSystemPasswordChar = false;
-            this.MtxtDescricao.WordWrap = true;
             // 
             // cbxUnidadeMedida
             // 
@@ -472,7 +465,7 @@
             "Mililitros (ml)",
             "Unidades",
             "Caixas"});
-            this.cbxUnidadeMedida.Location = new System.Drawing.Point(429, 423);
+            this.cbxUnidadeMedida.Location = new System.Drawing.Point(434, 421);
             this.cbxUnidadeMedida.Name = "cbxUnidadeMedida";
             this.cbxUnidadeMedida.Size = new System.Drawing.Size(324, 33);
             this.cbxUnidadeMedida.TabIndex = 29;
@@ -482,7 +475,7 @@
             this.lblUnidade.AutoSize = true;
             this.lblUnidade.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUnidade.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUnidade.Location = new System.Drawing.Point(425, 395);
+            this.lblUnidade.Location = new System.Drawing.Point(430, 393);
             this.lblUnidade.Name = "lblUnidade";
             this.lblUnidade.Size = new System.Drawing.Size(160, 21);
             this.lblUnidade.TabIndex = 28;
@@ -493,33 +486,11 @@
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantidade.ForeColor = System.Drawing.Color.DimGray;
-            this.lblQuantidade.Location = new System.Drawing.Point(27, 395);
+            this.lblQuantidade.Location = new System.Drawing.Point(32, 393);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(100, 21);
             this.lblQuantidade.TabIndex = 27;
             this.lblQuantidade.Text = "Quantidade";
-            // 
-            // MtxtQuantidade
-            // 
-            this.MtxtQuantidade.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtQuantidade.BorderColorB = System.Drawing.Color.Black;
-            this.MtxtQuantidade.EnablePlaceholder = true;
-            this.MtxtQuantidade.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MtxtQuantidade.Location = new System.Drawing.Point(31, 423);
-            this.MtxtQuantidade.MaxLength = 4;
-            this.MtxtQuantidade.Name = "MtxtQuantidade";
-            this.MtxtQuantidade.PasswordChar = '\0';
-            this.MtxtQuantidade.PlaceholderChar = '\0';
-            this.MtxtQuantidade.PlaceholderColor = System.Drawing.Color.Black;
-            this.MtxtQuantidade.PlaceholderText = "Ex:10";
-            this.MtxtQuantidade.SelectionStart = 0;
-            this.MtxtQuantidade.Size = new System.Drawing.Size(317, 38);
-            this.MtxtQuantidade.TabIndex = 25;
-            this.MtxtQuantidade.Tamanho = new System.Drawing.Size(300, 20);
-            this.MtxtQuantidade.TextBoxBackColor = System.Drawing.Color.White;
-            this.MtxtQuantidade.TextValue = "";
-            this.MtxtQuantidade.UseSystemPasswordChar = false;
-            this.MtxtQuantidade.WordWrap = true;
             // 
             // cbxTipoDoacao
             // 
@@ -530,7 +501,7 @@
             this.cbxTipoDoacao.Items.AddRange(new object[] {
             "Selecione...",
             "Alimentos Perecíveis"});
-            this.cbxTipoDoacao.Location = new System.Drawing.Point(31, 344);
+            this.cbxTipoDoacao.Location = new System.Drawing.Point(36, 342);
             this.cbxTipoDoacao.Name = "cbxTipoDoacao";
             this.cbxTipoDoacao.Size = new System.Drawing.Size(717, 29);
             this.cbxTipoDoacao.TabIndex = 24;
@@ -540,117 +511,40 @@
             this.lblTipoDoacao.AutoSize = true;
             this.lblTipoDoacao.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoDoacao.ForeColor = System.Drawing.Color.DimGray;
-            this.lblTipoDoacao.Location = new System.Drawing.Point(27, 309);
+            this.lblTipoDoacao.Location = new System.Drawing.Point(32, 307);
             this.lblTipoDoacao.Name = "lblTipoDoacao";
             this.lblTipoDoacao.Size = new System.Drawing.Size(133, 21);
             this.lblTipoDoacao.TabIndex = 23;
             this.lblTipoDoacao.Text = "Tipo de Doação ";
-            // 
-            // MtxtContatoDoador
-            // 
-            this.MtxtContatoDoador.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtContatoDoador.BorderColorB = System.Drawing.Color.Black;
-            this.MtxtContatoDoador.EnablePlaceholder = true;
-            this.MtxtContatoDoador.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MtxtContatoDoador.Location = new System.Drawing.Point(31, 240);
-            this.MtxtContatoDoador.MaxLength = 100;
-            this.MtxtContatoDoador.Name = "MtxtContatoDoador";
-            this.MtxtContatoDoador.PasswordChar = '\0';
-            this.MtxtContatoDoador.PlaceholderChar = '\0';
-            this.MtxtContatoDoador.PlaceholderColor = System.Drawing.Color.Black;
-            this.MtxtContatoDoador.PlaceholderText = "Telefone ou E-mail";
-            this.MtxtContatoDoador.SelectionStart = 0;
-            this.MtxtContatoDoador.Size = new System.Drawing.Size(716, 38);
-            this.MtxtContatoDoador.TabIndex = 22;
-            this.MtxtContatoDoador.Tamanho = new System.Drawing.Size(700, 20);
-            this.MtxtContatoDoador.TextBoxBackColor = System.Drawing.Color.White;
-            this.MtxtContatoDoador.TextValue = "";
-            this.MtxtContatoDoador.UseSystemPasswordChar = false;
-            this.MtxtContatoDoador.WordWrap = true;
             // 
             // lblContato
             // 
             this.lblContato.AutoSize = true;
             this.lblContato.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContato.ForeColor = System.Drawing.Color.DimGray;
-            this.lblContato.Location = new System.Drawing.Point(27, 204);
+            this.lblContato.Location = new System.Drawing.Point(32, 202);
             this.lblContato.Name = "lblContato";
             this.lblContato.Size = new System.Drawing.Size(154, 21);
             this.lblContato.TabIndex = 21;
             this.lblContato.Text = "Contato do doador";
-            // 
-            // lblDataDeReceber
-            // 
-            this.lblDataDeReceber.AutoSize = true;
-            this.lblDataDeReceber.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataDeReceber.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDataDeReceber.Location = new System.Drawing.Point(426, 98);
-            this.lblDataDeReceber.Name = "lblDataDeReceber";
-            this.lblDataDeReceber.Size = new System.Drawing.Size(170, 21);
-            this.lblDataDeReceber.TabIndex = 20;
-            this.lblDataDeReceber.Text = "Data de recebimento";
             // 
             // lblDoador
             // 
             this.lblDoador.AutoSize = true;
             this.lblDoador.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoador.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDoador.Location = new System.Drawing.Point(28, 98);
+            this.lblDoador.Location = new System.Drawing.Point(31, 91);
             this.lblDoador.Name = "lblDoador";
             this.lblDoador.Size = new System.Drawing.Size(67, 21);
             this.lblDoador.TabIndex = 19;
             this.lblDoador.Text = "Doador";
-            // 
-            // MtxtDataRecebemento
-            // 
-            this.MtxtDataRecebemento.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtDataRecebemento.BorderColorB = System.Drawing.Color.Black;
-            this.MtxtDataRecebemento.EnablePlaceholder = true;
-            this.MtxtDataRecebemento.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MtxtDataRecebemento.Location = new System.Drawing.Point(429, 143);
-            this.MtxtDataRecebemento.MaxLength = 10;
-            this.MtxtDataRecebemento.Name = "MtxtDataRecebemento";
-            this.MtxtDataRecebemento.PasswordChar = '\0';
-            this.MtxtDataRecebemento.PlaceholderChar = '\0';
-            this.MtxtDataRecebemento.PlaceholderColor = System.Drawing.Color.Black;
-            this.MtxtDataRecebemento.PlaceholderText = "dd/MM/yyyy";
-            this.MtxtDataRecebemento.SelectionStart = 0;
-            this.MtxtDataRecebemento.Size = new System.Drawing.Size(317, 38);
-            this.MtxtDataRecebemento.TabIndex = 18;
-            this.MtxtDataRecebemento.Tamanho = new System.Drawing.Size(300, 20);
-            this.MtxtDataRecebemento.TextBoxBackColor = System.Drawing.Color.White;
-            this.MtxtDataRecebemento.TextValue = "";
-            this.MtxtDataRecebemento.UseSystemPasswordChar = false;
-            this.MtxtDataRecebemento.WordWrap = true;
-            // 
-            // MtxtDoador
-            // 
-            this.MtxtDoador.BackColor = System.Drawing.Color.Transparent;
-            this.MtxtDoador.BorderColorB = System.Drawing.Color.Black;
-            this.MtxtDoador.EnablePlaceholder = true;
-            this.MtxtDoador.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MtxtDoador.Location = new System.Drawing.Point(30, 143);
-            this.MtxtDoador.MaxLength = 50;
-            this.MtxtDoador.Name = "MtxtDoador";
-            this.MtxtDoador.PasswordChar = '\0';
-            this.MtxtDoador.PlaceholderChar = '\0';
-            this.MtxtDoador.PlaceholderColor = System.Drawing.Color.Black;
-            this.MtxtDoador.PlaceholderText = "Nome do doador ou empresa";
-            this.MtxtDoador.SelectionStart = 0;
-            this.MtxtDoador.Size = new System.Drawing.Size(317, 38);
-            this.MtxtDoador.TabIndex = 17;
-            this.MtxtDoador.Tamanho = new System.Drawing.Size(300, 20);
-            this.MtxtDoador.TextBoxBackColor = System.Drawing.Color.White;
-            this.MtxtDoador.TextValue = "";
-            this.MtxtDoador.UseSystemPasswordChar = false;
-            this.MtxtDoador.WordWrap = true;
             // 
             // lblRegistroDoacao
             // 
             this.lblRegistroDoacao.AutoSize = true;
             this.lblRegistroDoacao.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistroDoacao.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRegistroDoacao.Location = new System.Drawing.Point(266, 37);
+            this.lblRegistroDoacao.Location = new System.Drawing.Point(269, 30);
             this.lblRegistroDoacao.Name = "lblRegistroDoacao";
             this.lblRegistroDoacao.Size = new System.Drawing.Size(231, 28);
             this.lblRegistroDoacao.TabIndex = 16;
@@ -679,30 +573,138 @@
             this.lblTitulo.TabIndex = 16;
             this.lblTitulo.Text = "Receber alimentos";
             // 
-            // date
+            // MtxtDataRecebemento
             // 
-            this.date.HeaderText = "Data";
-            this.date.Name = "date";
+            this.MtxtDataRecebemento.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtDataRecebemento.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtDataRecebemento.EnablePlaceholder = true;
+            this.MtxtDataRecebemento.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MtxtDataRecebemento.Location = new System.Drawing.Point(432, 136);
+            this.MtxtDataRecebemento.MaxLength = 10;
+            this.MtxtDataRecebemento.Name = "MtxtDataRecebemento";
+            this.MtxtDataRecebemento.PasswordChar = '\0';
+            this.MtxtDataRecebemento.PlaceholderChar = '\0';
+            this.MtxtDataRecebemento.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtDataRecebemento.PlaceholderText = "dd/MM/yyyy";
+            this.MtxtDataRecebemento.SelectionStart = 0;
+            this.MtxtDataRecebemento.Size = new System.Drawing.Size(317, 38);
+            this.MtxtDataRecebemento.TabIndex = 18;
+            this.MtxtDataRecebemento.Tamanho = new System.Drawing.Size(300, 20);
+            this.MtxtDataRecebemento.TextBoxBackColor = System.Drawing.Color.White;
+            this.MtxtDataRecebemento.TextValue = "";
+            this.MtxtDataRecebemento.UseSystemPasswordChar = false;
+            this.MtxtDataRecebemento.WordWrap = true;
+            this.MtxtDataRecebemento.TextChanged += new System.EventHandler(this.MtxtDataRecebemento_TextChanged);
             // 
-            // doador
+            // MtxtInformacoes
             // 
-            this.doador.HeaderText = "Doador";
-            this.doador.Name = "doador";
+            this.MtxtInformacoes.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtInformacoes.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtInformacoes.EnablePlaceholder = true;
+            this.MtxtInformacoes.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MtxtInformacoes.Location = new System.Drawing.Point(35, 705);
+            this.MtxtInformacoes.MaxLength = 32767;
+            this.MtxtInformacoes.Name = "MtxtInformacoes";
+            this.MtxtInformacoes.PasswordChar = '\0';
+            this.MtxtInformacoes.PlaceholderChar = '\0';
+            this.MtxtInformacoes.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtInformacoes.PlaceholderText = "Informações adicionais";
+            this.MtxtInformacoes.SelectionStart = 0;
+            this.MtxtInformacoes.Size = new System.Drawing.Size(716, 112);
+            this.MtxtInformacoes.TabIndex = 33;
+            this.MtxtInformacoes.Tamanho = new System.Drawing.Size(700, 100);
+            this.MtxtInformacoes.TextBoxBackColor = System.Drawing.Color.White;
+            this.MtxtInformacoes.TextValue = "";
+            this.MtxtInformacoes.UseSystemPasswordChar = false;
+            this.MtxtInformacoes.WordWrap = true;
             // 
-            // tipo
+            // MtxtDescricao
             // 
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
+            this.MtxtDescricao.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtDescricao.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtDescricao.EnablePlaceholder = true;
+            this.MtxtDescricao.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MtxtDescricao.Location = new System.Drawing.Point(35, 536);
+            this.MtxtDescricao.MaxLength = 32767;
+            this.MtxtDescricao.Name = "MtxtDescricao";
+            this.MtxtDescricao.PasswordChar = '\0';
+            this.MtxtDescricao.PlaceholderChar = '\0';
+            this.MtxtDescricao.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtDescricao.PlaceholderText = "Descreva os alimentos recebidos";
+            this.MtxtDescricao.SelectionStart = 0;
+            this.MtxtDescricao.Size = new System.Drawing.Size(716, 112);
+            this.MtxtDescricao.TabIndex = 30;
+            this.MtxtDescricao.Tamanho = new System.Drawing.Size(700, 100);
+            this.MtxtDescricao.TextBoxBackColor = System.Drawing.SystemColors.Window;
+            this.MtxtDescricao.TextValue = "";
+            this.MtxtDescricao.UseSystemPasswordChar = false;
+            this.MtxtDescricao.WordWrap = true;
             // 
-            // quantidade
+            // MtxtQuantidade
             // 
-            this.quantidade.HeaderText = "Quantidade";
-            this.quantidade.Name = "quantidade";
+            this.MtxtQuantidade.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtQuantidade.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtQuantidade.EnablePlaceholder = true;
+            this.MtxtQuantidade.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MtxtQuantidade.Location = new System.Drawing.Point(36, 421);
+            this.MtxtQuantidade.MaxLength = 4;
+            this.MtxtQuantidade.Name = "MtxtQuantidade";
+            this.MtxtQuantidade.PasswordChar = '\0';
+            this.MtxtQuantidade.PlaceholderChar = '\0';
+            this.MtxtQuantidade.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtQuantidade.PlaceholderText = "Ex:10";
+            this.MtxtQuantidade.SelectionStart = 0;
+            this.MtxtQuantidade.Size = new System.Drawing.Size(317, 38);
+            this.MtxtQuantidade.TabIndex = 25;
+            this.MtxtQuantidade.Tamanho = new System.Drawing.Size(300, 20);
+            this.MtxtQuantidade.TextBoxBackColor = System.Drawing.Color.White;
+            this.MtxtQuantidade.TextValue = "";
+            this.MtxtQuantidade.UseSystemPasswordChar = false;
+            this.MtxtQuantidade.WordWrap = true;
             // 
-            // descricao
+            // MtxtContatoDoador
             // 
-            this.descricao.HeaderText = "Descrições";
-            this.descricao.Name = "descricao";
+            this.MtxtContatoDoador.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtContatoDoador.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtContatoDoador.EnablePlaceholder = true;
+            this.MtxtContatoDoador.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MtxtContatoDoador.Location = new System.Drawing.Point(36, 238);
+            this.MtxtContatoDoador.MaxLength = 100;
+            this.MtxtContatoDoador.Name = "MtxtContatoDoador";
+            this.MtxtContatoDoador.PasswordChar = '\0';
+            this.MtxtContatoDoador.PlaceholderChar = '\0';
+            this.MtxtContatoDoador.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtContatoDoador.PlaceholderText = "Telefone ou E-mail";
+            this.MtxtContatoDoador.SelectionStart = 0;
+            this.MtxtContatoDoador.Size = new System.Drawing.Size(716, 38);
+            this.MtxtContatoDoador.TabIndex = 22;
+            this.MtxtContatoDoador.Tamanho = new System.Drawing.Size(700, 20);
+            this.MtxtContatoDoador.TextBoxBackColor = System.Drawing.Color.White;
+            this.MtxtContatoDoador.TextValue = "";
+            this.MtxtContatoDoador.UseSystemPasswordChar = false;
+            this.MtxtContatoDoador.WordWrap = true;
+            // 
+            // MtxtDoador
+            // 
+            this.MtxtDoador.BackColor = System.Drawing.Color.Transparent;
+            this.MtxtDoador.BorderColorB = System.Drawing.Color.Black;
+            this.MtxtDoador.EnablePlaceholder = true;
+            this.MtxtDoador.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MtxtDoador.Location = new System.Drawing.Point(33, 136);
+            this.MtxtDoador.MaxLength = 50;
+            this.MtxtDoador.Name = "MtxtDoador";
+            this.MtxtDoador.PasswordChar = '\0';
+            this.MtxtDoador.PlaceholderChar = '\0';
+            this.MtxtDoador.PlaceholderColor = System.Drawing.Color.Black;
+            this.MtxtDoador.PlaceholderText = "Nome do doador ou empresa";
+            this.MtxtDoador.SelectionStart = 0;
+            this.MtxtDoador.Size = new System.Drawing.Size(317, 38);
+            this.MtxtDoador.TabIndex = 17;
+            this.MtxtDoador.Tamanho = new System.Drawing.Size(300, 20);
+            this.MtxtDoador.TextBoxBackColor = System.Drawing.Color.White;
+            this.MtxtDoador.TextValue = "";
+            this.MtxtDoador.UseSystemPasswordChar = false;
+            this.MtxtDoador.WordWrap = true;
             // 
             // frmReceberAlimentos
             // 

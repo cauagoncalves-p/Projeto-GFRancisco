@@ -157,6 +157,27 @@ namespace Projeto_Socorrista
             }
             return true;
         }
+        private string SimplificarUnidade(string unidadeSelecionada)
+        {
+            switch (unidadeSelecionada)
+            {
+                case "Quilogramas (kg)":
+                    return "kg";
+                case "Gramas (g)":
+                    return "g";
+                case "Litros (l)":
+                    return "l";
+                case "Mililitros (ml)":
+                    return "ml";
+                case "Unidades":
+                    return "un";
+                case "Caixas":
+                    return "cx";
+                default:
+                    return ""; 
+            }
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (MtxtDoador.TextValue.Equals("") || MtxtContatoDoador.TextValue.Equals("") || MtxtDataRecebemento.TextValue.Equals("") || MtxtDescricao.TextValue.Equals("") || MtxtInformacoes.TextValue.Equals("")
@@ -174,7 +195,7 @@ namespace Projeto_Socorrista
             string dataFormatada = data.ToString("yyyy-MM-dd");
             int quantidade = Convert.ToInt32(MtxtQuantidade.TextValue);
             string tipoDoacao = cbxTipoDoacao.Text; ;
-            string tipoUnidade = cbxUnidadeMedida.Text;
+            string tipoUnidade = SimplificarUnidade(cbxUnidadeMedida.Text);
 
             if (enviarDoacoes(MtxtDoador.TextValue, dataFormatada, MtxtContatoDoador.TextValue, tipoDoacao, quantidade, tipoUnidade, MtxtDescricao.TextValue, MtxtInformacoes.TextValue) == 1)
             {

@@ -173,7 +173,7 @@
             this.MtxtSenha.SelectionStart = 0;
             this.MtxtSenha.Size = new System.Drawing.Size(557, 40);
             this.MtxtSenha.TabIndex = 81;
-            this.MtxtSenha.Tamanho = new System.Drawing.Size(400, 18);
+            this.MtxtSenha.Tamanho = new System.Drawing.Size(400, 20);
             this.MtxtSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
             this.MtxtSenha.TextValue = "";
             this.MtxtSenha.UseSystemPasswordChar = false;
@@ -209,7 +209,7 @@
             this.MtxtEmail.SelectionStart = 0;
             this.MtxtEmail.Size = new System.Drawing.Size(557, 40);
             this.MtxtEmail.TabIndex = 77;
-            this.MtxtEmail.Tamanho = new System.Drawing.Size(500, 18);
+            this.MtxtEmail.Tamanho = new System.Drawing.Size(500, 20);
             this.MtxtEmail.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(112)))));
             this.MtxtEmail.TextValue = "";
             this.MtxtEmail.UseSystemPasswordChar = false;

@@ -377,8 +377,6 @@
             this.Controls.Add(this.lblSubTituloF);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "frmEnviaCodigoCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Código de verficação";

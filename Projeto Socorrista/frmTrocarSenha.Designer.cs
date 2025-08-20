@@ -126,7 +126,7 @@
             this.MtxtConfimeSenha.BorderColorB = System.Drawing.Color.Black;
             this.MtxtConfimeSenha.EnablePlaceholder = true;
             this.MtxtConfimeSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MtxtConfimeSenha.Location = new System.Drawing.Point(462, 497);
+            this.MtxtConfimeSenha.Location = new System.Drawing.Point(462, 486);
             this.MtxtConfimeSenha.MaxLength = 32767;
             this.MtxtConfimeSenha.Name = "MtxtConfimeSenha";
             this.MtxtConfimeSenha.PasswordChar = '\0';
@@ -136,7 +136,7 @@
             this.MtxtConfimeSenha.SelectionStart = 0;
             this.MtxtConfimeSenha.Size = new System.Drawing.Size(400, 41);
             this.MtxtConfimeSenha.TabIndex = 1;
-            this.MtxtConfimeSenha.Tamanho = new System.Drawing.Size(380, 18);
+            this.MtxtConfimeSenha.Tamanho = new System.Drawing.Size(380, 20);
             this.MtxtConfimeSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.MtxtConfimeSenha.TextValue = "";
             this.MtxtConfimeSenha.UseSystemPasswordChar = false;
@@ -158,7 +158,7 @@
             this.MtxtSenha.SelectionStart = 0;
             this.MtxtSenha.Size = new System.Drawing.Size(400, 40);
             this.MtxtSenha.TabIndex = 0;
-            this.MtxtSenha.Tamanho = new System.Drawing.Size(380, 18);
+            this.MtxtSenha.Tamanho = new System.Drawing.Size(380, 20);
             this.MtxtSenha.TextBoxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.MtxtSenha.TextValue = "";
             this.MtxtSenha.UseSystemPasswordChar = false;
